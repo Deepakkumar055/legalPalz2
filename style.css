@@ -2272,7 +2272,7 @@ h4.small-title {
 /*----------------------------------
     14.1 Footer Top Area CSS
 ------------------------------------*/
-.footer-logo img {
+/* .footer-logo img {
 	margin-bottom: 20px;
 }
 .single-footer-widget > p {
@@ -2417,7 +2417,7 @@ h4.small-title {
 }
 .footer-bottom-area p a{
     color: #b99044;
-}
+} */
 /*---------------------
     15. Page Banner CSS
 ------------------------*/
@@ -2852,4 +2852,119 @@ h4.small-title {
 }
 .contact-form p.form-messege.error {
   color: #EF785A;
+}
+
+/* Footer Top Area */
+.footer-top-area {
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.single-footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Footer Links */
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-menu ul li a:hover {
+    color: #007bff;
+}
+
+/* Footer Contact Form */
+.footer-contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f8f9fa;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.footer-contact-form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.footer-contact-form .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Contact Info */
+.single-footer-widget p, .single-footer-widget a {
+    color: #ccc;
+}
+
+.contact-info a {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #007bff;
+}
+
+/* Footer Bottom Area */
+.footer-bottom-area {
+    background-color: #23272b;
+    color: #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-bottom-area a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom-area a:hover {
+    color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-contact-form .col-md-6, .footer-contact-form .col-md-12 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact-form .btn-primary {
+        width: 100%;
+    }
+
+    .footer-top-area .col-lg-4 {
+        margin-bottom: 30px;
+    }
 }
