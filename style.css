@@ -1221,7 +1221,7 @@ Common Style CSS
 	line-height: 25px;
 	color: #cfcfcf;
 	margin-bottom: 30px;
-}
+} 
 /*Home Page 2 Css*/
 .wrapper.box-layout .about-img {
 	left: -50px;
@@ -1230,12 +1230,12 @@ Common Style CSS
 .wrapper.box-layout .about-content {
 	margin-left: -30px;
 	padding-right: 120px;
-}
+} 
 /*----------------------------------
        6. Timeline Area CSS
 ------------------------------------*/
 .timeline-area {
-	padding: 375px 0 80px;
+	padding:  0 80px;
 }
 .timeline-frame {
 	background-image: url(img/time-line-frame/frame1.png);
@@ -1283,26 +1283,58 @@ Common Style CSS
 /*----------------------------------
        7. Service Area CSS
 ------------------------------------*/
-.service-img{
-    padding-right: 40px;
+/* Service Area CSS */
+.service-area {
+    background-color: #f9f9f9; /* Light grey background */
+    padding-top: 120px;
+    padding-bottom: 55px;
 }
+
 .service-content {
-	margin-left: 25px;
+    text-align: center; /* Center align content */
 }
+
 .service-content > h4 {
-	font-size: 22px;
-	font-weight: 700;
-	text-transform: capitalize;
-	margin-bottom: 15px;
+    font-size: 24px; /* Increased font size */
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 15px;
 }
+
 .service-content > p {
-	font-size: 16px;
-	line-height: 25px;
-	color: #606060;
-	margin-bottom: 0;
-	font-weight: 400;
-	max-width: 250px;
+    font-size: 18px; /* Increased font size */
+    line-height: 28px; /* Increased line height */
+    color: #606060;
+    margin-bottom: 0;
+    font-weight: 400;
+    max-width: 300px; /* Adjusted maximum width */
 }
+
+.single-service {
+    padding: 30px; /* Increased padding */
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Increased border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 30px;
+    text-align: left; /* Align text to the left */
+    display: flex; /* Use flexbox for equal height */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space evenly between children */
+    min-height: 360px; /* Minimum height for each card */
+}
+
+.single-service:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.service-icon {
+    margin-right: 20px;
+}
+
+.service-icon img {
+    max-width: 60px; /* Increased icon size */
+}
+
 /*----------------------
     7.1 Service Page CSS
 --------------------------*/
@@ -1651,38 +1683,62 @@ Common Style CSS
 .request-quate-form textarea::placeholder{
     color: #f9f9f9;
 }
-/*Testimonial araea css*/
-.testimonial-area {
-	padding-left: 70px;
-	padding-top: 35px;
-	padding-bottom: 30px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Testimonial Area Styles */
+.all-testimonial-area {
+    padding: 50px 0;
+}
+
 .single-testimonial {
-	max-width: 410px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
+
+.single-testimonial:hover {
+    transform: translateY(-5px);
+}
+
 .testimonial-content > i {
-	font-size: 35px;
-	line-height: 46px;
-	color: #606060;
-	vertical-align: ;
+    font-size: 24px;
+    color: #606060;
+    margin-bottom: 15px;
 }
+
 .testimonial-content > p {
-	font-size: 16px;
-	color: #606060;
-	line-height: 25px;
-	margin-bottom: 20px;
+    font-size: 16px;
+    color: #606060;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
+
 .testimonial-author > h5 {
-	font-size: 16px;
-	font-weight: 700;
-    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
+
 .testimonial-author > h5 > span {
-	font-size: 14px;
-	font-family: 'Mada', sans-serif
-	color: #6e6e6e;
-	font-weight: 400;
+    font-size: 14px;
+    color: #999999;
 }
+
 /*----------------------------------
     12. Blog Area CSS
 ------------------------------------*/
@@ -2771,7 +2827,7 @@ h4.small-title {
     padding-left: 8px;
 }
 /*---------------------------------
-    19. Contuct Page CSS
+    19. Contact Page CSS
 ----------------------------------*/
 .contact-address {
 	padding-right: 50px;
@@ -2793,6 +2849,9 @@ h4.small-title {
 .contact-information > ul > li:last-child{
     border-bottom: 0;
     padding-bottom: 0;
+}
+.contact-us-area {
+    padding-bottom: 70px; /* Add padding to create space between Contact Us area and footer */
 }
 .contact-information h5 {
 	font-size: 20px;
@@ -2854,117 +2913,258 @@ h4.small-title {
   color: #EF785A;
 }
 
-/* Footer Top Area */
-.footer-top-area {
-    background-color: #343a40;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+/* Footer Styles */
+.footer-container {
+	background-color: #000;
+	color: #fff;
+	font-family: Arial, sans-serif;
+  }
+  
+  .footer-top-area {
+	padding: 50px 0 30px; /* Reduced padding from 100px 0 65px to 50px 0 30px */
+	display: flex;
+	justify-content: center;
+  }
+  
+  .footer-top-area .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+  
+  .single-footer-widget {
+	flex: 1 1 30%;
+	margin-bottom: 30px;
+	padding: 0 15px;
+	box-sizing: border-box;
+  }
+  
+  .footer-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #fff;
+	padding-bottom: 10px;
+  }
+  
+  .footer-contact-form .form-control {
+	background-color: #333;
+	border: none;
+	color: #fff;
+	margin-bottom: 10px;
+  }
+  
+  .footer-contact-form .form-control::placeholder {
+	color: #bbb;
+  }
+  
+  .footer-contact-form .form-control:focus {
+	border: none;
+	box-shadow: none;
+  }
+  
+  .footer-contact-form .btn {
+	background-color: #444;
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
+	width: 100%;
+  }
+  
+  .footer-contact-form .btn:hover {
+	background-color: #555;
+  }
+  
+  .footer-menu ul {
+	list-style: none;
+	padding: 0;
+  }
+  
+  .footer-menu ul li {
+	margin-bottom: 10px;
+  }
+  
+  .footer-menu ul li a {
+	color: #fff;
+	text-decoration: none;
+  }
+  
+  .footer-menu ul li a:hover {
+	text-decoration: underline;
+  }
+  
+  .contact-info a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 5px;
+  }
+  
+  .contact-info a:hover {
+	text-decoration: underline;
+  }
+  
+  .footer-bottom-area {
+	background-color: #111;
+	padding: 10px 0; /* Reduced padding from 20px 0 to 10px 0 */
+  }
+  
+  .footer-bottom-area p {
+	margin: 0;
+  }
+  
+  .footer-bottom-area a {
+	color: #fff;
+	text-decoration: none;
+  }
+  
+  .footer-bottom-area a:hover {
+	text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+	.single-footer-widget {
+	  flex: 1 1 100%;
+	  margin-bottom: 20px;
+	}
+  
+	.footer-contact-form .form-control,
+	.footer-contact-form .btn {
+	  width: 100%;
+	}
+  }
+  
+  @media (max-width: 992px) {
+	.footer-top-area .container {
+	  justify-content: space-around;
+	}
+  
+	.single-footer-widget {
+	  flex: 1 1 45%;
+	}
+}  
 
-.single-footer-widget {
-    margin-bottom: 30px;
-}
-
-.footer-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-/* Footer Links */
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-menu ul li {
-    margin-bottom: 10px;
-}
-
-.footer-menu ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-menu ul li a:hover {
-    color: #007bff;
-}
-
-/* Footer Contact Form */
-.footer-contact-form .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f8f9fa;
-    color: #343a40;
-    margin-bottom: 15px;
-}
-
-.footer-contact-form .btn-primary {
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    width: 100%;
-}
-
-.footer-contact-form .btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Contact Info */
-.single-footer-widget p, .single-footer-widget a {
-    color: #ccc;
-}
-
-.contact-info a {
-    display: block;
-    margin-bottom: 5px;
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-info a:hover {
-    color: #007bff;
-}
-
-/* Footer Bottom Area */
-.footer-bottom-area {
-    background-color: #23272b;
-    color: #ccc;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.footer-bottom-area a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-bottom-area a:hover {
-    color: #0056b3;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .footer-contact-form .col-md-6, .footer-contact-form .col-md-12 {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .footer-contact-form .btn-primary {
-        width: 100%;
-    }
-
-    .footer-top-area .col-lg-4 {
-        margin-bottom: 30px;
-    }
-}
+/* General Styles */
+.testimonial-case-studies-area {
+	padding: 50px 0;
+	background-color: #f5f5dc; /* Beige background color */
+	color: #111; /* Changed text color to dark for better contrast */
+  }
+  
+  /* Section Title Styles */
+  .section-title {
+	text-align: center;
+	margin-bottom: 40px;
+  }
+  
+  .section-title img {
+	max-width: 50px;
+  }
+  
+  .section-title h4 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .section-title h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+  }
+  
+  .section-title p {
+	font-size: 16px;
+  }
+  
+  /* Testimonials Styles */
+  .testimonial-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff; /* White background for contrast */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-content-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+  }
+  
+  .single-testimonial {
+	background-color: #fafafa; /* Slightly darker white for contrast */
+	padding: 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	flex: 0 0 48%;
+	box-sizing: border-box;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-content i {
+	font-size: 24px;
+	color: #f39c12;
+  }
+  
+  .testimonial-content p {
+	font-size: 16px;
+	margin: 20px 0;
+  }
+  
+  .testimonial-author h5 {
+	font-size: 18px;
+  }
+  
+  .testimonial-author span {
+	font-size: 16px;
+	color: #555; /* Darker text color for author span */
+  }
+  
+  /* Case Studies Styles */
+  .case-studies-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff; /* White background for contrast */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .case-studies-content-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+  }
+  
+  .single-case-study {
+	background-color: #fafafa; /* Slightly darker white for contrast */
+	padding: 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	flex: 0 0 48%;
+	box-sizing: border-box;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .case-study-content h5 {
+	font-size: 18px;
+	margin-bottom: 10px;
+  }
+  
+  .case-study-content p {
+	font-size: 16px;
+  }
+  
+  .case-study-content a {
+	color: #f39c12;
+	text-decoration: none;
+  }
+  
+  .case-study-content a:hover {
+	text-decoration: underline;
+  }
+  
