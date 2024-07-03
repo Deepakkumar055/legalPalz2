@@ -65,6 +65,7 @@ body {
     font-size: 14px;
     width: 100%;
     color: #6e6e6e;
+	background-color: #fff;
 }
 .img{
     max-width: 100%;
@@ -767,6 +768,12 @@ Common Style CSS
 	-webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 	        animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 }
+.header-logo img{
+	height: 100px;
+	width: 150px;
+	top: 0px;
+	object-fit: cover;
+}
 .header-sticky.is-sticky.header-bottom-area {
 	padding-top: 0px;
 }
@@ -1124,104 +1131,240 @@ Common Style CSS
 /*----------------------------------
        4. Feature Area CSS
 ------------------------------------*/
-.feature-section-title {
-	position: relative;
+/* General Feature Area Styles */
+.feature-area {
+    background-image: url('img/bg/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 95px 0 90px 0;
 }
-.feature-section-title::before {
-	content: url(img/bg/bg2.jpg);
-	position: absolute;
-	top: 50%;
-	left: -65px;
-	z-index: -1;
-	transform: translateY(-50%);
+
+.feature-area::before {
+    content: "";
+    background: ; /* Adjust the transparency as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-.single-feature {
-	padding-left: 55px;
-	margin: 22px 0;
+
+/* Section Title Styles */
+.feature-section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
 }
-.single-feature:hover > h2{
+
+.feature-section-title h2 span {
     color: #b99044;
 }
-.single-feature > h2 {
-	font-size: 24px;
-	font-weight: 700;
-	line-height: ;
-	margin-bottom: 15px;
-	transition: all 0.3s ease-in-out;
+
+.feature-section-title p {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.5;
 }
-.single-feature > p {
-	font-size: 16px;
-	line-height: 25px;
-	color: #606060;
-	font-weight: 400;
+
+/* Single Feature Styles */
+.single-feature {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: background 0.3s ease-in-out;
 }
+
+.single-feature:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.single-feature h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.single-feature:hover h2 {
+    color: #b99044;
+}
+
+.single-feature p {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .feature-section-title h2 {
+        font-size: 30px;
+    }
+
+    .feature-section-title p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-section-title h2 {
+        font-size: 26px;
+    }
+
+    .feature-section-title p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-section-title h2 {
+        font-size: 22px;
+    }
+
+    .feature-section-title p {
+        font-size: 12px;
+    }
+
+    .single-feature {
+        padding: 15px;
+    }
+
+    .single-feature h2 {
+        font-size: 20px;
+    }
+
+    .single-feature p {
+        font-size: 14px;
+    }
+}
+
 /*----------------------------------
        5. About Area CSS
 ------------------------------------*/
-.about-area {
-    margin-bottom: -295px;
-}
 .about-img {
 	left: -100px;
 	position: relative;
-}
-.about-img::before {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: 0.3;
-}
-.about-img img{
-    width: 100%;
-}
-.about-img > a {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	text-align: center;
-	color: #fafafa;
-	font-size: 60px;
-	line-height: 1;
-	height: 60px;
-	width: 60px;
-	display: inline-block;
-	margin-left: -30px;
-	margin-top: -30px;
-	line-height: 60px;
-}
-.about-img > a:hover{
-    animation: crSpinn 0.5s linear 0s 1 both;
-}
-.about-content {
-	margin-left: -60px;
-    padding-right: 120px;
-}
-.about-content > span {
+	background-color: #434343; /* Matching black background color */
+	color: #fafafa; /* Text color to match the theme */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visibility */
+  }
+  
+  .view-all-btn {
+	background-color: #b99044; /* Matching the theme's color */
+	color: #fafafa; /* Button text color */
+	border: none;
+	padding: 10px 20px;
 	font-size: 16px;
-	color: #c9c9c4;
-	line-height: 42px;
-}
-.about-content > h1 {
-	font-size: 36px;
-	color: #b99044;
 	font-weight: 700;
-	margin-bottom: 20px;
-}
-.about-content > h5 {
-	font-size: 18px;
-	line-height: 36px;
-	color: #c9c9c4;
-	font-weight: 700;
-	margin-bottom: 15px;
-}
-.about-content > p {
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	text-decoration: none; /* Removing underline if the button is a link */
+  }
+  
+  .view-all-btn:hover {
+	background-color: #a87f39; /* Darker shade for hover effect */
+	color: #ffffff; /* Slightly brighter text color on hover */
+  }
+  
+  .testimonial-card {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  
+  .testimonial-text {
 	font-size: 16px;
 	line-height: 25px;
 	color: #cfcfcf;
-	margin-bottom: 30px;
-} 
+	margin-bottom: 15px;
+  }
+  
+  .testimonial-author {
+	font-size: 14px;
+	color: #b99044;
+	font-weight: 700;
+	margin-bottom: 20px; /* Add some space between the author and the button */
+  }
+  
+  .case-studies-wrapper {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+  }
+  
+  .case-study {
+    background-color: #434343;
+    color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1 1 45%;
+    max-width: 45%;
+
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    /* Adjusting height */
+    height: 180px; /* Example height for the first card */
+	border-radius: 0px 10px 0px 10px;
+}
+
+.case-study:nth-child(2) {
+    height: 200px; /* Height for the second card */
+	border-radius: 15px 0px 15px 0px;
+}
+
+.case-study:nth-child(3) {
+    height: 200px; 
+	border-radius: 15px 0px 15px 0px;
+}
+
+.case-study:nth-child(4) {
+    height: 180px;
+	border-radius: 0px 10px 0px 10px;
+}
+
+  
+  .case-study h4 {
+	font-size: 18px;
+	color: #b99044;
+	font-weight: 700;
+	margin-bottom: 15px;
+  }
+  
+  .case-study p {
+	font-size: 16px;
+	line-height: 25px;
+	color: #cfcfcf;
+  }
+  
+  /* Ensuring the overall layout and padding remain the same */
+  .about-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
 /*Home Page 2 Css*/
 .wrapper.box-layout .about-img {
 	left: -50px;
@@ -2322,158 +2465,7 @@ h4.small-title {
     -webkit-transform: scale3d(1.05,1.05,1.05);
             transform: scale3d(1.05,1.05,1.05);
 }
-/*----------------------------------
-    14. Footer Area CSS
-------------------------------------*/
-/*----------------------------------
-    14.1 Footer Top Area CSS
-------------------------------------*/
-/* .footer-logo img {
-	margin-bottom: 20px;
-}
-.single-footer-widget > p {
-	font-size: 16px;
-	line-height: 25px;
-	color: #a8a8a8;
-	margin-bottom: 25px;
-}
-.newslatter-title {
-	font-size: 18px;
-	color: #e2e2e2;
-	line-height: 24px;
-	font-weight: 700;
-	text-transform: capitalize;
-}
-.single-footer-widget form {
-	position: relative;
-	max-width: 300px;
-}
-.single-footer-widget form input {
-	border: 1px solid #555555;
-	font-size: 14px;
-	color: #f9f9f9;
-	line-height: 25px;
-	font-weight: 300;
-	height: 40px;
-	padding-right: 40px;
-}
-.single-footer-widget form input::-webkit-input-placeholder{
-    color: #f9f9f9;
-}
-.single-footer-widget form input::-moz-placeholder{
-    color: #f9f9f9;
-}
-.single-footer-widget form input:-ms-input-placeholder{
-    color: #f9f9f9;
-}
-.single-footer-widget form input::placeholder{
-    color: #f9f9f9;
-}
-.single-footer-widget form button {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 40px;
-	height: 40px;
-	background: transparent;
-	border: 0;
-	font-size: 16px;
-	color: #8f8e8e;
-	cursor: pointer;
-}
-.footer-menu {
-	padding-left: 55px;
-}
-.footer-title {
-	font-size: 22px;
-	color: #e2e2e2;
-	font-weight: 700;
-	text-transform: capitalize;
-	margin-bottom: 30px;
-}
-.single-footer-widget ul > li {
-	list-style: none;
-}
-.single-footer-widget ul > li > a {
-	color: #a8a8a8;
-	font-size: 14px;
-	text-transform: capitalize;
-	line-height: 26px -webkit-transform: translateY(0);
-	transform: translateY(0);
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	display: block;
-	margin-bottom: 15px;
-	font-weight: 400;
-}
-.single-footer-widget ul > li > a:hover {
-	-webkit-transform: translateY(5px);
-	transform: translateY(5px);
-	color: #fff;
-}
-.footer-tweet > li {
-	font-size: 14px;
-	line-height: 23px;
-	color: #a8a8a8;
-	padding-left: 35px;
-	position: relative;
-	margin-bottom: 25px;
-}
-.footer-tweet > li > p {
-	margin-bottom: 5px;
-	color: #a8a8a8;
-}
-.footer-tweet > li > span > a{
-    color: #fff;
-    font-size: 14px;
-}
-.footer-tweet > li > span > a:hover{
-    color: #b99044;
-}
-.footer-tweet > li > p > a {
-	font-weight: 300;
-    font-size: 16px;
-    display: inline-block;
-	color: #b99044;
-}
-.footer-tweet > li::before {
-	position: absolute;
-	left: 0;
-	top: 2px;
-	content: "\ee34";
-	font-family: 'IcoFont';
-	color: #e2e2e2;
-	font-size: 24px;
-	display: block;
-}
-.single-footer-widget > p.contact-info > a {
-	font-size: 16px;
-	line-height: 25px;
-	color: #a8a8a8;
-	display: block;
-}
-.single-footer-widget > p.contact-info > a:hover{
-    color: #fff;
-}
-/*----------------------------------
-    14.2 Footer Bottom Area CSS
-------------------------------------*/
-.footer-bottom-area {
-	background-color: #272727;
-}
-.footer-bottom-area p {
-	font-size: 14px;
-	color: #e2e2e2;
-	line-height: 24px;
-	margin: 0;
-	font-weight: 400;
-}
-.footer-bottom-area p span {
-	color: #b99044;
-}
-.footer-bottom-area p a{
-    color: #b99044;
-} */
+
 /*---------------------
     15. Page Banner CSS
 ------------------------*/
@@ -2913,258 +2905,345 @@ h4.small-title {
   color: #EF785A;
 }
 
-/* Footer Styles */
-.footer-container {
-	background-color: #000;
-	color: #fff;
-	font-family: Arial, sans-serif;
-  }
-  
-  .footer-top-area {
-	padding: 50px 0 30px; /* Reduced padding from 100px 0 65px to 50px 0 30px */
-	display: flex;
-	justify-content: center;
-  }
-  
-  .footer-top-area .container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-  }
-  
-  .single-footer-widget {
-	flex: 1 1 30%;
-	margin-bottom: 30px;
-	padding: 0 15px;
-	box-sizing: border-box;
-  }
-  
-  .footer-title {
-	font-size: 20px;
-	margin-bottom: 20px;
-	text-transform: uppercase;
-	border-bottom: 2px solid #fff;
-	padding-bottom: 10px;
-  }
-  
-  .footer-contact-form .form-control {
-	background-color: #333;
-	border: none;
-	color: #fff;
-	margin-bottom: 10px;
-  }
-  
-  .footer-contact-form .form-control::placeholder {
-	color: #bbb;
-  }
-  
-  .footer-contact-form .form-control:focus {
-	border: none;
-	box-shadow: none;
-  }
-  
-  .footer-contact-form .btn {
-	background-color: #444;
-	border: none;
-	color: #fff;
-	padding: 10px 20px;
-	width: 100%;
-  }
-  
-  .footer-contact-form .btn:hover {
-	background-color: #555;
-  }
-  
-  .footer-menu ul {
-	list-style: none;
-	padding: 0;
-  }
-  
-  .footer-menu ul li {
-	margin-bottom: 10px;
-  }
-  
-  .footer-menu ul li a {
-	color: #fff;
-	text-decoration: none;
-  }
-  
-  .footer-menu ul li a:hover {
-	text-decoration: underline;
-  }
-  
-  .contact-info a {
-	display: block;
-	color: #fff;
-	text-decoration: none;
-	margin-bottom: 5px;
-  }
-  
-  .contact-info a:hover {
-	text-decoration: underline;
-  }
-  
-  .footer-bottom-area {
-	background-color: #111;
-	padding: 10px 0; /* Reduced padding from 20px 0 to 10px 0 */
-  }
-  
-  .footer-bottom-area p {
-	margin: 0;
-  }
-  
-  .footer-bottom-area a {
-	color: #fff;
-	text-decoration: none;
-  }
-  
-  .footer-bottom-area a:hover {
-	text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-	.single-footer-widget {
-	  flex: 1 1 100%;
-	  margin-bottom: 20px;
-	}
-  
-	.footer-contact-form .form-control,
-	.footer-contact-form .btn {
-	  width: 100%;
-	}
-  }
-  
-  @media (max-width: 992px) {
-	.footer-top-area .container {
-	  justify-content: space-around;
-	}
-  
-	.single-footer-widget {
-	  flex: 1 1 45%;
-	}
-}  
 
 /* General Styles */
 .testimonial-case-studies-area {
-	padding: 50px 0;
-	background-color: #f5f5dc; /* Beige background color */
-	color: #111; /* Changed text color to dark for better contrast */
-  }
-  
-  /* Section Title Styles */
-  .section-title {
-	text-align: center;
-	margin-bottom: 40px;
-  }
-  
-  .section-title img {
-	max-width: 50px;
-  }
-  
-  .section-title h4 {
+    padding: 50px 0;
+    background-color: #f9f7f1; /* Light beige background */
+    color: #333; /* Dark text color */
+}
+
+/* Testimonials and Case Studies Wrapper */
+.testimonial-case-studies-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section Title Styles */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title img {
+    max-width: 50px;
+}
+
+.section-title h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8b4513; /* Brown color for section title */
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #555; /* Darker text color */
+    max-width: 600px; /* Limiting the maximum width for better readability */
+    margin: auto; /* Centering the paragraph text */
+}
+
+/* Testimonials Styles */
+.testimonial-area,
+.case-studies-area {
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    width: 100%; /* Full width */
+    max-width: 900px; /* Max width for responsiveness */
+    text-align: left;
+}
+
+.testimonial-content-wrapper,
+.case-studies-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.single-testimonial,
+.single-case-study {
+    background-color: #ffffff; /* White background for cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(50% - 20px); /* Two columns with margin */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.single-testimonial:hover,
+.single-case-study:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.testimonial-content i,
+.testimonial-content p {
+    font-size: 16px;
+    color: #555; /* Darker text color */
+}
+
+.testimonial-author h5 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333; /* Dark text color */
+}
+
+.testimonial-author span {
+    font-size: 16px;
+    color: #888; /* Lighter text color */
+}
+
+.case-study-content h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #8b4513; /* Brown color for case study titles */
+}
+
+.case-study-content p {
+    font-size: 16px;
+    color: #555; /* Darker text color */
+}
+
+.case-study-content a {
+    color: #8b4513; /* Brown link color */
+    text-decoration: none;
+}
+
+.case-study-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .testimonial-area,
+    .case-studies-area {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .single-testimonial,
+    .single-case-study {
+        flex: 0 0 calc(50% - 20px); /* Two columns with margin */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .single-testimonial,
+    .single-case-study {
+        flex: 0 0 100%; /* Full width on smaller screens */
+    }
+}
+/* 14. Footer Area CSS */
+------------------------------------*/
+/*----------------------------------
+    14.1 Footer Top Area CSS
+------------------------------------*/
+/* Footer Container */
+.footer-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #272727;
+    padding-top: 50px;
+}
+
+/* Footer Title */
+.footer-title {
+    font-size: 18px;
+    color: #e2e2e2;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+/* Single Footer Widget */
+.single-footer-widget {
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.single-footer-widget form {
+    max-width: 300px;
+}
+
+.single-footer-widget input,
+.single-footer-widget textarea {
+    background-color: transparent;
+    border: 1px solid #555555;
+    font-size: 14px;
+    color: #f9f9f9;
+    line-height: 25px;
+    font-weight: 300;
+    height: 40px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.single-footer-widget input::placeholder,
+.single-footer-widget textarea::placeholder {
+    color: #f9f9f9;
+}
+.btn-p{
+	background-color: grey;
+}
+
+.btn-p:hover{
+	background-color: darkgray;
+}
+.footer-menu {
+	padding-left: 55px;
+}
+.footer-title {
+	font-size: 22px;
+	color: #e2e2e2;
+	font-weight: 700;
+	text-transform: capitalize;
+	margin-bottom: 30px;
+}
+.single-footer-widget ul > li {
+	list-style: none;
+}
+.single-footer-widget ul > li > a {
+	color: #a8a8a8;
+	font-size: 14px;
+	text-transform: capitalize;
+	line-height: 26px -webkit-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	display: block;
+	margin-bottom: 15px;
+	font-weight: 400;
+}
+.single-footer-widget ul > li > a:hover {
+	-webkit-transform: translateY(5px);
+	transform: translateY(5px);
+	color: #fff;
+}
+.footer-tweet > li {
+	font-size: 14px;
+	line-height: 23px;
+	color: #a8a8a8;
+	padding-left: 35px;
+	position: relative;
+	margin-bottom: 25px;
+}
+.footer-tweet > li > p {
+	margin-bottom: 5px;
+	color: #a8a8a8;
+}
+.footer-tweet > li > span > a{
+    color: #fff;
+    font-size: 14px;
+}
+.footer-tweet > li > span > a:hover{
+    color: #b99044;
+}
+.footer-tweet > li > p > a {
+	font-weight: 300;
+    font-size: 16px;
+    display: inline-block;
+	color: #b99044;
+}
+.footer-tweet > li::before {
+	position: absolute;
+	left: 0;
+	top: 2px;
+	content: "\ee34";
+	font-family: 'IcoFont';
+	color: #e2e2e2;
 	font-size: 24px;
-	margin-bottom: 10px;
-  }
-  
-  .section-title h2 {
-	font-size: 36px;
-	margin-bottom: 20px;
-  }
-  
-  .section-title p {
+	display: block;
+}
+.single-footer-widget > p.contact-info > a {
 	font-size: 16px;
-  }
-  
-  /* Testimonials Styles */
-  .testimonial-area {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #fff; /* White background for contrast */
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .testimonial-content-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 100%;
-  }
-  
-  .single-testimonial {
-	background-color: #fafafa; /* Slightly darker white for contrast */
-	padding: 20px;
-	border-radius: 5px;
-	margin-bottom: 20px;
-	flex: 0 0 48%;
-	box-sizing: border-box;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .testimonial-content i {
-	font-size: 24px;
-	color: #f39c12;
-  }
-  
-  .testimonial-content p {
-	font-size: 16px;
-	margin: 20px 0;
-  }
-  
-  .testimonial-author h5 {
-	font-size: 18px;
-  }
-  
-  .testimonial-author span {
-	font-size: 16px;
-	color: #555; /* Darker text color for author span */
-  }
-  
-  /* Case Studies Styles */
-  .case-studies-area {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #fff; /* White background for contrast */
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .case-studies-content-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 100%;
-  }
-  
-  .single-case-study {
-	background-color: #fafafa; /* Slightly darker white for contrast */
-	padding: 20px;
-	border-radius: 5px;
-	margin-bottom: 20px;
-	flex: 0 0 48%;
-	box-sizing: border-box;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .case-study-content h5 {
-	font-size: 18px;
-	margin-bottom: 10px;
-  }
-  
-  .case-study-content p {
-	font-size: 16px;
-  }
-  
-  .case-study-content a {
-	color: #f39c12;
-	text-decoration: none;
-  }
-  
-  .case-study-content a:hover {
-	text-decoration: underline;
-  }
-  
+	line-height: 25px;
+	color: #a8a8a8;
+	display: block;
+}
+.single-footer-widget > p.contact-info > a:hover{
+    color: #fff;
+}
+/*----------------------------------
+    14.2 Footer Bottom Area CSS
+------------------------------------*/
+.footer-bottom-area {
+	background-color: #272727;
+}
+.footer-bottom-area p {
+	font-size: 14px;
+	color: #e2e2e2;
+	line-height: 24px;
+	margin: 0;
+	font-weight: 400;
+}
+.footer-bottom-area p span {
+	color: #b99044;
+}
+.footer-bottom-area p a{
+    color: #b99044;
+}
+
+* Responsive Styles */
+@media (max-width: 992px) {
+    .single-footer-widget {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-contact-form .form-control {
+        width: 100%;
+    }
+
+    .footer-contact-form .btn-p {
+        width: 100%;
+    }
+
+    .footer-news ul li {
+        margin-bottom: 10px;
+    }
+
+    .contact-info a {
+        margin-bottom: 10px;
+    }
+
+    .footer-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-contact-form .form-control {
+        margin-bottom: 10px;
+    }
+
+    .footer-menu ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-news ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
