@@ -749,6 +749,8 @@ Common Style CSS
 	padding-right: 25px;
 	padding-left: 25px;
 }
+
+
 /*----------------------------------
         2. Header CSS
 ------------------------------------*/
@@ -923,6 +925,7 @@ Common Style CSS
     /*---- Menu Open ----*/
     /*---- Menu Close ----*/
 }
+
 .mean-container a.meanmenu-reveal span {
 	display: block;
 	background: #282828;
@@ -1137,6 +1140,7 @@ Common Style CSS
     background-size: cover;
     background-position: center;
     color: #fff;
+	
     position: relative;
     z-index: 1;
     padding: 95px 0 90px 0;
@@ -3199,51 +3203,282 @@ h4.small-title {
     color: #b99044;
 }
 
-* Responsive Styles */
-@media (max-width: 992px) {
-    .single-footer-widget {
-        margin-bottom: 20px;
-    }
-}
 
-@media (max-width: 768px) {
-    .footer-contact-form .form-control {
-        width: 100%;
-    }
 
-    .footer-contact-form .btn-p {
-        width: 100%;
-    }
+  
+  /* Responsive styles */
+  @media (max-width: 767px) {
+	.header-top-area {
+	  padding: 5px 0;
+	}
+  
+	.header-top-left p,
+	.header-top-right p {
+	  font-size: 12px;
+	  margin: 0;
+	}
+  
+	.social-link li {
+	  margin: 0 3px;
+	}
+  
+	.social-link li a i {
+	  font-size: 16px;
+	}
+  
+	.header-top-left,
+	.header-top-right {
+	  text-align: center;
+	}
+  }
+  
 
-    .footer-news ul li {
-        margin-bottom: 10px;
-    }
 
-    .contact-info a {
-        margin-bottom: 10px;
-    }
+  @media (max-width: 767px) {
+	.header-logo img {
+	 height: 80px;
+	 width: 80px;
+	 object-fit: cover;
+	}
+  }
 
-    .footer-title {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-}
+/* Hide logo image on mobile */
+@media (max-width: 767px) {
+	.hero-img {
+	  display: none;
+	}
+  }
+  
+  /* Adjustments for mobile view */
+  @media (max-width: 767px) {
+	.hero-content {
+	  text-align: center; /* Center align content */
+	}
+	
+	.hero-content .title {
+	  margin-bottom: 20px; /* Add spacing between title and description */
+	}
+	
+	.hero-content .description {
+	  font-size: 14px; /* Decrease font size for better readability */
+	  line-height: 1.6; /* Increase line height for better spacing */
+	}
+	
+	.hero-content a {
+	  display: block;
+	  margin-top: 20px; /* Add space above the button */
+	  text-align: center; /* Center align the button */
+	}
+  }
+  /* Adjust background image for mobile view */
+/* Hide logo image and change background color on mobile */
+@media (max-width: 767px) {
+	.hero-img {
+	  display: none;
+	}
+	
+	.single-slider {
+	  background-image: none; /* Remove background image */
+	  background-color: #000; /* Set background color to black */
+	  color: #fff; /* Set text color to white */
+	  padding: 30px; /* Add padding for better readability */
+	}
+	
+	.hero-content {
+	  text-align: center; /* Center align content */
+	}
+	
+	.hero-content .title {
+	  margin-bottom: 20px; /* Add spacing between title and description */
+	}
+	
+	.hero-content .description {
+	  font-size: 14px; /* Decrease font size for better readability */
+	  line-height: 1.6; /* Increase line height for better spacing */
+	}
+	
+	.hero-content a {
+	  display: block;
+	  margin-top: 20px; /* Add space above the button */
+	  text-align: center; /* Center align the button */
+	}
+  }
+  
 
-@media (max-width: 576px) {
-    .footer-contact-form .form-control {
-        margin-bottom: 10px;
-    }
+  @media (max-width: 992px) {
+	.about-area {
+	  padding-top: 60px; /* Adjusted top padding */
+	  padding-bottom: 60px; /* Adjusted bottom padding */
+	}
+  
+	.about-img {
+	  display: none; /* Hide the about image on smaller screens */
+	}
+  
+	.testimonial-card {
+	  padding: 20px; /* Padding for testimonial card */
+	  text-align: center; /* Center align text in testimonial card */
+	  background-color: #434343; /* Background color for testimonial card */
+	  border-radius: 10px; /* Border radius */
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for card */
+	  margin-bottom: 20px; /* Margin bottom for spacing */
+	}
+  
+	.testimonial-text {
+	  font-size: 16px; /* Font size for testimonial text */
+	  line-height: 1.6; /* Line height for readability */
+	  color: #fff; /* Text color */
+	}
+  
+	.testimonial-author {
+	  font-size: 14px; /* Font size for testimonial author */
+	  color: #b99044; /* Author text color */
+	  margin-top: 10px; /* Margin top for spacing */
+	}
+  
+	.view-all-btn {
+	  background-color: #b99044; /* Button background color */
+	  color: #fff; /* Button text color */
+	  font-size: 14px; /* Button font size */
+	  padding: 10px 20px; /* Button padding */
+	  border: none; /* Remove button border */
+	  border-radius: 5px; /* Button border radius */
+	  cursor: pointer; /* Cursor style */
+	  transition: background-color 0.3s ease, color 0.3s ease; /* Transition effect */
+	  text-decoration: none; /* Remove underline */
+	  display: inline-block; /* Make button inline */
+	  margin-top: 15px; /* Margin top for spacing */
+	}
+  
+	.view-all-btn:hover {
+	  background-color: #a87f39; /* Darker shade for hover effect */
+	}
+  
+	.case-studies-wrapper {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 20px; /* Gap between case studies */
+	  justify-content: center; /* Center align case studies */
+	}
+  
+	.case-study {
+	  flex: 0 0 calc(50% - 20px); /* Two columns layout with gap */
+	  background-color: #434343; /* Background color for case study */
+	  color: #fff; /* Text color */
+	  padding: 20px; /* Padding for case study */
+	  border-radius: 10px; /* Border radius */
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for card */
+	  margin-bottom: 20px; /* Margin bottom for spacing */
+	  text-align: center; /* Center align text */
+	}
+  
+	.case-study h4 {
+	  font-size: 18px; /* Font size for case study title */
+	  color: #b99044; /* Title color */
+	  margin-bottom: 10px; /* Margin bottom for spacing */
+	}
+  
+	.case-study p {
+	  font-size: 16px; /* Font size for case study details */
+	  line-height: 1.6; /* Line height for readability */
+	  color: #cfcfcf; /* Text color */
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.testimonial-card {
+	  padding: 15px; /* Further adjust padding for testimonial card */
+	}
+  
+	.testimonial-text {
+	  font-size: 15px; /* Further reduce font size for testimonial text */
+	}
+  
+	.testimonial-author {
+	  font-size: 13px; /* Further reduce font size for testimonial author */
+	}
+  
+	.view-all-btn {
+	  font-size: 13px; /* Further reduce font size for button */
+	  padding: 8px 16px; /* Further reduce padding for button */
+	}
+  
+	.case-study {
+	  flex: 0 0 100%; /* Full width for case study cards on smaller screens */
+	}
+  
+	.case-study h4 {
+	  font-size: 16px; /* Further reduce font size for case study title */
+	}
+  
+	.case-study p {
+	  font-size: 13px; /* Further reduce font size for case study details */
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.view-all-btn {
+	  font-size: 12px; /* Further reduce font size for button */
+	  padding: 6px 12px; /* Further reduce padding for button */
+	}
+  
+	.case-study {
+	  padding: 15px; /* Adjusted padding for case study cards */
+	}
+  
+	.case-study h4 {
+	  font-size: 14px; /* Further reduce font size for case study title */
+	}
+  
+	.case-study p {
+	  font-size: 12px; /* Further reduce font size for case study details */
+	}
+  }
+  
+  .latest-blog-area .blog-slider {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+  
+  .blog-slider::-webkit-scrollbar {
+	display: none; /* Hide scrollbar in Chrome, Safari, Opera */
+  }
+  
+  .blog-slider > div {
+	scroll-snap-align: start;
+	flex: 0 0 100%;
+	max-width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+	.blog-slider > div {
+	  flex: 0 0 33.33%;
+	  max-width: 33.33%;
+	}
+  }
+  
 
-    .footer-menu ul li {
-        margin-bottom: 5px;
-    }
 
-    .footer-news ul li {
-        margin-bottom: 5px;
-    }
-
-    .footer-title {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-}
+  .contact-us-area .container {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .contact-address, .contact-form {
+	flex: 1 1 100%; /* This ensures both elements take full width */
+  }
+  
+  /* Mobile View */
+  @media (max-width: 767px) {
+	.contact-us-area .container {
+	  flex-direction: column-reverse;
+	}
+	
+	.contact-form {
+	  order: -1; /* Makes the contact form come before the contact address */
+	}
+  }
+  
