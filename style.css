@@ -506,7 +506,7 @@ textarea:focus {
 .mb-50 { margin-bottom: 50px }
 .mb-55 { margin-bottom: 55px }
 .mb-60 { margin-bottom: 60px }
-.mb-65 { margin-bottom: 65px }
+.mb-65 { margin-bottom: 0px }
 .mb-70 { margin-bottom: 70px }
 .mb-75 { margin-bottom: 75px }
 .mb-80 { margin-bottom: 80px }
@@ -1459,27 +1459,49 @@ Common Style CSS
 
 .single-service {
     padding: 30px; /* Increased padding */
-    background-color: #fff; /* White background */
     border-radius: 8px; /* Increased border radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
     margin-bottom: 30px;
-    text-align: left; /* Align text to the left */
-    display: flex; /* Use flexbox for equal height */
+    display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack children vertically */
     justify-content: space-between; /* Space evenly between children */
     min-height: 360px; /* Minimum height for each card */
+    text-align: center; /* Center align text */
 }
 
-.single-service:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+.single-service:hover,
+.single-service.active { /* Add active class for mobile */
+    background-color: #818181; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.single-service:hover .service-content h4,
+.single-service.active .service-content h4,
+.single-service:hover .service-content p,
+.single-service.active .service-content p {
+    color: #fff; /* Ensure text color is white on hover */
 }
 
 .service-icon {
-    margin-right: 20px;
+   
+    margin-bottom: 20px;/* margin-top: 20px; Add margin at the top */
+    text-align: center; /* Center align icon */
 }
 
 .service-icon img {
     max-width: 60px; /* Increased icon size */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .single-service {
+        min-height: auto; /* Remove minimum height on smaller screens */
+    }
+
+    .service-content > p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        line-height: 24px; /* Adjust line height for smaller screens */
+    }
 }
 
 /*----------------------
@@ -2910,144 +2932,183 @@ h4.small-title {
 }
 
 
+@keyframes slideInFromLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.single-testimonial {
+	animation: slideInFromLeft 1s ease-in-out;
+}
+
+ /* Add the CSS animation styles here */
+ @keyframes slideInFromLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.single-testimonial {
+	animation: slideInFromLeft 1s ease-in-out;
+	animation-fill-mode: both; /* Ensures the animation stays in place */
+}
+
 /* General Styles */
 .testimonial-case-studies-area {
-    padding: 50px 0;
-    background-color: #f9f7f1; /* Light beige background */
-    color: #333; /* Dark text color */
+	padding: 50px 0;
+	background-color: #f9f7f1; /* Light beige background */
+	color: #333; /* Dark text color */
 }
 
 /* Testimonials and Case Studies Wrapper */
 .testimonial-case-studies-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* Section Title Styles */
 .section-title {
-    text-align: center;
-    margin-bottom: 40px;
+	text-align: center;
+	margin-bottom: 40px;
 }
 
 .section-title img {
-    max-width: 50px;
+	max-width: 50px;
 }
 
 .section-title h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #8b4513; /* Brown color for section title */
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #8b4513; /* Brown color for section title */
 }
 
 .section-title h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333; /* Dark text color */
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #333; /* Dark text color */
 }
 
 .section-title p {
-    font-size: 16px;
-    color: #555; /* Darker text color */
-    max-width: 600px; /* Limiting the maximum width for better readability */
-    margin: auto; /* Centering the paragraph text */
+	font-size: 16px;
+	color: #555; /* Darker text color */
+	max-width: 600px; /* Limiting the maximum width for better readability */
+	margin: auto; /* Centering the paragraph text */
 }
 
 /* Testimonials Styles */
 .testimonial-area,
 .case-studies-area {
-    background-color: #ffffff; /* White background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    width: 100%; /* Full width */
-    max-width: 900px; /* Max width for responsiveness */
-    text-align: left;
+	background-color: #ffffff; /* White background */
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+	width: 100%; /* Full width */
+	max-width: 900px; /* Max width for responsiveness */
+	text-align: left;
 }
 
 .testimonial-content-wrapper,
 .case-studies-content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .single-testimonial,
 .single-case-study {
-    background-color: #ffffff; /* White background for cards */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 0 0 calc(50% - 20px); /* Two columns with margin */
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease-in-out;
+	background-color: #ffffff; /* White background for cards */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex: 0 0 calc(50% - 20px); /* Two columns with margin */
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.3s ease-in-out;
 }
 
 .single-testimonial:hover,
 .single-case-study:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transform: translateY(-5px);
 }
 
 .testimonial-content i,
 .testimonial-content p {
-    font-size: 16px;
-    color: #555; /* Darker text color */
+	font-size: 16px;
+	color: #555; /* Darker text color */
 }
 
 .testimonial-author h5 {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #333; /* Dark text color */
+	font-size: 18px;
+	margin-top: 20px;
+	color: #333; /* Dark text color */
 }
 
 .testimonial-author span {
-    font-size: 16px;
-    color: #888; /* Lighter text color */
+	font-size: 16px;
+	color: #888; /* Lighter text color */
 }
 
 .case-study-content h5 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #8b4513; /* Brown color for case study titles */
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #8b4513; /* Brown color for case study titles */
 }
 
 .case-study-content p {
-    font-size: 16px;
-    color: #555; /* Darker text color */
+	font-size: 16px;
+	color: #555; /* Darker text color */
 }
 
 .case-study-content a {
-    color: #8b4513; /* Brown link color */
-    text-decoration: none;
+	color: #8b4513; /* Brown link color */
+	text-decoration: none;
 }
 
 .case-study-content a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 991.98px) {
-    .testimonial-area,
-    .case-studies-area {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
+	.testimonial-area,
+	.case-studies-area {
+		padding: 20px; /* Adjust padding for smaller screens */
+	}
 
-    .single-testimonial,
-    .single-case-study {
-        flex: 0 0 calc(50% - 20px); /* Two columns with margin */
-    }
+	.single-testimonial,
+	.single-case-study {
+		flex: 0 0 calc(50% - 20px); /* Two columns with margin */
+	}
 }
 
 @media (max-width: 767.98px) {
-    .single-testimonial,
-    .single-case-study {
-        flex: 0 0 100%; /* Full width on smaller screens */
-    }
+	.single-testimonial,
+	.single-case-study {
+		flex: 0 0 100%; /* Full width on smaller screens */
+	}
+}
+
+@media (max-width: 767.98px) {
+	.single-testimonial,
+	.single-case-study {
+		flex: 0 0 100%; /* Full width on smaller screens */
+	}
 }
 /* 14. Footer Area CSS */
 ------------------------------------*/
@@ -3479,6 +3540,242 @@ h4.small-title {
 	
 	.contact-form {
 	  order: -1; /* Makes the contact form come before the contact address */
+	}
+  }
+  
+  
+
+  //* General Styles */
+.about-area {
+	background-color: #000;
+	padding-top: 110px;
+	padding-bottom: 110px;
+  }
+  
+  .about-wrapper {
+	background-color: #1b1b1b;
+	padding: 50px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .testimonial-card {
+	padding: 30px;
+	background-color: #434343;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: left;
+  }
+  
+  .testimonial-card h1 {
+	font-size: 24px;
+	color: #b99044;
+	margin-bottom: 20px;
+  }
+  
+  .testimonial-text {
+	font-size: 18px;
+	line-height: 1.6;
+	color: #fff;
+	margin-bottom: 20px;
+  }
+  
+  .testimonial-author {
+	font-size: 16px;
+	color: #b99044;
+	margin-bottom: 20px;
+  }
+  
+  .view-all-btn {
+	background-color: #b99044;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	text-decoration: none;
+	display: inline-block;
+  }
+  
+  .view-all-btn:hover {
+	background-color: #a87f39;
+  }
+  
+  .case-studies-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+  }
+  
+  .case-study {
+	flex: 0 0 calc(50% - 20px);
+	background-color: #434343;
+	color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+	text-align: left;
+  }
+  
+  .case-study h4 {
+	font-size: 18px;
+	color: #b99044;
+	margin-bottom: 10px;
+  }
+  
+  .case-study p {
+	font-size: 16px;
+	line-height: 1.6;
+	color: #cfcfcf;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+	.about-area {
+	  padding-top: 60px;
+	  padding-bottom: 60px;
+	}
+  
+	.about-img {
+	  display: block; /* Make the about image visible on smaller screens */
+	  margin-bottom: 20px;
+	}
+  
+	.testimonial-card {
+	  padding: 20px;
+	  text-align: center;
+	  margin-bottom: 20px;
+	}
+  
+	.testimonial-text {
+	  font-size: 16px;
+	}
+  
+	.testimonial-author {
+	  font-size: 14px;
+	  margin-top: 10px;
+	}
+  
+	.view-all-btn {
+	  font-size: 14px;
+	  padding: 10px 20px;
+	  margin-top: 15px;
+	}
+  
+	.case-studies-wrapper {
+	  gap: 20px;
+	  justify-content: center;
+	}
+  
+	.case-study {
+	  flex: 0 0 calc(100% - 20px);
+	  margin-bottom: 20px;
+	  text-align: center;
+	}
+  
+	.case-study h4 {
+	  font-size: 18px;
+	  margin-bottom: 10px;
+	}
+  
+	.case-study p {
+	  font-size: 16px;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.testimonial-card {
+	  padding: 15px;
+	}
+  
+	.testimonial-text {
+	  font-size: 15px;
+	}
+  
+	.testimonial-author {
+	  font-size: 13px;
+	}
+  
+	.view-all-btn {
+	  font-size: 13px;
+	  padding: 8px 16px;
+	}
+  
+	.case-study {
+	  flex: 0 0 100%;
+	}
+  
+	.case-study h4 {
+	  font-size: 16px;
+	}
+  
+	.case-study p {
+	  font-size: 13px;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.about-wrapper {
+	  padding: 30px;
+	}
+  
+	.about-img {
+	  display: block;
+	  margin-bottom: 20px; /* Ensure there is some space between the image and the testimonial card */
+	}
+  
+	.testimonial-card {
+	  display: block;
+	  padding: 20px;
+	  margin-bottom: 20px;
+	  text-align: center; /* Center align text in testimonial card */
+	}
+  
+	.testimonial-card h1 {
+	  font-size: 20px;
+	  margin-bottom: 15px;
+	}
+  
+	.testimonial-text {
+	  font-size: 14px;
+	  margin-bottom: 15px;
+	}
+  
+	.testimonial-author {
+	  font-size: 12px;
+	  margin-bottom: 15px;
+	}
+  
+	.view-all-btn {
+	  font-size: 12px;
+	  padding: 6px 12px;
+	}
+  
+	.case-studies-wrapper {
+	  display: flex; /* Stack case studies vertically */
+	}
+  
+	.case-study {
+	  
+	  text-align: center; /* Align text to center for readability */
+	}
+  
+	.case-study h4 {
+	  font-size: 14px;
+	  margin-bottom: 10px;
+	}
+  
+	.case-study p {
+	  font-size: 12px;
 	}
   }
   

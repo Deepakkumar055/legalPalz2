@@ -462,8 +462,9 @@ blockquote {
 	padding-top: 50px;
 }
 .hero-content > .title > h1 {
-	font-size: 22px;
+	font-size: 40px;
 	margin-bottom: 5px;
+	
 }
 .hero-content > .title > h2 {
 	font-size: 18px;
@@ -472,6 +473,7 @@ blockquote {
 	margin-top: 10px;
 	font-size: 14px;
 	line-height: 20px;
+	
 }
 .hero-content > a {
 	font-size: 14px;
