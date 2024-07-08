@@ -1305,49 +1305,48 @@ Common Style CSS
   
   .case-studies-wrapper {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    height: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	height: 100%;
   }
   
   .case-study {
-    background-color: #434343;
-    color: #fafafa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    flex: 1 1 45%;
-    max-width: 45%;
-
+	background-color: #434343;
+	color: #fafafa;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	flex: 1 1 45%;
+	max-width: 45%;
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
-    /* Adjusting height */
-    height: 180px; /* Example height for the first card */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 120px; /* Example height for the first card */
 	border-radius: 0px 10px 0px 10px;
-}
-
-.case-study:nth-child(2) {
-    height: 200px; /* Height for the second card */
+  }
+  .case-study:nth-child(1) {
+	height: 120px; /* Height for the  card */
 	border-radius: 15px 0px 15px 0px;
-}
-
-.case-study:nth-child(3) {
-    height: 200px; 
+  }
+  
+  .case-study:nth-child(2) {
+	height: 120px; /* Height for the second card */
 	border-radius: 15px 0px 15px 0px;
-}
-
-.case-study:nth-child(4) {
-    height: 180px;
+  }
+  
+  .case-study:nth-child(3) {
+	height: 120px; 
+	border-radius: 15px 0px 15px 0px;
+  }
+  
+  .case-study:nth-child(4) {
+	height: 120px;
 	border-radius: 0px 10px 0px 10px;
-}
-
+  }
   
   .case-study h4 {
 	font-size: 18px;
@@ -1362,22 +1361,130 @@ Common Style CSS
 	color: #cfcfcf;
   }
   
-  /* Ensuring the overall layout and padding remain the same */
-  .about-content {
+  .about-area .about-wrapper {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  }
+  
+  .testimonial-card {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .case-studies-wrapper {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	width: 100%;
+	direction: rtl; /* Change the scroll direction to right-to-left */
+  }
+  
+  .case-study {
+	min-width: 100%;
+	scroll-snap-align: start;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-left: 20px; /* Adjust margin for spacing */
+  }
+  
+  /* General styling for .about-content-area */
+  .about-content-area {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	width: 100%; /* Ensure full width */
+	padding: 0 20px; /* Optional: Add padding for better spacing on mobile */
   }
-/*Home Page 2 Css*/
-.wrapper.box-layout .about-img {
-	left: -50px;
-	position: relative;
-}
-.wrapper.box-layout .about-content {
-	margin-left: -30px;
-	padding-right: 120px;
-} 
+  
+  /* Custom CSS for case studies on mobile view */
+  @media (max-width: 767px) {
+	.about-content-area {
+	  height: auto; /* Adjust height for mobile view */
+	  margin-top: 20px; /* Optional: Add top margin for spacing */
+	}
+	.about-area{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.about-content-area-custom{
+		height: 120px;
+		margin-top: 30px;
+	}
+  
+	.case-studies-wrapper {
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	  overflow-x: auto;
+	  
+	  scroll-snap-type: x mandatory;
+	  order: 1;
+	}
+  
+	.case-study {
+	  min-width: 100%;
+	  scroll-snap-align: start;
+	  background-color: #434343;
+	  padding: 20px;
+	  border-radius: 10px;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	  margin-bottom: 20px; /* Space between case studies */
+	 
+	  height: 50px; /* Adjusted height */
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center; /* Center content vertically */
+	  align-items: center;
+	  text-align: center; /* Center text */
+	}
+  }
+  
+  /* Additional styling for larger screens */
+  @media (min-width: 768px) {
+	.about-content-area {
+	  margin: 0 auto;
+	  height: 100px; /* Adjusted height for larger screens */
+	  margin-top: 20px; /* Optional: Add top margin for spacing */
+	}
+  
+	.container {
+	  width: 100%;
+	}
+  
+	.case-studies-wrapper {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 20px;
+	  overflow: initial;
+	  direction: ltr; /* Reset direction for larger screens */
+	}
+  
+	.case-study {
+	  flex: 1 1 calc(50% - 20px);
+	  min-width: auto;
+	  margin-left: 0;
+	  height: 80px; /* Adjusted height for larger screens */
+	  display: flex;
+	  
+	  flex-direction: column;
+	  justify-content: center; /* Center content vertically */
+	  align-items: center;
+	  text-align: center; /* Center text */
+	}
+  }
+  
+  
+	
+  
+  
 /*----------------------------------
        6. Timeline Area CSS
 ------------------------------------*/
@@ -3778,4 +3885,77 @@ h4.small-title {
 	  font-size: 12px;
 	}
   }
-  
+  /* Grid Layout for Service Row */
+.service-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Ensure each service item takes the full height of the row */
+.ladder-item {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Card Flipping Styles */
+.card {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    padding: 20px; /* Add padding to the back of the card */
+}
+
+.ladder-item:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.ladder-item:hover .card-back {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+figure {
+    margin: 0;
+    padding: 20px; /* Add padding to the figure to ensure space around figcaption */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+    margin-top: 10px; /* Add margin to ensure space between image and caption */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Lazy Loading Styles */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.lazy-loaded {
+    opacity: 1;
+}
