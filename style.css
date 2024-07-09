@@ -682,7 +682,7 @@ textarea:focus {
 /*colored background*/
  .white-bg { background: #fff !important; }
  .gray-bg { background: #f5f6f7 !important; }
- .black-bg { background: #303030 !important; }
+ /* .black-bg { background: #303030 !important; } */
  .default-bg { background: #b99044 !important; }
  .transparent-bg { background: transparent !important; }
 
@@ -1256,7 +1256,7 @@ Common Style CSS
 	position: relative;
 	background-color: #434343; /* Matching black background color */
 	color: #fafafa; /* Text color to match the theme */
-	padding: 20px;
+	
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visibility */
   }
@@ -1375,17 +1375,11 @@ Common Style CSS
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .case-studies-wrapper {
-	display: flex;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	width: 100%;
-	direction: rtl; /* Change the scroll direction to right-to-left */
-  }
+ 
   
   .case-study {
 	min-width: 100%;
-	scroll-snap-align: start;
+	
 	background-color: white;
 	padding: 20px;
 	border-radius: 10px;
@@ -1425,13 +1419,13 @@ Common Style CSS
 	  width: 100%;
 	  overflow-x: auto;
 	  
-	  scroll-snap-type: x mandatory;
-	  order: 1;
+	
+	 
 	}
   
 	.case-study {
 	  min-width: 100%;
-	  scroll-snap-align: start;
+	 
 	  background-color: #434343;
 	  padding: 20px;
 	  border-radius: 10px;
@@ -3507,6 +3501,7 @@ h4.small-title {
 
   @media (max-width: 992px) {
 	.about-area {
+		
 	  padding-top: 60px; /* Adjusted top padding */
 	  padding-bottom: 60px; /* Adjusted bottom padding */
 	}
@@ -3696,6 +3691,7 @@ h4.small-title {
 	padding: 50px;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	width: 100%;
   }
   
   .about-img {
@@ -3950,6 +3946,18 @@ h4.small-title {
     backface-visibility: hidden;
     transition: transform 0.6s;
 }
+.real_estate{
+	font-size: 50px;
+	color: burlywood;
+}
+.civil-drafting{
+	font-size: 50px;
+	color: burlywood;
+}
+.data-privacy{
+	font-size: 50px;
+	color: burlywood;
+}
 
 .card-front {
     transform: rotateY(0deg);
@@ -4164,3 +4172,116 @@ figcaption {
         flex-direction: column;
     }
 }
+
+/* service cards */
+
+
+/* Adjustments for Mobile View */
+@media (max-width: 768px) {
+    .single-service {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align elements */
+        text-align: center; /* Center-align text */
+    }
+
+    .service-icon {
+        margin-bottom: 15px; /* Add margin below icons for spacing */
+    }
+
+    .service-content {
+        display: flex;
+        flex-direction: column; /* Stack heading and paragraph vertically */
+        align-items: center; /* Center-align heading and paragraph */
+    }
+
+    .service-content h4 {
+        font-size: 18px; /* Adjust font size for headings */
+        margin-bottom: 10px; /* Add margin below headings */
+    }
+
+    .service-content p {
+        font-size: 14px; /* Adjust font size for paragraphs */
+        margin-bottom: 15px; /* Add margin below paragraphs */
+    }
+
+    .single-service a {
+        display: inline-block; /* Ensure links are easy to tap */
+        margin-top: 10px; /* Add margin for better spacing */
+    }
+}
+
+/* Ensure icons are responsive */
+.service-icon img {
+    max-width: 100%; /* Ensure icons scale within their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* General adjustments for better readability and spacing */
+.section-title h2 {
+    font-size: 24px; /* Adjust title font size */
+    margin-bottom: 20px; /* Add margin below title */
+}
+
+.section-title p {
+    font-size: 14px; /* Adjust paragraph font size */
+    margin-bottom: 30px; /* Add margin below paragraph */
+}
+
+
+/* Custom CSS for mobile view */
+@media (max-width: 767px) {
+	.testimonial-area, .case-study-area {
+	  width: 100%;
+	  padding: 0;
+	  margin: 0;
+	}
+	.about-wrapper {
+		
+		width: 100%;
+	  }
+  
+	.testimonial-area {
+	  margin-bottom: 20px;
+	}
+  
+	.testimonial-card {
+	  width: 100%;
+	  padding: 20px;
+	  text-align: center;
+	  box-sizing: border-box;
+	}
+  
+	.testimonial-card h1 {
+	  margin-bottom: 20px;
+	}
+  
+	.testimonial-card .view-all-btn {
+	  margin-top: 20px;
+	  padding: 10px 20px;
+	  border: none;
+	  border-radius: 5px;
+	  cursor: pointer;
+	}
+  
+	.case-study-area {
+	  margin-top: 20px;
+	}
+  
+	.case-studies-wrapper {
+	  display: block;
+	  width: 100%;
+	}
+  
+	.case-study {
+	  width: 100%;
+	  padding: 20px;
+	  margin-bottom: 20px;
+	  text-align: center;
+	  box-sizing: border-box;
+	}
+  
+	.case-study h4 {
+	  margin-bottom: 10px;
+	}
+  }
+  

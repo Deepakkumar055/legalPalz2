@@ -428,7 +428,7 @@ blockquote {
 }
 /* small mobile :320px. */
 @media (max-width: 767px) {
-.container {width:300px}
+.container {width:390px}
 .row-75 {
 	margin-left: -15px;
 	margin-right: -15px;
