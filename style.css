@@ -4250,6 +4250,7 @@ figcaption {
 	  padding: 20px;
 	  text-align: center;
 	  box-sizing: border-box;
+	  height: 350px;
 	}
   
 	.testimonial-card h1 {

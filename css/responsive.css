@@ -490,6 +490,7 @@ blockquote {
 .about-wrapper {
 	padding-left: 30px;
 	padding-right: 30px;
+	height: 1130px;
 }
 .about-img {
 	left: 0;
@@ -802,7 +803,7 @@ blockquote::before {
 .hero-content {
 	padding-top: 70px;
 }
-.about-content > h1 {
+/* .about-content > h1 {
 	font-size: 24px;
 	margin-bottom: 10px;
 }
@@ -817,7 +818,7 @@ blockquote::before {
 .timeline-content > p {
 	font-size: 16px;
 	line-height: 18px;
-}
+} */
 .fun-factor-wrap {
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 33%;
