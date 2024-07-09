@@ -1923,6 +1923,38 @@ Common Style CSS
 	line-height: 30px;
     margin: 0;
 }
+@media (max-width: 768px) {
+	.working-wrap {
+	  flex-direction: column;
+	  align-items: center;
+	}
+	.single-working {
+	  width: 100%;
+	  max-width: 500px;
+	}
+	.section-title h2 {
+	  font-size: 28px;
+	}
+	.section-title p {
+	  font-size: 14px;
+	}
+  }
+  @media (max-width: 480px) {
+	.working-icon img {
+	  margin-right: 10px;
+	  width: 40px;
+	  height: 40px;
+	}
+	.working-title h2 {
+	  font-size: 18px;
+	}
+	.section-title h2 {
+	  font-size: 24px;
+	}
+	.section-title p {
+	  font-size: 12px;
+	}
+  }
 /*----------------------------------
     11. Testimonial And Quote Area CSS
 ------------------------------------*/
@@ -3885,6 +3917,9 @@ h4.small-title {
 	  font-size: 12px;
 	}
   }
+
+  /* case study cards page */
+
   /* Grid Layout for Service Row */
 .service-row {
     display: grid;
@@ -3958,4 +3993,174 @@ figcaption {
 
 .lazy-loaded {
     opacity: 1;
+}
+.case-study-lines {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+  }
+  
+  .case-study-lines .line {
+	width: 2px;
+	background-color: #333; /* Adjust color as per your design */
+	height: calc(100% - 30px); /* Adjust height based on your layout */
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+  
+  .case-study-lines .line:before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #333; /* Same color as line */
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+  }
+  
+  .case-study-lines .line:after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #333; /* Same color as line */
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	border-radius: 50%;
+  }
+
+  /* Adjustments for Mobile View */
+@media (max-width: 768px) {
+    .service-row {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .single-service {
+        height: 280px; /* Adjust height to auto for better stacking */
+    }
+
+    .card {
+        height: auto; /* Allow cards to resize based on content */
+    }
+
+    .card-back {
+        padding: 10px; /* Reduce padding on the back for mobile view */
+    }
+
+    .section-title {
+        margin-bottom: 40px; /* Increase margin for better separation */
+    }
+
+    figure {
+        padding: 10px; /* Adjust padding for images */
+    }
+
+    figcaption {
+        font-size: 14px; /* Reduce font size for better readability */
+    }
+}
+
+  /*footer*/
+
+  .footer-container {
+    background-color: #272727;
+    color: #fff;
+    padding-top: 50px;
+}
+.single-footer-widget {
+    margin-bottom: 30px;
+}
+.single-footer-widget h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+.single-footer-widget ul {
+    list-style: none;
+    padding: 0;
+}
+.single-footer-widget ul li {
+    margin-bottom: 10px;
+}
+.single-footer-widget ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.single-footer-widget ul li a:hover {
+    text-decoration: underline;
+}
+.footer-bottom-area {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+.footer-bottom-area p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+.footer-bottom-area p a {
+    
+    text-decoration: none;
+}
+.footer-bottom-area p a:hover {
+    text-decoration: underline;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.combine{
+	display: flex;
+	width: 500px;
+	justify-content: space-around;
+	margin-right: 50px;
+	
+}
+
+
+
+@media (max-width: 767px) {
+    .footer-container {
+        padding-top: 20px;
+    }
+    .single-footer-widget {
+        margin-bottom: 20px;
+    }
+    .quicksLinks, .importantLinks {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-contact-form input, 
+    .footer-contact-form textarea, 
+    .footer-contact-form button {
+        font-size: 14px;
+    }
+    .contact-info a {
+        font-size: 14px;
+    }
+    .footer-title {
+        font-size: 18px;
+    }
+    .footer-news a {
+        font-size: 14px;
+    }
+	.combine{
+		display: flex;
+		width: 100%;
+		margin-top: 25px;
+	}
+}
+
+@media (max-width: 767px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
 }
