@@ -3692,6 +3692,7 @@ h4.small-title {
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	width: 100%;
+	height: 485px;
   }
   
   .about-img {
@@ -4236,9 +4237,9 @@ figcaption {
 	  margin: 0;
 	}
 	.about-wrapper {
-		
 		width: 100%;
-	  }
+		height: 1100px;
+		}
   
 	.testimonial-area {
 	  margin-bottom: 20px;
@@ -4285,3 +4286,19 @@ figcaption {
 	}
   }
   
+  .case-study-area .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+	margin-top: 5px;
+	
+   
+  }
+
+  .case-study-area .button .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	background-color: burlywood;
+  }
