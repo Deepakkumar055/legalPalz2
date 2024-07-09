@@ -715,7 +715,7 @@ textarea:focus {
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	margin-top: 50px;
+	
 }
 .bg-img-3 {
 	background-image: url(img/bg/bg3.jpg);
