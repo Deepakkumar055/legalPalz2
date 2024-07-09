@@ -2069,6 +2069,9 @@ body {
 	margin-right: 20px;
 	text-transform: uppercase;
 }
+.blogs{
+	width: 100%;
+}
 .single-blog .blog-content .blog-meta > li::before {
 	content: "";
 	width: 5px;
@@ -2412,7 +2415,43 @@ body {
 	margin-bottom: 15px;
 	position: relative;
 	padding-left: 20px;
+	width: 700px;
 }
+@media (max-width: 991px) {
+	.blog-post-list > li {
+	  margin-bottom: 20px; /* Add spacing between items */
+	}
+  
+	.blog-post-list {
+	  padding: 0 15px; /* Add padding for better alignment */
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.blog-post-list {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: flex-start; /* Align items to the start */
+	}
+  
+	.blog-post-list > li {
+	  width: 100%; /* Make each list item take full width */
+	  margin-bottom: 15px; /* Adjust spacing */
+	  padding: 10px; /* Add padding for better spacing */
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.blog-post-list {
+	  padding: 0 10px; /* Reduce padding on smaller screens */
+	}
+  
+	.blog-post-list > li {
+	  font-size: 14px; /* Adjust font size for readability */
+	  padding: 8px; /* Adjust padding */
+	}
+  }
+  
 .blog-post-list > li::before {
 	position: absolute;
 	content: "\f101";
