@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Process Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .timeline {
+            background-color: #00284d;
+            color: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            width: 4px;
+            height: calc(100% - 70px);
+            background: white;
+            z-index: 1;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .timeline-header h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .timeline-header .icon-computer {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 50px;
+        }
+
+        .timeline-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-step .icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+            z-index: 2;
+        }
+
+        .timeline-step h2 {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+
+        .timeline-step p {
+            font-size: 0.9em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="timeline-header">
+            <div class="icon-computer"></div>
+            <h1>Design Process</h1>
+        </div>
+        <div class="timeline-step">
+            <div class="icon"></div>
+            <h2>1. Understand</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum urna ac dolor aliquam, vitae ultrices diam accumsan.</p>
+        </div>
+        <div class="timeline-step">
+            <div class="icon"></div>
+            <h2>2. Define</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum urna ac dolor aliquam, vitae ultrices diam accumsan.</p>
+        </div>
+        <div class="timeline-step">
+            <div class="icon"></div>
+            <h2>3. Ideate</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum urna ac dolor aliquam, vitae ultrices diam accumsan.</p>
+        </div>
+        <div class="timeline-step">
+            <div class="icon"></div>
+            <h2>4. Prototype</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum urna ac dolor aliquam, vitae ultrices diam accumsan.</p>
+        </div>
+        <div class="timeline-step">
+            <div class="icon"></div>
+            <h2>5. Test</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum urna ac dolor aliquam, vitae ultrices diam accumsan.</p>
+        </div>
+    </div>
+</body>
+</html>

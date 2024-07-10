@@ -1573,7 +1573,7 @@ Common Style CSS
 
 .single-service:hover,
 .single-service.active { /* Add active class for mobile */
-    background-color: #818181; /* Change background color on hover */
+    background-color: #b9a8a3; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
 }
 
@@ -1812,75 +1812,149 @@ Common Style CSS
 /*----------------------------------
        8. Fun Factor Area CSS
 ------------------------------------*/
+
 .justify-content-between > .col {
 	width: auto;
 	flex: 0 0 auto;
 	text-align: center;
-}
-.col.fun-factor-wrap > h2 {
+  }
+  
+  .col.fun-factor-wrap > h2 {
 	margin-bottom: 0;
-}
-.fun-factor-wrap > h2 > span {
+  }
+  
+  .fun-factor-wrap > h2 > span {
 	font-size: 38px;
 	font-weight: 700;
-}
-.fun-factor-wrap > span {
+  }
+  
+  .fun-factor-wrap > span {
 	font-size: 18px;
 	font-weight: 700;
 	color: #303030;
 	font-family: Droid Serif;
 	text-transform: capitalize;
-}
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 767px) {
+	.fun-factor-area .row {
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+	.fun-factor-area .col {
+	  width: 50%;
+	  /* flex: 0 0 50%; */
+	}
+  }
+  
 /*----------------------------------
        9. Team Area CSS
 ------------------------------------*/
-.team-img {
-	border: 20px solid #303030;
-	flex: 0 0 245px;
+.section-title-wrapper {
+  display: block;
+  text-align: center;
+  margin-bottom: 70px;
 }
-.team-content {
-	margin-left: 50px;
+.heading{
+	text-align: center;
 }
-.team-content > h2 {
+
+.single-team-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.team-wrap {
+	padding: 50px 0;
+  }
+  .team {
+	justify-content: space-around;
+  }
+  .team1{
+	display: flex;
+	width: 100%;
+  }
+  .team2{
+	display: flex;
+  }
+  .single-team {
+	width: 100%; 
+	margin-bottom: 40px;
+	overflow: hidden;
+	
+  }
+  
+  .team-img {
+	position: relative;
+  }
+  
+  .team-img img {
+	width: 250px;
+	height: auto;
+	border: 10px solid #804b15;
+
+  }
+  
+  .team-content {
+	padding: 20px;
+  }
+  
+  .team-content > h2 {
 	font-size: 24px;
 	font-weight: 700;
 	margin-bottom: 10px;
-}
-.team-content > h5 {
+	color: #333; /* Darken text color for readability */
+  }
+  
+  .team-content > h5 {
 	font-size: 16px;
 	font-weight: 300;
-	font-family: 'Mada', sans-serif;
 	color: #606060;
-	margin-bottom: 20px;
-}
-.team-content > p {
+	margin-bottom: 15px;
+  }
+  
+  .team-content > p {
 	font-size: 16px;
 	color: #606060;
-	line-height: 25px;
-	margin-bottom: 25px;
-	font-weight: 400;
-	max-width: 250px;
-}
-.team-social-link > li {
+	line-height: 1.6;
+	margin-bottom: 15px;
+  }
+  .maincontent{
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .team-social-link {
+	margin-top: 10px;
+	text-align: center;
+  }
+  
+  .team-social-link > li {
 	display: inline-block;
-	list-style: none;
 	margin: 0 7px;
-}
-.team-social-link > li > a {
+  }
+  
+  .team-social-link > li > a {
+	display: block;
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
-	display: block;
 	border: 1px solid #303030;
-	text-align: center;
-	border-radius: 100%;
+	border-radius: 50%;
 	color: #303030;
-}
-.team-social-link > li > a:hover{
-    background-color: #b99044;
-    color: #fff;
-    border-color: #b99044;
-}
+	transition: all 0.3s ease;
+  }
+  
+  .team-social-link > li > a:hover {
+	background-color: #b99044;
+	color: #fff;
+	border-color: #b99044;
+  }
+  
+
+
 /*----------------------------------
        10. Our Working Area CSS
 ------------------------------------*/
@@ -1890,35 +1964,35 @@ Common Style CSS
 	border-radius: 100px;
 	margin-bottom: -65px;
 	border: 1px solid #ebebeb;
-}
-.single-working {
+  }
+  .single-working {
 	position: relative;
 	overflow: hidden;
-}
-.single-working::after {
+  }
+  .single-working::after {
 	position: absolute;
-	content: "\eb55";
+	content: "\eb55͢";
 	top: 50%;
 	right: 20px;
 	font-family: "Icofont";
 	font-size: 30px;
 	transform: translateY(-50%);
 	color: #585858;
-}
-.working-wrap .col-md-4:last-child .single-working::after{
-    display: none;
-}
-.working-icon {
+  }
+  .working-wrap .col-md-4:last-child .single-working::after {
+	display: none;
+  }
+  .working-icon {
 	flex: 0 0 45px;
 	margin-right: 30px;
-}
-.working-title > h2 {
+  }
+  .working-title > h2 {
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 30px;
-    margin: 0;
-}
-@media (max-width: 768px) {
+	margin: 0;
+  }
+  @media (max-width: 768px) {
 	.working-wrap {
 	  flex-direction: column;
 	  align-items: center;
@@ -1933,6 +2007,14 @@ Common Style CSS
 	.section-title p {
 	  font-size: 14px;
 	}
+	
+		.single-working::after {
+			content: "↓"; /* Remove content for mobile */
+		}
+	
+	
+	
+		
   }
   @media (max-width: 480px) {
 	.working-icon img {
@@ -1949,7 +2031,13 @@ Common Style CSS
 	.section-title p {
 	  font-size: 12px;
 	}
+	.single-working::after {
+		content: "↓"; /* Remove content for mobile */
+	}
+
   }
+  
+  
 /*----------------------------------
     11. Testimonial And Quote Area CSS
 ------------------------------------*/
@@ -2240,6 +2328,7 @@ body {
 	right: 5px;
 	top: 5px;
 }
+
 .widget-newslatter > form button:hover{
     background: #b99044; 
 }
@@ -2345,21 +2434,21 @@ body {
 	padding-left: 60px;
 }
 .blog-content h2::before {
-	content: "\f0ea";
-	font-family: 'Icofont';
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 9;
-	font-size: 20px;
-	height: 40px;
-	width: 40px;
-	background: #303030;
-	color: #fff;
-	text-align: center;
-	line-height: 38px;
-	border-radius: 100%;
-	text-indent: 0;
+    content: "\f0ea";
+    font-family: 'Icofont';
+    position: absolute;
+    left: -70px;
+    top: -5px;
+    z-index: 9;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    background: #303030;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 100%;
+    text-indent: 0;
 }
 .blog-wrapper > .blog-content > p {
 	margin-top: 15px;
@@ -4350,4 +4439,203 @@ figcaption {
 	  display: none;
 	}
   }
-  
+  /* info design section */
+  .infoDesignContainer {
+    position: relative;
+    background-image: url('img/about/wesley-tingey-RnfF8SXkzRw-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.infoDesign {
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+    color: white;
+    position: relative;
+    
+}
+
+.road {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    color: #000;
+    z-index: 1;
+}
+
+.road svg {
+    width: 100px;
+    height: 100%;
+    color: #000;
+}
+
+.step {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 8px;
+    z-index: 2;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+}
+
+.step h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.step p {
+    margin: 0;
+}
+
+.step .icon {
+    width: 280px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #002147;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.step.left {
+    left: -5%;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.step.right {
+    left: 55%;
+}
+
+.step.left .icon {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.step.right .icon {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .infoDesign {
+        width: 100%; /* Ensure the container takes full width on smaller screens */
+    }
+
+    .road svg {
+        width: 60px;
+    }
+
+    .step {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .step.left {
+        left: 10%;
+        text-align: left;
+        flex-direction: row;
+    }
+
+    .step.right {
+        left: 10%;
+    }
+
+    .step .icon {
+        margin-right: 20px;
+        margin-left: 0;
+    }
+}
+.bgi{
+	background-image: url('img/bg/bg2.jpg');
+	background-image: url('img/bg/bg2.jpg');
+    background-size: cover;
+	
+ 
+ 
+}
+.timeline {
+	
+	color: black;
+	width: 100%;
+	padding: 20px;
+	border-radius: 10px;
+	
+	position: relative;
+	overflow: hidden;
+}
+
+.timeline::before {
+	content: '';
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	width: 4px;
+	height: calc(100% - 70px);
+	background: white;
+	z-index: 1;
+}
+
+.timeline-header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.timeline-header h1 {
+	font-size: 3.5em;
+	margin-bottom: 10px;
+}
+
+.timeline-header .icon-computer {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 50%;
+	position: relative;
+}
+
+.timeline-step {
+	position: relative;
+	margin-bottom: 40px;
+	padding-left: 50px;
+}
+
+.timeline-step:last-child {
+	margin-bottom: 0;
+}
+
+.timeline-step .icon {
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border-radius: 50%;
+	position: absolute;
+	left: -15px;
+	top: 0;
+	z-index: 2;
+}
+
+.timeline-step h2 {
+	font-size: 1.2em;
+	margin: 0 0 10px;
+}
+
+.timeline-step p {
+	font-size: 1em;
+	margin: 0;
+}

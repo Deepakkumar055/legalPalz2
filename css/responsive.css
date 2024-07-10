@@ -585,6 +585,9 @@ blockquote {
 .working-wrap {
 	padding: 40px 0px;
 }
+.single-working::after {
+	content: "↓"; /* Remove content for mobile */
+}
 .working-title > h2 {
 	font-size: 16px;
 	line-height: 20px;
