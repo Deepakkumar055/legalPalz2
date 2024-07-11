@@ -1,83 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Firm Name - Legal Services for Startups</title>
-  
-  <style>
-    /* Basic styles for the page */
-  
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    h1, h2 {
-      color: #333;
-    }
-
-    h1 {
-      margin-top: 0;
-    }
-
-    
-
-    /* Styling for different sections */
-    .hero {
-    
-      padding: 40px 0;
-      text-align: center;
-    }
-
-    .columns {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .column {
-      width: 48%;
-    }
-
-   
-
-    
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .footer {
+            background-color: #272727;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .footer-section {
+            flex: 1 1 250px;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center; /* Center align content */
+        }
+        .footer-section h3 {
+            margin-top: 0;
+            color: aliceblue;
+        }
+        .footer form {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer form input[type="text"],
+        .footer form input[type="email"],
+        .footer form textarea,
+        .footer form button {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            background-color: #333;
+            border: white;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .footer form textarea {
+            resize: vertical;
+            height: 60px;
+        }
+        .footer form button {
+            background-color: grey;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .footer form button:hover {
+            background-color: darkgray;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* Center align list items */
+        }
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-lin {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-top: 10px; /* Adjusted margin for better spacing */
+        }
+        .footer .social-lin li {
+            margin: 0 10px; /* Increased margin for better separation */
+        }
+        .footer .social-lin a {
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        .footer .social-lin a:hover {
+            color: #4CAF50;
+            background-color: #555;
+        }
+        .footer .social-lin a i {
+            vertical-align: middle;
+        }
+        .footer .copyright {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+            color: #aaa;
+        }
+        @media (max-width: 767px) {
+            .footer-section {
+                flex: 1 1 100%; /* Take full width */
+                width: 100%;
+                margin: 0; /* Remove margin */
+                padding: 10px 0; /* Add padding */
+                text-align: center;
+            }
+            .footer .footer-section:nth-child(2),
+            .footer .footer-section:nth-child(3) {
+                flex-basis: 100%; /* Ensure full width for stacked columns */
+                max-width: 48%;
+                margin: 0; /* Remove margin */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer .footer-section:nth-child(2) ul,
+            .footer .footer-section:nth-child(3) ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+            }
+            .footer .footer-section:nth-child(3) ul {
+              
+                justify-content: center; /* Ensure social links are in one line */
+            }
+            .footer .footer-section:nth-child(3) .social-lin li {
+                margin: 0 8px; /* Adjusted margin for better spacing */
+            }
+            .footer .footer-section:nth-child(3) .social-lin a {
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        }
+    </style>
 </head>
 <body>
 
-<section class="hero">
-  <div class="container">
-    <h1>Welcome to [Your Firm Name]</h1>
-
-    <div class="columns">
-      <div class="column">
-        <div class="vision">
-          <h2>Our Vision</h2>
-          <p>At [Your Firm Name], we are dedicated to walking alongside new startups, providing clear, forward-thinking legal guidance to help them grow and succeed. We understand the challenges that come with starting a new business, and our goal is to make that journey smoother and more confident for you. We believe in empowering businesses to innovate and thrive, ensuring that your early stages are just the beginning of a long and successful journey. Count on us to be the partner you can rely on as you build your future.</p>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <form action="mail.php" method="POST" class="footer-contact-form">
+                <input name="first-name" placeholder="First Name" type="text" required />
+                <input name="last-name" placeholder="Last Name" type="text" required />
+                <input name="phone" placeholder="Phone" type="text" required />
+                <input name="email" placeholder="Email" type="email" required />
+                <textarea name="message" placeholder="Message" rows="2" required></textarea>
+                <button type="submit" class="btn">Send Now</button>
+            </form>
         </div>
-      </div>
-
-      <div class="column">
-        <div class="objective">
-          <h2>Our Objective</h2>
-          <p>Every client is unique, and we understand that. Our objective is to tailor our services to perfectly fit each client's specific needs, ensuring a personalized and effective solution every time.</p>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-      </div>
-    </div>
-
-
-
-   
-
-  </div>
-</section>
-
-<!-- Replace with your actual contact section or form -->
-
+        <div class="footer-section">
+            <h3>Important Links</h3>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <div class="social-lin">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </div>
+            </ul>
+        </div>
+        <div class="footer-section hide-on-mobile">
+            <h3>Contact Us</h3>
+            <p>Timing: </p>
+            <p>Email: info@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Your Company. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 </html>

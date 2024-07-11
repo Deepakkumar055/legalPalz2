@@ -49,9 +49,8 @@
       /* Basic styles for the page */
 
       .hero {
-        padding: 60px 0;
-        background-image: url("your-background-image.jpg"); /* Background image */
-        background-size: cover;
+       
+       
         background-position: center;
         color: #fff;
         text-align: center;
@@ -60,7 +59,7 @@
       }
 
       .hero::before {
-        content: "";
+       
         position: absolute;
         top: 0;
         left: 0;
@@ -98,9 +97,9 @@
 
       .column {
         width: 48%;
-        margin-bottom: 20px;
+        
         /* Semi-transparent background */
-        padding: 20px;
+       
         border-radius: 10px;
       }
 
@@ -136,7 +135,114 @@
       .icon2 {
         color: grey;
       }
+      .mobile-only {
+            display: none;
+        }
 
+        /* Show the section on mobile devices */
+        @media (max-width: 767px) {
+            .mobile-only {
+                display: block;
+                padding: 10px;
+                
+                border-radius: 10px;
+                overflow: hidden;
+            }
+        }
+
+        /* Styling for the cards */
+        .mobile-only .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-only .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-only .card p {
+            margin: 0 0 10px;
+        }
+
+        .mobile-only .card a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mobile-only .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adding background images */
+        .mobile-only .testimonial-card {
+            background-image: url('testimonial-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mobile-only .case-study-card {
+            background-image: url('case-study-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Gradient overlay for text readability */
+        .mobile-only .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            z-index: 0;
+        }
+
+        .mobile-only .card * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Adding some animation */
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(-1000px);
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.1) translateY(30px);
+            }
+            80% {
+                transform: scale(0.9) translateY(-10px);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .mobile-only .card {
+            animation: bounceIn 1s ease-in-out;
+        }
+
+        
       @media (max-width: 600px) {
         .column {
           width: 100%;
@@ -305,7 +411,7 @@
       </div>
       <!--Slider Area End-->
       <!-- Feature Area Start -->
-      <div class="feature-area pt-95 pb-90">
+      <div class="feature-area pt-95">
         <section class="hero">
           <div class="hero-container">
             <div class="columns">
@@ -399,8 +505,22 @@
         </div>
       </div>
       <!-- Feature Area End -->
+
+      <div class="mobile-only">
+        <div class="card testimonial-card">
+          <h3>Testimonials</h3>
+            <p><p>Excellent freelancer! Concise, to the point. Got the work done very well. Went the extra mile to draft a solid contract for us. Highly recommend Jasmeet!</p></p>
+            <a href="testimonials.html">Read More</a>
+        </div>
+        <div class="card case-study-card">
+            <h3>Case Study 1</h3>
+            
+            <a href="caseStudy1.html">Read More</a>
+        </div>
+    </div>
+    </div>
       <!-- Our Working Area Start -->
-      <div class="our-working-area bg-img pt-120 mb-65">
+      <div class="our-working-area bg-img pt-50 mb-65">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -638,117 +758,83 @@
       <!-- </div>
         </div>
       </div> -->
-
       <!--Latest Blog Area End-->
 
       <!--Footer Area Start-->
-      <footer style="background-color: #272727; padding-top: 50px">
+      <footer style="background-color: #272727; padding-top: px; color: #fff;">
         <div class="footer-container">
-          <div class="container">
-            <div class="row">
-              <!-- Contact Form -->
-              <div class="col-md-6 col-lg-3">
-                <div class="single-footer-widget mb-30">
-                  <h3 class="footer-title">Contact Us</h3>
-                  <form
-                    action="mail.php"
-                    method="POST"
-                    class="footer-contact-form"
-                  >
-                    <input
-                      name="first-name"
-                      placeholder="First Name"
-                      type="text"
-                      class="form-control mb-3"
-                    />
-                    <input
-                      name="last-name"
-                      placeholder="Last Name"
-                      type="text"
-                      class="form-control mb-3"
-                    />
-                    <input
-                      name="phone"
-                      placeholder="Phone"
-                      type="text"
-                      class="form-control mb-3"
-                    />
-                    <input
-                      name="email"
-                      placeholder="Email"
-                      type="email"
-                      class="form-control mb-3"
-                    />
-                    <textarea
-                      name="message"
-                      placeholder="Message"
-                      class="form-control mb-3"
-                      rows="4"
-                    ></textarea>
-                    <button type="submit" class="btn btn-p">
-                      Send Now <i class="icofont icofont-long-arrow-right"></i>
-                    </button>
-                  </form>
+            <div class="container">
+                <div class="footer-row">
+                    <!-- Contact Form -->
+                    <div class="footer-column">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <form action="mail.php" method="POST" class="footer-contact-form">
+                                <input name="first-name" placeholder="First Name" type="text" class="form-control mb-3" required />
+                                <input name="last-name" placeholder="Last Name" type="text" class="form-control mb-3" required />
+                                <input name="phone" placeholder="Phone" type="text" class="form-control mb-3" required />
+                                <input name="email" placeholder="Email" type="email" class="form-control mb-3" required />
+                                <textarea name="message" placeholder="Message" class="form-control mb-3" rows="4" required></textarea>
+                                <button type="submit" class="btn ">Send Now <i class="icofont icofont-long-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="footer-column">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">Quick Links</h3>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="service.html">Our Expertise</a></li>
+                                <li><a href="appointment.html">Case Studies</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Important Links -->
+                    <div class="footer-column">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">Important Links</h3>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Privacy Policy</a></li>
+                                <li><a href="contact.html">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="footer-column">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">Contact Info</h3>
+                            <p>129 Street Avenue, Alex Complex Central Street, New York</p>
+                            <p class="contact-info">
+                                <a href="#">+12546 658 987</a>
+                                <a href="#">+12548 789 987</a>
+                            </p>
+                            <p class="contact-info">
+                                <a href="#">info@yoursite.com</a>
+                                <a href="#">www.yoursite.com</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <!-- Quick Links -->
-              <div class="combine">
-                <div class="col-md-6 col-lg-3 quicksLinks">
-                  <div class="single-footer-widget mb-30">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About us</a></li>
-                      <li><a href="service.html">Our Expertise</a></li>
-                      <li><a href="appointment.html">Case Studies</a></li>
-                      <li><a href="testimonials.html">Testimonials</a></li>
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Important Links -->
-                <div class="col-md-6 col-lg-3 importantLinks">
-                  <div class="single-footer-widget mb-30">
-                    <h3 class="footer-title">Important Links</h3>
-                    <ul class="footer-news">
-                      <li><a href="index.html">Privacy Policy</a></li>
-                      <li><a href="contact.html">Term and Conditions</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Contact Info -->
-              <div class="col-md-6 col-lg-3">
-                <div class="single-footer-widget mb-30">
-                  <h3 class="footer-title">Contact Info</h3>
-                  <p>
-                    129 Street Avenue, Alex Complex Central Street, New York
-                  </p>
-                  <p class="contact-info">
-                    <a href="#">+12546 658 987</a>
-                    <a href="#">+12548 789 987</a>
-                  </p>
-                  <p class="contact-info">
-                    <a href="#">info@yoursite.com</a>
-                    <a href="#">www.yoursite.com</a>
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- Footer Bottom Area -->
-          <div class="footer-bottom-area pt-20 pb-20">
-            <div class="container text-center">
-              <p>
-                <span>&copy;</span> Copyright, 2024 All right reserved by
-                <a href="#">LegalPalz</a>
-              </p>
+            <!-- Footer Bottom Area -->
+            <div class="footer-bottom-area">
+                <div class="container text-center">
+                    <p>
+                        <span>&copy;</span> Copyright, 2024 All rights reserved by
+                        <a href="#">LegalPalz</a>
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
+    </footer>
+    
+    
+    
 
       <!--Footer Area End-->
     </div>
