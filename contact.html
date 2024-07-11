@@ -37,6 +37,430 @@
 	<link rel="stylesheet" href="css/responsive.css">
 	<!-- Modernizr Js -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<style>
+		/* Basic styles for the page */
+  
+		.hero {
+		 
+		 
+		  background-position: center;
+		  color: #fff;
+		  text-align: center;
+  
+		  position: relative;
+		}
+  
+		.hero::before {
+		 
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		}
+  
+		.hero-container {
+		  position: relative;
+		  z-index: 1;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		  padding: 20px;
+		}
+  
+		.hero-text {
+		  margin-bottom: 40px;
+		}
+  
+		.hero h1 {
+		  font-size: 3em;
+		  margin: 0;
+		}
+  
+		.hero-subtitle {
+		  font-size: 1.5em;
+		  color: #ddd;
+		}
+  
+		.columns {
+		  display: flex;
+		  justify-content: space-between;
+		  flex-wrap: wrap;
+		}
+  
+		.column {
+		  width: 48%;
+		  
+		  /* Semi-transparent background */
+		 
+		  border-radius: 10px;
+		}
+  
+		.vision,
+		.objective {
+		  padding: 10px;
+		}
+  
+		.column h2 {
+		  font-size: 1.8em;
+		  color: #333;
+		}
+  
+		.column p {
+		  text-align: justify;
+		  margin-bottom: 10px;
+		  line-height: 1.8;
+		  color: #555;
+		  font-size: 1.2em;
+		  font-weight: 500;
+		}
+  
+		.icon1,
+		.icon2 {
+		  margin-right: 10px;
+		  font-size: 1.2em;
+		}
+  
+		.icon1 {
+		  color: rgb(212, 212, 26);
+		}
+  
+		.icon2 {
+		  color: grey;
+		}
+		.mobile-only {
+			  display: none;
+		  }
+		  .mobile-only1 {
+			  display: none;
+		  }
+  
+		  /* Show the section on mobile devices */
+		  @media (max-width: 767px) {
+			  .mobile-only {
+				  display: block;
+				  padding: 10px;
+				  
+				  border-radius: 10px;
+				  overflow: hidden;
+			  }
+		  }
+  
+		  /* Styling for the cards */
+		  .mobile-only .card {
+			  background-color: white;
+			  border: 1px solid #ddd;
+			  padding: 15px;
+			  margin: 10px 0;
+			  height: auto;
+			  border-radius: 10px;
+			  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			  transition: transform 0.3s ease, box-shadow 0.3s ease;
+			  position: relative;
+			  overflow: hidden;
+		  }
+  
+		  .mobile-only .card:hover {
+			  transform: translateY(-5px);
+			  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		  }
+  
+		  .mobile-only .card p {
+			  margin: 0 0 10px;
+		  }
+  
+		  .mobile-only .card a {
+			  color: #333;
+			  text-decoration: none;
+			  font-weight: bold;
+			  position: relative;
+			  z-index: 1;
+		  }
+  
+		  .mobile-only .card a:hover {
+			  text-decoration: underline;
+		  }
+  
+		  /* Adding background images */
+		  .mobile-only .testimonial-card {
+			  background-image: url('testimonial-bg.jpg');
+			  background-size: cover;
+			  background-position: center;
+		  }
+  
+		  .mobile-only .case-study-card {
+			  background-image: url('case-study-bg.jpg');
+			  background-size: cover;
+			  background-position: center;
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: center;
+			  align-items: center;
+			  text-align: center;
+		  }
+  
+		  /* Gradient overlay for text readability */
+		  .mobile-only .card::before {
+			  content: "";
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100%;
+			  border-radius: 10px;
+			  z-index: 0;
+		  }
+  
+		  .mobile-only .card * {
+			  position: relative;
+			  z-index: 1;
+		  }
+  
+		  /* Adding some animation */
+		  @keyframes bounceIn {
+			  0% {
+				  opacity: 0;
+				  transform: scale(0.3) translateY(-1000px);
+			  }
+			  60% {
+				  opacity: 1;
+				  transform: scale(1.1) translateY(30px);
+			  }
+			  80% {
+				  transform: scale(0.9) translateY(-10px);
+			  }
+			  100% {
+				  transform: scale(1) translateY(0);
+			  }
+		  }
+  
+		  .mobile-only .card {
+			  animation: bounceIn 1s ease-in-out;
+		  }
+  
+		  
+		@media (max-width: 600px) {
+		  .column {
+			width: 100%;
+		  }
+		}
+  
+		/* footer */
+  
+		.footer {
+			  background-color: #272727;
+			  color: #fff;
+			  padding: 20px;
+			  display: flex;
+			  flex-wrap: wrap;
+			  justify-content: space-between;
+			  text-align: left;
+		  }
+		  .footer-section {
+			  flex: 1 1 250px;
+			  padding: 10px;
+			  margin: 10px;
+			  box-sizing: border-box;
+			  text-align: center; /* Center align content */
+		  }
+		  .footer-section h3 {
+			  margin-top: 0;
+			  color: aliceblue;
+		  }
+		  .footer form {
+			  display: flex;
+			  flex-direction: column;
+		  }
+		  .footer form input[type="text"],
+		  .footer form input[type="email"],
+		  .footer form textarea,
+		  .footer form button {
+			  padding: 8px;
+			  margin-bottom: 10px;
+			  border: none;
+			  border-radius: 4px;
+			  width: 100%;
+			  background-color: #333;
+			  border: white;
+			  box-sizing: border-box;
+			  font-size: 14px;
+		  }
+		  .footer form textarea {
+			  resize: vertical;
+			  height: 60px;
+		  }
+		  .footer form button {
+			  background-color: grey;
+			  color: white;
+			  cursor: pointer;
+			  text-transform: uppercase;
+			  font-size: 14px;
+		  }
+		  .footer form button:hover {
+			  background-color: darkgray;
+		  }
+		  .footer ul {
+			  list-style: none;
+			  padding: 0;
+			  text-align: center; /* Center align list items */
+		  }
+		  .footer ul li {
+			  margin-bottom: 8px;
+		  }
+		  .footer a {
+			  color: white;
+			  text-decoration: none;
+		  }
+		  .footer a:hover {
+			  text-decoration: underline;
+		  }
+		  .footer .social-lin {
+			  display: flex;
+			  justify-content: center;
+			  padding: 0;
+			  margin-top: 10px; /* Adjusted margin for better spacing */
+		  }
+		  .footer .social-lin li {
+			  margin: 0 10px; /* Increased margin for better separation */
+		  }
+		  .footer .social-lin a {
+			  color: #fff;
+			  font-size: 18px;
+			  display: inline-block;
+			  width: 40px;
+			  height: 40px;
+			  line-height: 40px;
+			  text-align: center;
+			  border-radius: 50%;
+			  background-color: #333;
+		  }
+		  .footer .social-lin a:hover {
+			  color: #4CAF50;
+			  background-color: #555;
+		  }
+		  .footer .social-lin a i {
+			  vertical-align: middle;
+		  }
+		  .footer .copyright {
+			  text-align: center;
+			  margin-top: 20px;
+			  width: 100%;
+			  color: #aaa;
+		  }
+		  @media (max-width: 767px) {
+			  .footer-section {
+				  flex: 1 1 100%; /* Take full width */
+				  width: 100%;
+				  margin: 0; /* Remove margin */
+				  padding: 10px 0; /* Add padding */
+				  text-align: center;
+			  }
+			  .footer .footer-section:nth-child(2),
+			  .footer .footer-section:nth-child(3) {
+				  flex-basis: 100%; /* Ensure full width for stacked columns */
+				  max-width: 48%;
+				  margin: 0; /* Remove margin */
+				  display: flex;
+				  flex-direction: column;
+				  align-items: center;
+			  }
+			  .footer .footer-section:nth-child(2) ul,
+			  .footer .footer-section:nth-child(3) ul {
+				  display: flex;
+				  flex-direction: column;
+				  align-items: center;
+				  padding-left: 0;
+			  }
+			  .footer .footer-section:nth-child(3) ul {
+				
+				  justify-content: center; /* Ensure social links are in one line */
+			  }
+			  .footer .footer-section:nth-child(3) .social-lin li {
+				  margin: 0 8px; /* Adjusted margin for better spacing */
+			  }
+			  .footer .footer-section:nth-child(3) .social-lin a {
+			  color: #fff;
+			  font-size: 18px;
+			  display: inline-block;
+			  width: 30px;
+			  height: 30px;
+			  line-height: 30px;
+			  text-align: center;
+			  border-radius: 50%;
+			  background-color: #333;
+		  }
+		  }
+		  /* footer end */
+  
+		  .justify-content-between > .col {
+	width: auto;
+	flex: 0 0 auto;
+	text-align: center;
+  }
+  
+  .col.fun-factor-wrap > h2 {
+	margin-bottom: 0;
+  }
+  
+  .fun-factor-wrap > h2 > span {
+	font-size: 38px;
+	font-weight: 700;
+  }
+  
+  .fun-factor-wrap > span {
+	font-size: 18px;
+	font-weight: 700;
+	color: #303030;
+	font-family: Droid Serif;
+	text-transform: capitalize;
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 767px) {
+	.fun-factor-area .row {
+	  display: flex;
+	  flex-direction: column;
+	}
+	.fun-factor-group {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  margin-bottom: 20px; /* Adjust margin as needed */
+	}
+	.fun-factor-group .col {
+	  width: 50%;
+	  text-align: center;
+	}
+	.fun-factor-wrap {
+	  box-sizing: border-box;
+	  padding: 10px;
+	}
+  }
+  
+  /* Media query for laptop view */
+  @media (min-width: 768px) and (max-width: 1199px) {
+	.fun-factor-area .row {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	}
+	.fun-factor-group {
+	  display: flex;
+	  flex-direction: row;
+	  flex: 1 1 auto;
+	  width: 100%;
+	}
+	.fun-factor-group .col {
+	  width: auto;
+	  flex: 1 1 auto;
+	  max-width: none;
+	}
+	.fun-factor-wrap {
+	  padding: 0 15px;
+	}
+  }
+  
+	  </style>
 </head>
 <body>
 	<!--[if lt IE 8]>
@@ -202,7 +626,7 @@
 				<div class="col-md-7 contact-form">
 				  <div class="contact-form-title">
 					<h3>Get in Touch </h3>
-					<p>Terms & Conditions deleniti atque corrupti sdolores et quas molestias cepturi sint eca itate non similique sunt in culpa modi tempora incidunt obtain pain</p>
+					<p>Reach out for expert legal advice on tech law, data privacy, company law, civil drafting, real estate, and consumer law. We're here to help!</p>
 				  </div>
 				  <form id="contact-form" action="mail.php" method="post">
 					<div class="row">
@@ -247,78 +671,53 @@
 		<!--Contact Us Area End-->
 		
 		<!--Footer Area Start-->
-		<footer style="background-color: #272727; padding-top: 50px">
-			<div class="footer-container">
-				<div class="container">
-					<div class="row">
-						<!-- Contact Form -->
-						<div class="col-md-6 col-lg-3">
-							<div class="single-footer-widget mb-30">
-								<h3 class="footer-title">Contact Us</h3>
-								<form action="mail.php" method="POST" class="footer-contact-form">
-									<input name="first-name" placeholder="First Name" type="text" class="form-control mb-3" />
-									<input name="last-name" placeholder="Last Name" type="text" class="form-control mb-3" />
-									<input name="phone" placeholder="Phone" type="text" class="form-control mb-3" />
-									<input name="email" placeholder="Email" type="email" class="form-control mb-3" />
-									<textarea name="message" placeholder="Message" class="form-control mb-3" rows="4"></textarea>
-									<button type="submit" class="btn btn-p">Send Now <i class="icofont icofont-long-arrow-right"></i></button>
-								</form>
-							</div>
-						</div>
-						<!-- Quick Links -->
-						 <div class="combine">
-						  <div class="col-md-6 col-lg-3 quicksLinks">
-							<div class="single-footer-widget mb-30">
-								<h3 class="footer-title">Quick Links</h3>
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="service.html">Our Expertise</a></li>
-									<li><a href="appointment.html">Case Studies</a></li>
-									<li><a href="testimonials.html">Testimonials</a></li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-							</div>
-						</div>
-						<!-- Important Links -->
-						<div class="col-md-6 col-lg-3 importantLinks">
-							<div class="single-footer-widget mb-30">
-								<h3 class="footer-title">Important Links</h3>
-								<ul class="footer-news">
-									<li><a href="index.html">Privacy Policy</a></li>
-									<li><a href="contact.html">Term and Conditions</a></li>
-								</ul>
-							</div>
-						</div>
-						 </div>
+		<footer class="footer">
+			<div class="footer-section">
+				<h3>Contact Us</h3>
+				<form action="mail.php" method="POST" class="footer-contact-form">
+					<input name="first-name" placeholder="First Name" type="text" required />
+					<input name="last-name" placeholder="Last Name" type="text" required />
+					<input name="phone" placeholder="Phone" type="text" required />
+					<input name="email" placeholder="Email" type="email" required />
+					<textarea name="message" placeholder="Message" rows="2" required></textarea>
+					<button type="submit" class="btn">Send Now -></button>
+				</form>
+			</div>
+			<div class="footer-section">
+				<h3>Quick Links</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Our Expertise</a></li>
+					<li><a href="#">Case Studies</a></li>
+					<li><a href="#">Tesmonials</a></li>
+					<li><a href="#">Blogs</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>Important Links</h3>
+				<ul>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms of Service</a></li>
+					<div class="social-lin">
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 						
-						<!-- Contact Info -->
-						<div class="col-md-6 col-lg-3">
-							<div class="single-footer-widget mb-30">
-								<h3 class="footer-title">Contact Info</h3>
-								<p>129 Street Avenue, Alex Complex Central Street, New York</p>
-								<p class="contact-info">
-									<a href="#">+12546 658 987</a>
-									<a href="#">+12548 789 987</a>
-								</p>
-								<p class="contact-info">
-									<a href="#">info@yoursite.com</a>
-									<a href="#">www.yoursite.com</a>
-								</p>
-							</div>
-						</div>
 					</div>
-				</div>
-				<!-- Footer Bottom Area -->
-				<div class="footer-bottom-area pt-20 pb-20">
-					<div class="container text-center">
-						<p>
-							<span>&copy;</span> Copyright, 2024 All right reserved by
-							<a href="#">LegalPalz</a>
-						</p>
-					</div>
-				</div>
+				</ul>
+			</div>
+			<div class="footer-section hide-on-mobile">
+				<h3>Contact Us</h3>
+				<p>Timing: 9:00 AM - 5:00 PM</p>
+				<p>Email: info@example.com</p>
+				
+			</div>
+			<div class="copyright">
+			  <p>
+				<span>&copy;</span> Copyright, 2024 All right reserved by
+				<a href="#">LegalPalz</a>
+			</p>
 			</div>
 		</footer>
 		<!--Footer Area End-->

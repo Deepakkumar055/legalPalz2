@@ -1642,6 +1642,7 @@ Common Style CSS
 	line-height: 25px;
 	color: #606060;
 	max-width: 360px;
+	
 }
 /*----------------------------
     7.2 Single Service Page CSS
@@ -1843,7 +1844,21 @@ Common Style CSS
 	}
 	.fun-factor-area .col {
 	  width: 50%;
-	  /* flex: 0 0 50%; */
+	  text-align: center;
+	  flex: 0 0 50%;
+	}
+	.fun-factor-wrap {
+	  box-sizing: border-box;
+	  padding: 10px;
+	}
+  }
+  .hide-on-laptop {
+	display: none;
+  } 
+  
+  @media (max-width: 767px) {
+	.hide-on-laptop {
+	  display: block;
 	}
   }
   
@@ -1999,6 +2014,9 @@ Common Style CSS
 	line-height: 30px;
 	margin: 0;
   }
+  .size{
+	font-size: 25px;
+  }
   @media (max-width: 768px) {
 	.working-wrap {
 	  flex-direction: column;
@@ -2018,9 +2036,10 @@ Common Style CSS
 	.single-working {
 		margin-bottom: 30px;
 	  }
-    .single-working::after {
-        content: "\2193"; /* Unicode down arrow character for mobile */
-    }
+	  .single-working::after {
+		content: ""; /* Remove the arrow content on mobile screens */
+	  }
+   
   }
   @media (max-width: 480px) {
 	.working-icon img {
@@ -2038,10 +2057,7 @@ Common Style CSS
 	  font-size: 12px;
 	}
 	
-    .single-working::after {
-        content: "\2193";
-		color: #000; /* Change arrow to point downwards for mobile */
-    }
+  
   }
   
   

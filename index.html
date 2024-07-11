@@ -138,6 +138,9 @@
       .mobile-only {
             display: none;
         }
+        .mobile-only1 {
+            display: none;
+        }
 
         /* Show the section on mobile devices */
         @media (max-width: 767px) {
@@ -394,6 +397,77 @@
             background-color: #333;
         }
         }
+        /* footer end */
+
+        .justify-content-between > .col {
+  width: auto;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.col.fun-factor-wrap > h2 {
+  margin-bottom: 0;
+}
+
+.fun-factor-wrap > h2 > span {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.fun-factor-wrap > span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #303030;
+  font-family: Droid Serif;
+  text-transform: capitalize;
+}
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+  .fun-factor-area .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .fun-factor-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+  .fun-factor-group .col {
+    width: 50%;
+    text-align: center;
+  }
+  .fun-factor-wrap {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
+
+/* Media query for laptop view */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .fun-factor-area .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .fun-factor-group {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .fun-factor-group .col {
+    width: auto;
+    flex: 1 1 auto;
+    max-width: none;
+  }
+  .fun-factor-wrap {
+    padding: 0 15px;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -534,7 +608,7 @@
                       With thorough research and forward-thinking strategies, we partner with you to empower your success.
                     </p>
                   </div>
-                  <a href="about.html">Known More...</a>
+                  <a href="about.html">Know More...</a>
                 </div>
               </div>
               <div class="col-md-4 col-xl-6">
@@ -665,7 +739,7 @@
     </div>
     </div>
       <!-- Our Working Area Start -->
-      <div class="our-working-area bg-img pt-50 mb-65">
+      <div class="our-working-area bg-img pt-50 pb-50">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -706,6 +780,10 @@
                     </div>
                   </div>
                   <!-- Single Working End -->
+                  <!-- Arrow for Mobile View -->
+                  <div class=" arrow-desktop col-12 arrow-mobile d-md-none size text-center">
+                    &#x2193;
+                  </div>
                   <!-- Single Working Start -->
                   <div class="col-md-4">
                     <div class="single-working d-flex flex-wrap">
@@ -724,6 +802,10 @@
                     </div>
                   </div>
                   <!-- Single Working End -->
+                  <!-- Arrow for Mobile View -->
+                  <div class=" arrow-desktopcol-12 arrow-mobile d-md-none size text-center">
+                    &#x2193;
+                  </div>
                   <!-- Single Working Start -->
                   <div class="col-md-4">
                     <div class="single-working d-flex flex-wrap">
@@ -749,9 +831,8 @@
         </div>
       </div>
       <!-- Our Working Area End -->
-
-      <!--Fun Factor Area Start-->
-      <div class="fun-factor-area bg-img pt-120 pb-90 " >
+       <!-- Fun Factor Area start -->
+      <div class="fun-factor-area bg-img pt-120 pb-90 hide-on-mobile">
         <div class="container">
           <div class="row justify-content-between">
             <!--Single Funfactor Area Start-->
@@ -762,7 +843,7 @@
             <!--Single Funfactor Area End-->
             <!--Single Funfactor Area Start-->
             <div class="col fun-factor-wrap">
-              <h2><span class="counter">110</span> +</h2>
+              <h2><span class="counter">110</span>+</h2>
               <span>Indian clients served</span>
             </div>
             <!--Single Funfactor Area End-->
@@ -772,7 +853,6 @@
               <span>Foreign clients served</span>
             </div>
             <!--Single Funfactor Area End-->
-
             <!--Single Funfactor Area Start-->
             <div class="col fun-factor-wrap">
               <h2><span class="counter">470</span>+</h2>
@@ -783,6 +863,45 @@
         </div>
       </div>
       <!--Fun Factor Area End-->
+       <!-- fun factor2 starts -->
+      <div class="fun-factor-area bg-img pt-150 pb-90  hide-on-laptop ">
+        <div class="container">
+          <div class="row">
+            <!-- Group 1 for larger screens -->
+            <div class="fun-factor-group">
+              <!--Single Funfactor Area Start-->
+              <div class="col fun-factor-wrap">
+                <h2><span class="counter">480</span>+</h2>
+                <span>Drafted Contracts</span>
+              </div>
+              <!--Single Funfactor Area End-->
+              <!--Single Funfactor Area Start-->
+              <div class="col fun-factor-wrap">
+                <h2><span class="counter">110</span>+</h2>
+                <span>Indian clients served</span>
+              </div>
+              <!--Single Funfactor Area End-->
+            </div>
+      
+            <!-- Group 2 for larger screens -->
+            <div class="fun-factor-group">
+              <!--Single Funfactor Area Start-->
+              <div class="col fun-factor-wrap">
+                <h2><span class="counter">250</span>+</h2>
+                <span>Foreign clients served</span>
+              </div>
+              <!--Single Funfactor Area End-->
+              <!--Single Funfactor Area Start-->
+              <div class="col fun-factor-wrap">
+                <h2><span class="counter">470</span>+</h2>
+                <span>Cup Coffee</span>
+              </div>
+              <!--Single Funfactor Area End-->
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- funfactor2 ends -->
 
       <!--Latest Blog Area Start-->
       <!-- <div class="latest-blog-area bg-img pb-85">
@@ -937,7 +1056,7 @@
                 <li><a href="#">Terms of Service</a></li>
                 <div class="social-lin">
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     
                 </div>
             </ul>

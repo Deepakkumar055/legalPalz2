@@ -1,208 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Design</title>
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .footer {
-            background-color: #272727;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            text-align: left;
-        }
-        .footer-section {
-            flex: 1 1 250px;
-            padding: 10px;
-            margin: 10px;
-            box-sizing: border-box;
-            text-align: center; /* Center align content */
-        }
-        .footer-section h3 {
-            margin-top: 0;
-            color: aliceblue;
-        }
-        .footer form {
-            display: flex;
-            flex-direction: column;
-        }
-        .footer form input[type="text"],
-        .footer form input[type="email"],
-        .footer form textarea,
-        .footer form button {
-            padding: 8px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 4px;
-            width: 100%;
-            background-color: #333;
-            border: white;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-        .footer form textarea {
-            resize: vertical;
-            height: 60px;
-        }
-        .footer form button {
-            background-color: grey;
-            color: white;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-        .footer form button:hover {
-            background-color: darkgray;
-        }
-        .footer ul {
-            list-style: none;
-            padding: 0;
-            text-align: center; /* Center align list items */
-        }
-        .footer ul li {
-            margin-bottom: 8px;
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .footer .social-lin {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin-top: 10px; /* Adjusted margin for better spacing */
-        }
-        .footer .social-lin li {
-            margin: 0 10px; /* Increased margin for better separation */
-        }
-        .footer .social-lin a {
-            color: #fff;
-            font-size: 18px;
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            border-radius: 50%;
-            background-color: #333;
-        }
-        .footer .social-lin a:hover {
-            color: #4CAF50;
-            background-color: #555;
-        }
-        .footer .social-lin a i {
-            vertical-align: middle;
-        }
-        .footer .copyright {
-            text-align: center;
-            margin-top: 20px;
-            width: 100%;
-            color: #aaa;
-        }
-        @media (max-width: 767px) {
-            .footer-section {
-                flex: 1 1 100%; /* Take full width */
-                width: 100%;
-                margin: 0; /* Remove margin */
-                padding: 10px 0; /* Add padding */
-                text-align: center;
-            }
-            .footer .footer-section:nth-child(2),
-            .footer .footer-section:nth-child(3) {
-                flex-basis: 100%; /* Ensure full width for stacked columns */
-                max-width: 48%;
-                margin: 0; /* Remove margin */
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .footer .footer-section:nth-child(2) ul,
-            .footer .footer-section:nth-child(3) ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-left: 0;
-            }
-            .footer .footer-section:nth-child(3) ul {
-              
-                justify-content: center; /* Ensure social links are in one line */
-            }
-            .footer .footer-section:nth-child(3) .social-lin li {
-                margin: 0 8px; /* Adjusted margin for better spacing */
-            }
-            .footer .footer-section:nth-child(3) .social-lin a {
-            color: #fff;
-            font-size: 18px;
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            border-radius: 50%;
-            background-color: #333;
-        }
-        }
-    </style>
-</head>
-<body>
-
-    <footer class="footer">
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <form action="mail.php" method="POST" class="footer-contact-form">
-                <input name="first-name" placeholder="First Name" type="text" required />
-                <input name="last-name" placeholder="Last Name" type="text" required />
-                <input name="phone" placeholder="Phone" type="text" required />
-                <input name="email" placeholder="Email" type="email" required />
-                <textarea name="message" placeholder="Message" rows="2" required></textarea>
-                <button type="submit" class="btn">Send Now -></button>
-            </form>
+<div class="our-working-area bg-img pt-50 pb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Section Title Start -->
+          <div class="section-title text-center mb-70">
+            <img src="img/icon/icon1.png" alt="Icon" />
+            <h4>Working Process</h4>
+            <h2>Our Working Way</h2>
+            <p>
+              Our process involves client consultation, detailed planning,
+              seamless design, precise content creation, rigorous testing,
+              and ongoing support.
+            </p>
+          </div>
+          <!-- Section Title End -->
         </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Important Links</h3>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <div class="social-lin">
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="working-wrap">
+            <div class="row">
+              <!-- Single Working Start -->
+              <div class="col-md-4">
+                <div class="single-working d-flex flex-wrap">
+                  <div class="working-icon">
+                    <img
+                      src="img/icon/icon6.png"
+                      alt="client intake and consultation"
+                    />
+                  </div>
+                  <div class="working-title">
+                    <h2>
+                      Client
+                      <br />
+                      Consultation
+                    </h2>
+                  </div>
                 </div>
-            </ul>
+              </div>
+              <!-- Single Working End -->
+              <!-- Arrow for Mobile View -->
+              <div class=" arrow-desktop col-12 arrow-mobile d-md-none size text-center">
+                &#x2193;
+              </div>
+              <!-- Single Working Start -->
+              <div class="col-md-4">
+                <div class="single-working d-flex flex-wrap">
+                  <div class="working-icon">
+                    <img
+                      src="img/icon/icon7.png"
+                      alt="Legal research and drafting"
+                    />
+                  </div>
+                  <div class="working-title">
+                    <h2>
+                      Legal research <br />
+                      and drafting
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Working End -->
+              <!-- Arrow for Mobile View -->
+              <div class=" arrow-desktopcol-12 arrow-mobile d-md-none size text-center">
+                &#x2193;
+              </div>
+              <!-- Single Working Start -->
+              <div class="col-md-4">
+                <div class="single-working d-flex flex-wrap">
+                  <div class="working-icon">
+                    <img
+                      src="img/icon/icon8.png"
+                      alt="Review, finalization and delivery"
+                    />
+                  </div>
+                  <div class="working-title">
+                    <h2>
+                      Review<br />
+                      and delivery
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Working End -->
+            </div>
+          </div>
         </div>
-        <div class="footer-section hide-on-mobile">
-            <h3>Contact Us</h3>
-            <p>Timing: </p>
-            <p>Email: info@example.com</p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
-        <div class="copyright">
-            &copy; 2024 Your Company. All rights reserved.
-        </div>
-    </footer>
-
-</body>
-</html>
+      </div>
+    </div>
+  </div>

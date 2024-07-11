@@ -422,7 +422,7 @@ blockquote {
 	padding-left: 15px;
 }
 .single-working::after {
-	content: "\2193";
+	
 }
     
 }
@@ -586,9 +586,8 @@ blockquote {
 	padding: 40px 0px;
 }
 .single-working::after {
-	content: "\2193";
-	top: 75px;
-	right: 110px;
+	
+	
 }
 .working-title > h2 {
 	font-size: 16px;
