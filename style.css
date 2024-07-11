@@ -1097,6 +1097,7 @@ Common Style CSS
        3. Slider Area CSS
 ------------------------------------*/
 .single-slider {
+	background-image: url(img/bg/bg.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -1131,6 +1132,13 @@ Common Style CSS
 	text-decoration: underline;
 	margin-top: 60px;
 	display: inline-block;
+}
+@media (max-width: 768px) {
+    .single-slider {
+		background-image: none !important;
+		background-color: #333 !important;
+	}
+    
 }
 /*----------------------------------
        4. Feature Area CSS
@@ -1858,7 +1866,7 @@ Common Style CSS
 }
 
 .team-wrap {
-	padding: 50px 0;
+	padding: 0px 0;
   }
   .team {
 	justify-content: space-around;
@@ -1918,6 +1926,7 @@ Common Style CSS
   }
   
   .team-social-link {
+	display: flex;
 	margin-top: 10px;
 	text-align: center;
   }
@@ -1943,6 +1952,12 @@ Common Style CSS
 	color: #fff;
 	border-color: #b99044;
   }
+  @media (max-width: 767px) {
+    .fun-factor-area {
+      padding-top: 55px;
+	   padding-bottom: 38px;
+    }
+}
   
 
 
@@ -1960,16 +1975,17 @@ Common Style CSS
 	position: relative;
 	overflow: hidden;
   }
+
   .single-working::after {
-	position: absolute;
-	content: "\eb55͢";
-	top: 50%;
-	right: 20px;
-	font-family: "Icofont";
-	font-size: 30px;
-	transform: translateY(-50%);
-	color: #585858;
-  }
+    position: absolute;
+    content: "\2192"; /* Unicode arrow character */
+    top: 50%;
+    right: 20px;
+    font-family: "Icofont";
+    font-size: 30px;
+    transform: translateY(-50%);
+    color: #585858;
+}
   .working-wrap .col-md-4:last-child .single-working::after {
 	display: none;
   }
@@ -1987,6 +2003,7 @@ Common Style CSS
 	.working-wrap {
 	  flex-direction: column;
 	  align-items: center;
+	  padding: 30px 15px;
 	}
 	.single-working {
 	  width: 100%;
@@ -1998,15 +2015,12 @@ Common Style CSS
 	.section-title p {
 	  font-size: 14px;
 	}
-
-	.single-working::after {
-		content: "↓"; /* Change to arrow for mobile */
-	}
-	
-	
-	
-	
-		
+	.single-working {
+		margin-bottom: 30px;
+	  }
+    .single-working::after {
+        content: "\2193"; /* Unicode down arrow character for mobile */
+    }
   }
   @media (max-width: 480px) {
 	.working-icon img {
@@ -2023,10 +2037,11 @@ Common Style CSS
 	.section-title p {
 	  font-size: 12px;
 	}
-	.single-working::after {
-		content: "↓"; /* Change to arrow for mobile */
-	}
-
+	
+    .single-working::after {
+        content: "\2193";
+		color: #000; /* Change arrow to point downwards for mobile */
+    }
   }
   
   
@@ -2435,7 +2450,7 @@ body {
     font-size: 20px;
     height: 40px;
     width: 40px;
-    background: #303030;
+    background: #804b15;
     color: #fff;
     text-align: center;
     line-height: 38px;
@@ -3366,109 +3381,149 @@ h4.small-title {
 }
 /* 14. Footer Area CSS */
 ------------------------------------*/
-/*----------------------------------
-    14.1 Footer Top Area CSS
-------------------------------------*/
-/* Footer Container */
-.footer-container {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #272727;
-    padding-top: 50px;
+.footer {
+	background-color: #272727;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: left;
 }
-
-/* Footer Title */
-.footer-title {
-    font-size: 18px;
-    color: #e2e2e2;
-    font-weight: 700;
-    text-transform: capitalize;
-    margin-bottom: 15px;
+.footer-section {
+	flex: 1 1 250px;
+	padding: 10px;
+	margin: 10px;
+	box-sizing: border-box;
+	text-align: center; /* Center align content */
 }
-
-/* Single Footer Widget */
-.single-footer-widget {
-    margin-bottom: 30px;
+.footer-section h3 {
+	margin-top: 0;
+	color: aliceblue;
 }
-
-/* Contact Form */
-.single-footer-widget form {
-    max-width: 300px;
+.footer form {
+	display: flex;
+	flex-direction: column;
 }
-
-.single-footer-widget input,
-.single-footer-widget textarea {
-    background-color: transparent;
-    border: 1px solid #555555;
-    font-size: 14px;
-    color: #818181;
-    line-height: 25px;
-    font-weight: 300;
-    height: 40px;
-    padding: 0 15px;
-    margin-bottom: 10px;
-    width: 100%;
+.footer form input[type="text"],
+.footer form input[type="email"],
+.footer form textarea,
+.footer form button {
+	padding: 8px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+	background-color: #333;
+	border: white;
+	box-sizing: border-box;
+	font-size: 14px;
 }
-
-.single-footer-widget input::placeholder,
-.single-footer-widget textarea::placeholder {
-    color: #636363;
+.footer form textarea {
+	resize: vertical;
+	height: 60px;
 }
-.btn-p{
+.footer form button {
 	background-color: grey;
+	color: white;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 14px;
 }
-
-.btn-p:hover{
+.footer form button:hover {
 	background-color: darkgray;
 }
-.footer-menu {
-	padding-left: 55px;
+.footer ul {
+	list-style: none;
+	padding: 0;
+	text-align: center; /* Center align list items */
 }
-.footer-title {
-	font-size: 22px;
-	color: #e2e2e2;
-	font-weight: 700;
-	text-transform: capitalize;
-	margin-bottom: 30px;
+.footer ul li {
+	margin-bottom: 8px;
 }
-
-
-
-
-
-.single-footer-widget > p.contact-info > a {
-	font-size: 16px;
-	line-height: 25px;
-	color: #a8a8a8;
-	display: block;
+.footer a {
+	color: white;
+	text-decoration: none;
 }
-.single-footer-widget > p.contact-info > a:hover{
-    color: #fff;
+.footer a:hover {
+	text-decoration: underline;
 }
-/*----------------------------------
-    14.2 Footer Bottom Area CSS
-------------------------------------*/
-.footer-bottom-area {
-	background-color: #272727;
+.footer .social-lin {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin-top: 10px; /* Adjusted margin for better spacing */
 }
-.footer-bottom-area p {
-	font-size: 14px;
-	color: #e2e2e2;
-	line-height: 24px;
-	margin: 0;
-	font-weight: 400;
+.footer .social-lin li {
+	margin: 0 10px; /* Increased margin for better separation */
 }
-.footer-bottom-area p span {
-	color: #b99044;
+.footer .social-lin a {
+	color: #fff;
+	font-size: 18px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #333;
 }
-.footer-bottom-area p a{
-    color: #b99044;
+.footer .social-lin a:hover {
+	color: #4CAF50;
+	background-color: #555;
 }
-
-
+.footer .social-lin a i {
+	vertical-align: middle;
+}
+.footer .copyright {
+	text-align: center;
+	margin-top: 20px;
+	width: 100%;
+	color: #aaa;
+}
+@media (max-width: 767px) {
+	.footer-section {
+		flex: 1 1 100%; /* Take full width */
+		width: 100%;
+		margin: 0; /* Remove margin */
+		padding: 10px 0; /* Add padding */
+		text-align: center;
+	}
+	.footer .footer-section:nth-child(2),
+	.footer .footer-section:nth-child(3) {
+		flex-basis: 100%; /* Ensure full width for stacked columns */
+		max-width: 48%;
+		margin: 0; /* Remove margin */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer .footer-section:nth-child(2) ul,
+	.footer .footer-section:nth-child(3) ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-left: 0;
+	}
+	.footer .footer-section:nth-child(3) ul {
+	  
+		justify-content: center; /* Ensure social links are in one line */
+	}
+	.footer .footer-section:nth-child(3) .social-lin li {
+		margin: 0 8px; /* Adjusted margin for better spacing */
+	}
+	.footer .footer-section:nth-child(3) .social-lin a {
+	color: #fff;
+	font-size: 18px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #333;
+}
+}
 
   
   /* Responsive styles */
@@ -3496,9 +3551,6 @@ h4.small-title {
 	  text-align: center;
 	}
   }
-  
-
-
   @media (max-width: 767px) {
 	.header-logo img {
 	 height: 80px;
@@ -3506,16 +3558,8 @@ h4.small-title {
 	 object-fit: cover;
 	}
   }
-
-/* Hide logo image on mobile */
-@media (max-width: 767px) {
-	.hero-img {
-	  display: none;
-	}
-  }
-  
   /* Adjustments for mobile view */
-  @media (max-width: 767px) {
+  @edia (max-width: 767px) {
 	.hero-content {
 	  text-align: center; /* Center align content */
 	}
@@ -4144,100 +4188,6 @@ figcaption {
     }
 }
 
-  /*footer*/
-
-  .footer-container {
-    background-color: #272727;
-    color: #fff;
-    padding-top: 50px;
-}
-.single-footer-widget {
-    margin-bottom: 30px;
-}
-.single-footer-widget h3 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #fff;
-}
-.single-footer-widget ul {
-    list-style: none;
-    padding: 0;
-}
-.single-footer-widget ul li {
-    margin-bottom: 10px;
-}
-.single-footer-widget ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-.single-footer-widget ul li a:hover {
-    text-decoration: underline;
-}
-.footer-bottom-area {
-    background-color: #1a1a1a;
-    padding: 20px 0;
-}
-.footer-bottom-area p {
-    margin: 0;
-    font-size: 14px;
-    color: #fff;
-}
-.footer-bottom-area p a {
-    
-    text-decoration: none;
-}
-.footer-bottom-area p a:hover {
-    text-decoration: underline;
-}
-.form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-.combine{
-	display: flex;
-	width: 500px;
-	justify-content: space-around;
-	margin-right: 50px;
-	
-}
-
-
-
-@media (max-width: 767px) {
-    .footer-container {
-        padding-top: 20px;
-    }
-    .single-footer-widget {
-        margin-bottom: 20px;
-    }
-    .quicksLinks, .importantLinks {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .footer-contact-form input, 
-    .footer-contact-form textarea, 
-    .footer-contact-form button {
-        font-size: 14px;
-    }
-    .contact-info a {
-        font-size: 14px;
-    }
-    .footer-title {
-        font-size: 18px;
-    }
-    .footer-news a {
-        font-size: 14px;
-    }
-	.combine{
-		display: flex;
-		width: 100%;
-		margin-top: 25px;
-	}
-}
-
 @media (max-width: 767px) {
     .row {
         display: flex;
@@ -4533,7 +4483,7 @@ figcaption {
 	left: 20px;
 	width: 4px;
 	height: calc(100% - 70px);
-	background: white;
+	background: #b9a8a3;
 	z-index: 1;
 }
 

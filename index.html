@@ -248,6 +248,152 @@
           width: 100%;
         }
       }
+
+      /* footer */
+
+      .footer {
+            background-color: #272727;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .footer-section {
+            flex: 1 1 250px;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center; /* Center align content */
+        }
+        .footer-section h3 {
+            margin-top: 0;
+            color: aliceblue;
+        }
+        .footer form {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer form input[type="text"],
+        .footer form input[type="email"],
+        .footer form textarea,
+        .footer form button {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            background-color: #333;
+            border: white;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .footer form textarea {
+            resize: vertical;
+            height: 60px;
+        }
+        .footer form button {
+            background-color: grey;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .footer form button:hover {
+            background-color: darkgray;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* Center align list items */
+        }
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-lin {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-top: 10px; /* Adjusted margin for better spacing */
+        }
+        .footer .social-lin li {
+            margin: 0 10px; /* Increased margin for better separation */
+        }
+        .footer .social-lin a {
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        .footer .social-lin a:hover {
+            color: #4CAF50;
+            background-color: #555;
+        }
+        .footer .social-lin a i {
+            vertical-align: middle;
+        }
+        .footer .copyright {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+            color: #aaa;
+        }
+        @media (max-width: 767px) {
+            .footer-section {
+                flex: 1 1 100%; /* Take full width */
+                width: 100%;
+                margin: 0; /* Remove margin */
+                padding: 10px 0; /* Add padding */
+                text-align: center;
+            }
+            .footer .footer-section:nth-child(2),
+            .footer .footer-section:nth-child(3) {
+                flex-basis: 100%; /* Ensure full width for stacked columns */
+                max-width: 48%;
+                margin: 0; /* Remove margin */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer .footer-section:nth-child(2) ul,
+            .footer .footer-section:nth-child(3) ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+            }
+            .footer .footer-section:nth-child(3) ul {
+              
+                justify-content: center; /* Ensure social links are in one line */
+            }
+            .footer .footer-section:nth-child(3) .social-lin li {
+                margin: 0 8px; /* Adjusted margin for better spacing */
+            }
+            .footer .footer-section:nth-child(3) .social-lin a {
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        }
     </style>
   </head>
   <body>
@@ -380,16 +526,15 @@
                 <div class="hero-content">
                   <div class="title">
                     <h1>Legal Palz</h1>
+                   
                   </div>
                   <div class="description">
                     <p>
-                      "At the forefront of our field,. We're not just drafting
-                      contract, we're building bridges With thorough research
-                      and forward-thinking strategies, we partner with you to
-                      empower your success."
+                      At the forefront of our field,.  We're not just drafting contract, we're building bridges 
+                      With thorough research and forward-thinking strategies, we partner with you to empower your success.
                     </p>
                   </div>
-                  <a href="about.html">Know more</a>
+                  <a href="about.html">Known More...</a>
                 </div>
               </div>
               <div class="col-md-4 col-xl-6">
@@ -459,7 +604,7 @@
                           Excellent freelancer! Concise, to the point. Got the work done very well. Went the extra mile to draft a solid contract for us. Highly recommend Jasmeet!
                         </p>
                         <p class="testimonial-author">-Shialendra Khemka <span>Startup founder</span></p>
-                        <a href="testimonials.html" class="view-all-btn">View all -></a>
+                        <a href="testimonials.html" class="view-all-btn">View all</a>
 
                       </div>
                     </div>
@@ -494,7 +639,7 @@
                       </div>
                     </div>
                     <div class="button">
-                      <button class="btn">more</button>
+                      <a href="caseStudy1.html" class="view-all-btn">more</a>
                     </div>
                   </div>
                   <!-- About Content Area End -->
@@ -606,7 +751,7 @@
       <!-- Our Working Area End -->
 
       <!--Fun Factor Area Start-->
-      <div class="fun-factor-area bg-img pt-95 pb-90 " style=" padding-top: 120px">
+      <div class="fun-factor-area bg-img pt-120 pb-90 " >
         <div class="container">
           <div class="row justify-content-between">
             <!--Single Funfactor Area Start-->
@@ -761,75 +906,53 @@
       <!--Latest Blog Area End-->
 
       <!--Footer Area Start-->
-      <footer style="background-color: #272727; padding-top: px; color: #fff;">
-        <div class="footer-container">
-            <div class="container">
-                <div class="footer-row">
-                    <!-- Contact Form -->
-                    <div class="footer-column">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">Contact Us</h3>
-                            <form action="mail.php" method="POST" class="footer-contact-form">
-                                <input name="first-name" placeholder="First Name" type="text" class="form-control mb-3" required />
-                                <input name="last-name" placeholder="Last Name" type="text" class="form-control mb-3" required />
-                                <input name="phone" placeholder="Phone" type="text" class="form-control mb-3" required />
-                                <input name="email" placeholder="Email" type="email" class="form-control mb-3" required />
-                                <textarea name="message" placeholder="Message" class="form-control mb-3" rows="4" required></textarea>
-                                <button type="submit" class="btn ">Send Now <i class="icofont icofont-long-arrow-right"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Quick Links -->
-                    <div class="footer-column">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">Quick Links</h3>
-                            <ul class="footer-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="service.html">Our Expertise</a></li>
-                                <li><a href="appointment.html">Case Studies</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Important Links -->
-                    <div class="footer-column">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">Important Links</h3>
-                            <ul class="footer-links">
-                                <li><a href="index.html">Privacy Policy</a></li>
-                                <li><a href="contact.html">Terms and Conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Contact Info -->
-                    <div class="footer-column">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">Contact Info</h3>
-                            <p>129 Street Avenue, Alex Complex Central Street, New York</p>
-                            <p class="contact-info">
-                                <a href="#">+12546 658 987</a>
-                                <a href="#">+12548 789 987</a>
-                            </p>
-                            <p class="contact-info">
-                                <a href="#">info@yoursite.com</a>
-                                <a href="#">www.yoursite.com</a>
-                            </p>
-                        </div>
-                    </div>
+      <footer class="footer">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <form action="mail.php" method="POST" class="footer-contact-form">
+                <input name="first-name" placeholder="First Name" type="text" required />
+                <input name="last-name" placeholder="Last Name" type="text" required />
+                <input name="phone" placeholder="Phone" type="text" required />
+                <input name="email" placeholder="Email" type="email" required />
+                <textarea name="message" placeholder="Message" rows="2" required></textarea>
+                <button type="submit" class="btn">Send Now -></button>
+            </form>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Expertise</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Tesmonials</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Important Links</h3>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <div class="social-lin">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    
                 </div>
-            </div>
-            <!-- Footer Bottom Area -->
-            <div class="footer-bottom-area">
-                <div class="container text-center">
-                    <p>
-                        <span>&copy;</span> Copyright, 2024 All rights reserved by
-                        <a href="#">LegalPalz</a>
-                    </p>
-                </div>
-            </div>
+            </ul>
+        </div>
+        <div class="footer-section hide-on-mobile">
+            <h3>Contact Us</h3>
+            <p>Timing: 9:00 AM - 5:00 PM</p>
+            <p>Email: info@example.com</p>
+            
+        </div>
+        <div class="copyright">
+          <p>
+            <span>&copy;</span> Copyright, 2024 All right reserved by
+            <a href="#">LegalPalz</a>
+        </p>
         </div>
     </footer>
     
