@@ -38,215 +38,73 @@
 	<!-- Modernizr Js -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
-        /* Basic styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#custom-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+
+}
+
+#custom-sidebar {
+ 
+    width: 700px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+#custom-sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#custom-sidebar a:hover {
+    background-color: #ddd;
+}
+
+#custom-main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    #custom-content {
+        flex-direction: column;
+    }
+    #custom-sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+    #custom-main {
+        padding: 20px;
+    }
+}
+
+
+  /* footer */
   
-        .hero {
-         
-         
-          background-position: center;
-          color: #fff;
-          text-align: center;
-  
-          position: relative;
-        }
-  
-        .hero::before {
-         
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-  
-        .hero-container {
-          position: relative;
-          z-index: 1;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-  
-        .hero-text {
-          margin-bottom: 40px;
-        }
-  
-        .hero h1 {
-          font-size: 3em;
-          margin: 0;
-        }
-  
-        .hero-subtitle {
-          font-size: 1.5em;
-          color: #ddd;
-        }
-  
-        .columns {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-        }
-  
-        .column {
-          width: 48%;
-          
-          /* Semi-transparent background */
-         
-          border-radius: 10px;
-        }
-  
-        .vision,
-        .objective {
-          padding: 10px;
-        }
-  
-        .column h2 {
-          font-size: 1.8em;
-          color: #333;
-        }
-  
-        .column p {
-          text-align: justify;
-          margin-bottom: 10px;
-          line-height: 1.8;
-          color: #555;
-          font-size: 1.2em;
-          font-weight: 500;
-        }
-  
-        .icon1,
-        .icon2 {
-          margin-right: 10px;
-          font-size: 1.2em;
-        }
-  
-        .icon1 {
-          color: rgb(212, 212, 26);
-        }
-  
-        .icon2 {
-          color: grey;
-        }
-        .mobile-only {
-              display: none;
-          }
-          .mobile-only1 {
-              display: none;
-          }
-  
-          /* Show the section on mobile devices */
-          @media (max-width: 767px) {
-              .mobile-only {
-                  display: block;
-                  padding: 10px;
-                  
-                  border-radius: 10px;
-                  overflow: hidden;
-              }
-          }
-  
-          /* Styling for the cards */
-          .mobile-only .card {
-              background-color: white;
-              border: 1px solid #ddd;
-              padding: 15px;
-              margin: 10px 0;
-              height: auto;
-              border-radius: 10px;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              position: relative;
-              overflow: hidden;
-          }
-  
-          .mobile-only .card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-          }
-  
-          .mobile-only .card p {
-              margin: 0 0 10px;
-          }
-  
-          .mobile-only .card a {
-              color: #333;
-              text-decoration: none;
-              font-weight: bold;
-              position: relative;
-              z-index: 1;
-          }
-  
-          .mobile-only .card a:hover {
-              text-decoration: underline;
-          }
-  
-          /* Adding background images */
-          .mobile-only .testimonial-card {
-              background-image: url('testimonial-bg.jpg');
-              background-size: cover;
-              background-position: center;
-          }
-  
-          .mobile-only .case-study-card {
-              background-image: url('case-study-bg.jpg');
-              background-size: cover;
-              background-position: center;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-          }
-  
-          /* Gradient overlay for text readability */
-          .mobile-only .card::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              border-radius: 10px;
-              z-index: 0;
-          }
-  
-          .mobile-only .card * {
-              position: relative;
-              z-index: 1;
-          }
-  
-          /* Adding some animation */
-          @keyframes bounceIn {
-              0% {
-                  opacity: 0;
-                  transform: scale(0.3) translateY(-1000px);
-              }
-              60% {
-                  opacity: 1;
-                  transform: scale(1.1) translateY(30px);
-              }
-              80% {
-                  transform: scale(0.9) translateY(-10px);
-              }
-              100% {
-                  transform: scale(1) translateY(0);
-              }
-          }
-  
-          .mobile-only .card {
-              animation: bounceIn 1s ease-in-out;
-          }
-  
-          
-        @media (max-width: 600px) {
-          .column {
-            width: 100%;
-          }
-        }
-  
-        /* footer */
-  
-        .footer {
+  .footer {
               background-color: #272727;
               color: #fff;
               padding: 20px;
@@ -390,129 +248,6 @@
           }
           }
           /* footer end */
-  
-          .justify-content-between > .col {
-    width: auto;
-    flex: 0 0 auto;
-    text-align: center;
-  }
-  
-  .col.fun-factor-wrap > h2 {
-    margin-bottom: 0;
-  }
-  
-  .fun-factor-wrap > h2 > span {
-    font-size: 38px;
-    font-weight: 700;
-  }
-  
-  .fun-factor-wrap > span {
-    font-size: 18px;
-    font-weight: 700;
-    color: #303030;
-    font-family: Droid Serif;
-    text-transform: capitalize;
-  }
-  
-  /* Media query for mobile view */
-  @media (max-width: 767px) {
-    .fun-factor-area .row {
-      display: flex;
-      flex-direction: column;
-    }
-    .fun-factor-group {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-bottom: 20px; /* Adjust margin as needed */
-    }
-    .fun-factor-group .col {
-      width: 50%;
-      text-align: center;
-    }
-    .fun-factor-wrap {
-      box-sizing: border-box;
-      padding: 10px;
-    }
-  }
-  
-  /* Media query for laptop view */
-  @media (min-width: 768px) and (max-width: 1199px) {
-    .fun-factor-area .row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .fun-factor-group {
-      display: flex;
-      flex-direction: row;
-      flex: 1 1 auto;
-      width: 100%;
-    }
-    .fun-factor-group .col {
-      width: auto;
-      flex: 1 1 auto;
-      max-width: none;
-    }
-    .fun-factor-wrap {
-      padding: 0 15px;
-    }
-  }
-  body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-
-  #custom-content {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-        }
-        #custom-sidebar {
-            width: 200px;
-            background-color: #f4f4f4;
-            padding: 15px;
-            overflow-y: auto;
-        }
-        #custom-sidebar a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        #custom-sidebar a:hover {
-            background-color: #ddd;
-        }
-        #custom-main {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        h2 {
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-        }
-        @media (max-width: 768px) {
-            #custom-content {
-                flex-direction: column;
-            }
-            #custom-sidebar {
-                width: 100%;
-                height: auto;
-            }
-            #custom-main {
-                margin-left: 0;
-            }
-        }
-  
       </style>
 </head>
 <body>
@@ -533,13 +268,6 @@
                         <!--Header Top Left Area Start-->
                         <div class="col-md-4 col-xl-3">
                           <div class="header-top-left">
-                            <p>CALL US : <a href="#"> +008 12548 658 658</a></p>
-                          </div>
-                        </div>
-                        <!--Header Top Left Area End-->
-                        <!--Header Top Middle Area Start-->
-                        <div class="col-md-4 col-xl-6">
-                          <div class="header-top-middle text-center">
                             <ul class="social-link">
                               <li>
                                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -554,6 +282,13 @@
                                 <a href="#"><i class="fa fa-google-plus"></i></a>
                               </li>
                             </ul>
+                          </div>
+                        </div>
+                        <!--Header Top Left Area End-->
+                        <!--Header Top Middle Area Start-->
+                        <div class="col-md-4 col-xl-6">
+                          <div class="header-top-middle text-center">
+                         
                           </div>
                         </div>
                         <!--Header Top Middle Area End-->
@@ -595,7 +330,7 @@
                               <!--Dropdown Menu End-->
                             </li>
                             <li><a href="about.html">ABOUT US</a></li>
-                            <li class="active">
+                            <li >
                                 <a href="service.html">OUR EXPERTISE</a>
                               
                               </li>
@@ -632,120 +367,224 @@
 		
     <div id="custom-content">
       <div id="custom-sidebar">
-          <h3>Navigation</h3>
-          <a href="#introduction">Introduction</a>
-          <a href="#data-collection">Data Collection</a>
-          <a href="#data-use">Data Use</a>
-          <a href="#data-sharing">Data Sharing</a>
-          <a href="#data-security">Data Security</a>
-          <a href="#user-rights">User Rights</a>
-          <a href="#contact-us">Contact Us</a>
-      </div>
+     
+        <a href="#introduction">Introduction</a>
+        <a href="#data-collection">Use of Information and Legal Basis for Processing</a>
+        <a href="#data-use">Collection and Storage of Data by Third Parties</a>
+        <a href="#data-sharing">Security Measures</a>
+        <a href="#data-security">User Rights</a>
+        <a href="#user-rights">Cookies and Tracking Technologies</a>
+        <a href="#contact-us">Third-Party Links</a>
+        <a href="#compliance">Compliance with Children’s Online Privacy Protection Act</a>
+        <a href="#changes">Changes to the Privacy Policy</a>
+        <a href="#contact-info">Contact Information</a>
+    </div>
       <div id="custom-main">
           <section id="introduction">
               <h2>Introduction</h2>
-              <p>We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and share information about you when you use our services.</p>
+              <p>We collect certain personal information from our users to provide and improve our
+                services. The types of information we collect include:<br>
+                1.1. Name, to identify and address you appropriately;<br>
+                1.2. Email Address, for communication purposes, including responses to inquiries and
+                updates about our website; and<br>
+                1.3. Phone Number.<br>
+                However, providing phone number is optional and can be provided for additional
+                contact options.<br>
+                This information is collected when you fill out and submit the form for contacting us
+                on our website. We only collect the information you provide that typically includes
+                your name, email address, and optionally your phone number. We do not use cookies,
+                tracking technologies, or third-party services to collect information. All information is
+                provided directly by you through our website form. Further, we do not collect any
+                sensitive information such as health data, financial information, or any other special
+                categories of personal data.</p>
           </section>
           <section id="data-collection">
-              <h2>Data Collection</h2>
-              <p>We collect various types of information in connection with the services we provide, including:</p>
-              <ul>
-                  <li>Information you provide to us directly.</li>
-                  <li>Information we collect automatically.</li>
-                  <li>Information from third parties.</li>
+              <h2>USE OF INFORMATION AND LEGAL BASIS FOR PROCESSING
+              </h2>
+              <p>We use the personal information we collect to provide you with the best possible support
+                and to manage our interactions with you. This includes using your name and email
+                address to respond to your inquiries, provide requested information, and communicate
+                with you about your needs. If you provide your phone number, we may also contact you
+                by phone if necessary to address your request or provide support. Additionally, we use
+                your data to tailor our assistance to your needs and to ensure efficient handling of your
+                requests. We may also process your personal data to comply with applicable laws,
+                regulations, legal processes, or governmental requests, including fulfilling our obligations
+                under data protection laws such as GDPR, CCPA, and DPDPA.<br>
+                We process your personal data based on the following legal grounds:<br>
+                2.1. By filling out and submitting form on our website, you consent to the collection and
+                use of your personal information as described in this Privacy Policy. You have the
+                right to withdraw your consent at any time by contacting us, though this will not
+                affect the lawfulness of processing based on consent before its withdrawal.<br>
+                2.2. We may process your information when it is necessary for the performance of a
+                contract to which you are a party, or to take steps at your request before entering into
+                such a contract.<br>
+                2.3. We may process your personal data to comply with our legal obligations, such as
+                maintaining accurate records for regulatory compliance and responding to lawful
+                requests from public authorities.<br>
+                2.4. We may process your information based on our legitimate interests, provided that
+                these interests are not overridden by your rights and interests. This includes
+                improving our website, interactions, and user experience.<br>
+                We will retain your personal information only for as long as necessary to fulfill the
+                purposes for which it was collected, including any legal, accounting, or reporting
+                requirements. When we no longer need to use your personal information, we will securely
+                delete or anonymize it.</p>
               </ul>
           </section>
           <section id="data-use">
-              <h2>Data Use</h2>
-              <p>We use the information we collect to:</p>
-              <ul>
-                  <li>Provide, maintain, and improve our services.</li>
-                  <li>Communicate with you.</li>
-                  <li>Monitor and analyze trends and usage.</li>
-                  <li>Personalize your experience.</li>
-              </ul>
+              <h2>COLLECTION AND STORAGE OF DATA BY THIRD PARTIES</h2>
+              <p>We do not share your personal information with any third parties. Your data is kept
+                confidential and is only accessible to the founders and the developer of LegalPalz. This
+                access is strictly controlled to ensure the security and privacy of your information. We use
+                your personal information solely for the purposes stated in this Privacy Policy and do not
+                sell, rent, or otherwise disclose your data to external parties.</p>
+                
+             
           </section>
           <section id="data-sharing">
-              <h2>Data Sharing</h2>
-              <p>We may share your information with third parties in the following circumstances:</p>
-              <ul>
-                  <li>With your consent.</li>
-                  <li>For external processing.</li>
-                  <li>For legal reasons.</li>
-              </ul>
+              <h2>SECURITY MEASURES
+              </h2>
+              <p>We take the security of your personal information seriously. To protect your data from
+                unauthorized access, alteration, disclosure, or destruction, we implement the following
+                security measures:<br>
+                4.1. Access Control: Only the founders and the developer have access to the personal
+                information collected through our website. This access is tightly controlled to ensure
+                the highest level of security.<br>
+                4.2. Data Storage: Your personal information is stored securely in an Excel sheet, which
+                is only accessible by authorized personnel.<br>
+                Despite these measures, please be aware that no method of electronic storage or transmission
+                over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+                
           </section>
           <section id="data-security">
-              <h2>Data Security</h2>
-              <p>We take reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet, or method of electronic storage, is 100% secure.</p>
+              <h2>USER RIGHTS</h2>
+              <p>As a user of LegalPalz, you have certain rights regarding your personal information under
+                applicable data protection laws, including GDPR, CCPA, and DPDPA. These rights
+                include:<br>
+                5.1. The right to request access to the personal information we hold about you.<br>
+                5.2. The right to request correction of any inaccurate or incomplete personal information.<br>
+                5.3. The right to request the deletion of your personal information, subject to certain
+                exceptions. Exceptions may include situations where we need to retain your
+                information to comply with legal obligations, resolve disputes, enforce our
+                agreements, or for other legitimate business purposes.<br>
+                5.4. The right to object to or request the restriction of processing your personal
+                information under certain circumstances. This includes situations where you contest
+                the accuracy of the data, the processing is unlawful but you oppose the deletion of the
+                data, we no longer need the data but you require it for the establishment, exercise, or
+                defense of legal claims, or you have objected to processing and verification of
+                whether our legitimate grounds override your rights is pending.<br>
+                5.5. The right to request the transfer of your personal information to another service
+                provider, where technically feasible.<br>
+                To exercise any of these rights, please contact us via the email address provided in the
+                "Contact Information" section of our website. We will respond to your request within the
+                timeframes required by law and may ask for verification of your identity to ensure that
+                your rights are respected.</p>
+                
           </section>
           <section id="user-rights">
-              <h2>User Rights</h2>
-              <p>You have the right to access, correct, or delete your personal data. You can also object to the processing of your data in certain circumstances.</p>
+              <h2>COOKIES AND TRACKING TECHNOLOGIES</h2>
+              <p>We do not use any cookies or tracking technologies on our website. This means we do not
+                collect any information through cookies, web beacons, or similar technologies. Your
+                browsing activity on our website is not tracked, and no personal information is collected
+                automatically.
+                </p>
           </section>
           <section id="contact-us">
-              <h2>Contact Us</h2>
-              <p>If you have any questions or concerns about our privacy policy, please contact us at:</p>
-              <p>Email: support@example.com</p>
-              <p>Phone: (123) 456-7890</p>
+              <h2> THIRD-PARTY LINKS</h2>
+              <p>Our website does not contain links to third-party websites or services. We are solely
+                responsible for the content and practices of legalpalz.com. Should we decide to include
+                any third-party links in the future, we will update this Privacy Policy accordingly and
+                inform you of any changes.
+                </p>
           </section>
+          <section id="contact-us">
+            <h2>COMPLIANCE WITH CHILDREN’S ONLINE PRIVACY PROTECTION ACT</h2>
+            <p>Protecting the privacy of the young is especially important. For that reason, we never
+              collect or maintain information on our website from those we know are under 13 years
+              old, and no part of our website is structured to attract anyone under 13
+              </p>
+        </section>
+        <section id="contact-us">
+          <h2>CHANGES TO THE PRIVACY POLICY
+          </h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect changes in our practices or
+            for other operational, legal, or regulatory reasons. We encourage you to review this
+            Privacy Policy periodically to stay informed about how we are protecting your personal
+            information.<br>
+            When we make changes to this Privacy Policy, we will update the "Last Updated" date at
+            the top of this document. Any changes will be effective immediately upon posting on this
+            page, and your continued use of our website following the posting of any changes
+            constitutes your acceptance of the revised Privacy Policy.
+            
+            </p>
+      </section>
+      <section id="contact-us">
+        <h2>CONTACT INFORMATION
+        </h2>
+        <p>If you have any questions or concerns about this Privacy Policy or our data practices, or if
+          you wish to exercise your rights regarding your personal information, please contact us at
+          the email address provided in the "Contact Us" section of our website.
+          </p>
+    </section>
       </div>
   </div>
 		<!--Footer Area Start-->
     <footer class="footer">
-			<div class="footer-section">
-				<h3>Contact Us</h3>
-				<form action="mail.php" method="POST" class="footer-contact-form">
-					<input name="first-name" placeholder="First Name" type="text" required />
-					<input name="last-name" placeholder="Last Name" type="text" required />
-					<input name="phone" placeholder="Phone" type="text" required />
-					<input name="email" placeholder="Email" type="email" required />
-					<textarea name="message" placeholder="Message" rows="2" required></textarea>
-					<button type="submit" class="btn">Send Now -></button>
-				</form>
-			</div>
-			<div class="footer-section">
-				<h3>Quick Links</h3>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Our Expertise</a></li>
-					<li><a href="#">Case Studies</a></li>
-					<li><a href="#">Tesmonials</a></li>
-					<li><a href="#">Blogs</a></li>
-					<li><a href="#">Contact Us</a></li>
-				</ul>
-			</div>
-			<div class="footer-section">
-				<h3>Important Links</h3>
-				<ul>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of Service</a></li>
-					<div class="social-lin">
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						
-					</div>
-					<div class="social-lin">
-						
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						
-					</div>
-				</ul>
-			</div>
-			<div class="footer-section hide-on-mobile">
-				<h3>Contact Us</h3>
-				<p>Timing: 9:00 AM - 12:00 PM IST</p>
-				<a href="mailto:team@LegalPalz.com">team@LegalPalz.com</a>
+      <div class="footer-section">
+          <h3>Contact Us</h3>
+          <form action="mail.php" method="POST" class="footer-contact-form">
+              <input name="first-name" placeholder="First Name" type="text" required />
+              <input name="last-name" placeholder="Last Name" type="text" required />
+              <input name="phone" placeholder="Phone" type="text" required />
+              <input name="email" placeholder="Email" type="email" required />
+              <textarea name="message" placeholder="Message" rows="2" required></textarea>
+              <button type="submit" class="btn">Send Now -></button>
+          </form>
+      </div>
+      <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Expertise</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Tesmonials</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Important Links</h3>
+          <ul>
+              <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <div class="social-lin">
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  
+              </div>
+              <div class="social-lin">
+                  
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  
+              </div>
+          </ul>
+      </div>
+      <div class="footer-section hide-on-mobile">
+          <h3>Contact Us</h3>
+          <p>Timing: 9:00 AM - 12:00 AM IST</p>
+          <a href="mailto:team@legalpalz.com">team@legalpalz.com</a>
 
-				
-			</div>
-			<div class="copyright">
-			  <p>
-				<span>&copy;</span> Copyright, 2024 All right reserved by
-				<a href="#">LegalPalz</a>
-			</p>
-			</div>
-		</footer>
+          
+      </div>
+      <div class="copyright">
+        <p>
+          <span>&copy;</span> Copyright, 2024 All right reserved by
+          <a href="#">LegalPalz</a>
+      </p>
+      </div>
+  </footer>
 		<!--Footer Area End-->
 	</div>
 

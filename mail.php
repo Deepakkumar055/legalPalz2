@@ -5,14 +5,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = strip_tags(trim($_POST["first-name"]));
     $last_name = strip_tags(trim($_POST["last-name"]));
     $name = "$first_name $last_name";
-    $name = str_replace(array("\r","\n"),array(" "," "),$name);
+    $name = str_replace(array("\r", "\n"), array(" ", " "), $name);
 
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = trim($_POST["phone"]);
+    $subject = trim($_POST["subject"]);
     $message = trim($_POST["message"]);
 
     // Check that data was sent to the mailer.
-    if ( empty($first_name) OR empty($last_name) OR empty($phone) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (empty($first_name) OR empty($last_name) OR empty($phone) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Set a 400 (bad request) response code and exit.
         http_response_code(400);
         echo "Please complete the form and try again.";
@@ -20,8 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Set the recipient email address.
-    // FIXME: Update this to your desired email address.
-    $recipient = "dk0133964@gmail.com";
+    $recipient = "dk0133964@gmail.com,team@legalpalz.com";
 
     // Set the email subject.
     $subject = "New contact from $name";
@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n\n";
     $email_content .= "Phone: $phone\n\n";
+    $email_content .= "Subject: $subject\n\n";
     $email_content .= "Message:\n$message\n";
 
     // Build the email headers.

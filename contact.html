@@ -459,6 +459,9 @@
 	  padding: 0 15px;
 	}
   }
+  p .space{
+margin-right: 20px;
+  }
   
 	  </style>
 </head>
@@ -480,13 +483,6 @@
 						<!--Header Top Left Area Start-->
 						<div class="col-md-4 col-xl-3">
 						  <div class="header-top-left">
-							<p>Timmings : <a href="#"> 9:00AM To 12:00 IST</a></p>
-						  </div>
-						</div>
-						<!--Header Top Left Area End-->
-						<!--Header Top Middle Area Start-->
-						<div class="col-md-4 col-xl-6">
-						  <div class="header-top-middle text-center">
 							<ul class="social-link">
 							  <li>
 								<a href="#"><i class="fa fa-facebook"></i></a>
@@ -503,12 +499,19 @@
 							</ul>
 						  </div>
 						</div>
+						<!--Header Top Left Area End-->
+						<!--Header Top Middle Area Start-->
+						<div class="col-md-4 col-xl-6">
+						  <div class="header-top-middle text-center">
+						   
+						  </div>
+						</div>
 						<!--Header Top Middle Area End-->
 						<!--Header Top Right Area Start-->
 						<div class="col-md-4 col-xl-3">
 						  <div class="header-top-right">
 							<p>MAIL US : <a href="mailto:team@legalpalz.com">team@legalpalz.com</a></p>
-	  
+	
 						  </div>
 						</div>
 						<!--Header Top Right Area End-->
@@ -539,13 +542,13 @@
 							<li>
 							  <a href="index.html">HOME</a>
 							  <!--Dropdown Menu Start-->
-	  
+	
 							  <!--Dropdown Menu End-->
 							</li>
-							<li >
+							<li class="active">
 							  <a href="about.html">ABOUT US</a>
 							</li>
-							<li class="active">
+							<li>
 							  <a href="service.html">OUR EXPERTISE</a>
 							</li>
 							<li>
@@ -607,13 +610,14 @@
 					<ul>
 					  <li>
 						<h5>Timings</h5>
-						<p>9:00 Am to 12:00 Pm IST</p>
+						<p>9:00 AM to 12:00 AM IST</p>
 					  </li>
 					  <li>
 						<h5>Connect with us</h5>
 						<p>
-							<a href="#"><i class="fa fa-twitter"></i></a><br>
-							<a href="#"><i class="fa fa-linkedin"></i></a>
+							<a href="#"><i class="fa fa-twitter space"></i></a> 
+							<a href="#"><i class="fa fa-linkedin space"></i></a>
+							<a href="#"><i class="fa fa-facebook space"></i></a>
 						</p>
 					  </li>
 					  <li>
@@ -638,27 +642,32 @@
 					<div class="row">
 					  <div class="col-md-6">
 						<div class="single-input">
-						  <input name="name" placeholder="Name" type="text">
+						  <input name="first-name" placeholder="First Name" type="text" required>
 						</div>
 					  </div>
 					  <div class="col-md-6">
 						<div class="single-input">
-						  <input name="email" placeholder="E-mail" type="email">
+						  <input name="last-name" placeholder="Last Name" type="text" required>
 						</div>
 					  </div>
 					  <div class="col-md-6">
 						<div class="single-input">
-						  <input name="phone" placeholder="Phone" type="text">
+						  <input name="email" placeholder="E-mail" type="email" required>
 						</div>
 					  </div>
 					  <div class="col-md-6">
+						<div class="single-input">
+						  <input name="phone" placeholder="Phone" type="text" required>
+						</div>
+					  </div>
+					  <div class="col-md-12">
 						<div class="single-input">
 						  <input name="subject" placeholder="Subject" type="text">
 						</div>
 					  </div>
 					  <div class="col-md-12">
 						<div class="single-input">
-						  <textarea name="message" cols="10" rows="4" placeholder="Message"></textarea>
+						  <textarea name="message" cols="10" rows="4" placeholder="Message" required></textarea>
 						</div>
 					  </div>
 					  <div class="col-md-12">
@@ -668,6 +677,7 @@
 					  </div>
 					</div>
 				  </form>
+				  
 				  <p class="form-messege"></p>
 				</div>
 				<!-- Contact Form End -->
@@ -704,8 +714,9 @@
 			<div class="footer-section">
 				<h3>Important Links</h3>
 				<ul>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of Service</a></li>
+					<li><a href="privacyPolicy.html">Privacy Policy</a></li>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Disclaimer</a></li>
 					<div class="social-lin">
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -720,9 +731,9 @@
 			</div>
 			<div class="footer-section hide-on-mobile">
 				<h3>Contact Us</h3>
-				<p>Timing: 9:00 AM - 12:00 PM IST</p>
-				<a href="mailto:team@LegalPalz.com">team@LegalPalz.com</a>
-
+				<p>Timing: 9:00 AM - 12:00 AM IST</p>
+				<a href="mailto:team@legalpalz.com">team@legalpalz.com</a>
+	
 				
 			</div>
 			<div class="copyright">
