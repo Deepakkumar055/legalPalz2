@@ -3386,7 +3386,7 @@ h4.small-title {
 
 	.single-testimonial,
 	.single-case-study {
-		height: auto;
+		
 		flex: 0 0 calc(50% - 20px); /* Two columns with margin */
 	}
 }
@@ -3394,6 +3394,7 @@ h4.small-title {
 @media (max-width: 767.98px) {
 	.single-testimonial,
 	.single-case-study {
+		height: auto;
 		flex: 0 0 100%; /* Full width on smaller screens */
 	}
 }
@@ -3401,6 +3402,7 @@ h4.small-title {
 @media (max-width: 767.98px) {
 	.single-testimonial,
 	.single-case-study {
+		height: auto;
 		flex: 0 0 100%; /* Full width on smaller screens */
 	}
 }
