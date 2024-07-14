@@ -3386,6 +3386,7 @@ h4.small-title {
 
 	.single-testimonial,
 	.single-case-study {
+		height: auto;
 		flex: 0 0 calc(50% - 20px); /* Two columns with margin */
 	}
 }
