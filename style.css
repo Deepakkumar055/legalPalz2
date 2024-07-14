@@ -717,6 +717,13 @@ textarea:focus {
 	background-repeat: no-repeat;
 	
 }
+.bg-img2 {
+	background-image: url(img/about/nordwood-themes-R53t-Tg6J4c-unsplash.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
 .bg-img-3 {
 	background-image: url(img/bg/bg3.jpg);
 	background-position: center center;
@@ -3324,6 +3331,7 @@ h4.small-title {
 	overflow: hidden;
 	position: relative;
 	transition: all 0.3s ease-in-out;
+	height: 250px;
 }
 
 .single-testimonial:hover,

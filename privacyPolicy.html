@@ -459,6 +459,59 @@
       padding: 0 15px;
     }
   }
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+  #custom-content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        #custom-sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        #custom-sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        #custom-sidebar a:hover {
+            background-color: #ddd;
+        }
+        #custom-main {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            #custom-content {
+                flex-direction: column;
+            }
+            #custom-sidebar {
+                width: 100%;
+                height: auto;
+            }
+            #custom-main {
+                margin-left: 0;
+            }
+        }
   
       </style>
 </head>
@@ -469,270 +522,174 @@
 
 	<div class="wrapper">
 		<!--Header Area Start-->
-    <header>
-      <div class="header-container">
-        <!--Header Top Area Start-->
-        <div class="header-top-area default-bg hide-on-mobile">
-          <div class="container">
-            <div class="row row-75">
-              <div class="header-top-wrap col-12">
-                <div class="row">
-                  <!--Header Top Left Area Start-->
-                  <div class="col-md-4 col-xl-3">
-                    <div class="header-top-left">
-                      <p>Timmings : <a href="#"> 9:00AM To 12:00 IST</a></p>
-                    </div>
-                  </div>
-                  <!--Header Top Left Area End-->
-                  <!--Header Top Middle Area Start-->
-                  <div class="col-md-4 col-xl-6">
-                    <div class="header-top-middle text-center">
-                      <ul class="social-link">
-                        <li>
-                          <a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fa fa-google-plus"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--Header Top Middle Area End-->
-                  <!--Header Top Right Area Start-->
-                  <div class="col-md-4 col-xl-3">
-                    <div class="header-top-right">
-                      <p>MAIL US : <a href="mailto:team@legalpalz.com">team@legalpalz.com</a></p>
-
-                    </div>
-                  </div>
-                  <!--Header Top Right Area End-->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Header Top Area End-->
-        <!--Header Bottom Area Start-->
-        <div class="header-bottom-area header-sticky">
-          <div class="container">
-            <div class="row align-items-center">
-              <!--Header Logo Start-->
-              <div class="col-md-3">
-                <div class="header-logo">
-                  <a href="index.html"
-                    ><img src="img/about/Legal-Pal-Logo.png" alt=""
-                  /></a>
-                </div>
-              </div>
-              <!--Header Logo End-->
-              <!--Header Menu Start-->
-              <div class="col-md-9">
-                <div class="header-menu-area text-right">
-                  <nav>
-                    <ul class="main-menu">
-                      <li>
-                        <a href="index.html">HOME</a>
-                        <!--Dropdown Menu Start-->
-
-                        <!--Dropdown Menu End-->
-                      </li>
-                      <li >
-                        <a href="about.html">ABOUT US</a>
-                      </li>
-                      <li class="active">
-                        <a href="service.html">OUR EXPERTISE</a>
-                      </li>
-                      <li>
-                        <a href="caseStudy1.html">CASE STUDIES</a>
-                        <!--Dropdown Menu Start-->
-                        <ul>
-                          <li><a href="caseStudy1.html">Case Study 1</a></li>
-                          <li><a href="caseStudy2.html">Case Study 2</a></li>
-                          <li><a href="caseStudy3.html">Case Study 3</a></li>
-                          <li><a href="caseStudy4.html">Case Study 4</a></li>
-                        </ul>
-                        <!--Dropdown Menu End-->
-                      </li>
-                      <li><a href="testimonials.html">TESTIMONIALS</a></li>
-                      <li><a href="blog.html">BLOG</a></li>
-                      <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <!--Header Menu End-->
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <!--Mobile Menu Area Start-->
-                <div class="mobile-menu d-lg-none d-xl-none"></div>
-                <!--Mobile Menu Area End-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Header Bottom Area End-->
-      </div>
-    </header>
-		<!--Header Area End-->
-		<!-- Page Banner Area Start-->
-		<div class="page-banner-area bg-img-3 pt-95 pb-90">
-		    <div class="container">
-		        <div class="row">
-		            <div class="page-banner-content col-12 text-center">
-                        <h2>Tech Law</h2>
-                        <p>With deep tech law expertise, we guide businesses through the legalities of data privacy,
-                            e-commerce, and AI in today's innovative economy.</p>
-		                <ul class="breadcrumb-pagination">
-		                    <li><a href="index.html">Home</a></li>
-		                    <li><a href="service.html">Our Expertise</a></li>
-		                    <li>Tech Law</li>
-		                </ul>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<!-- Page Banner Area End-->
-		<!-- Servcice Layout Area Start-->
-		<div class="service-layout-area pt-120 pb-60">
-		    <div class="container">
-		        <div class="row">
-		            <div class="col-lg-8">
-		                <div class="single-service-wrapper">
-		                   
-		                    <div class="single-service-content">
-		                        <h3>Tech Law</h3>
-		                        <p>With deep tech law expertise, we guide businesses through the legalities of data privacy,
-                                    e-commerce, and AI in today's innovative economy.<br>
-                                    Tech Law is a dynamic and ever-evolving field which deals with legal issues arising from
-                                    rapid growth in technology sector. There is a vast range of complexities in this that have to be
-                                    dealt with such as data privacy, protection of Intellectual property, innovative apps, software
-                                    and many more. Tech Law is becoming increasingly crucial in this digital age and we
-                                    leverage our deep subject matter expertise to help businesses of all sizes to navigate with
-                                    their legal issues surrounding data privacy, online commerce, and emerging technologies like
-                                    AI and blockchain</p>
-		                        <h4>About this</h4>
-                                <p>A broad range of services offered by Legal Palz in this domain are:</p>
-                                <ul class="check-list ml-30">
-                                    <li>
-                                        Software License Agreement
-                                    </li>
-                                    <li>
-                                        Software Development Agreement
-                                    </li>
-                                    <li>
-                                        Service Level Agreement (SLA)
-                                    </li>
-                                    <li>
-                                         Escrow Agreement
-                                    </li>
-                                    <li>
-                                        Terms of Use and Terms of Service
-                                    </li>
-                                    <li>
-                                        Privacy Policy
-                                    </li>
-                                    <li>
-                                        Cookie Policy
-                                    </li>
-                                    <li>
-                                        Terms of Use for Web APIs
-                                    </li>
-                                    <li>
-                                        Website Development Agreement
-                                    </li>
-                                    <li>
-                                        Maintenance and Support Agreement
-                                    </li>
-                                    <li>
-                                        Technology Consulting Agreement
-
-                                    </li>
-                                    <li>
-                                        Cloud Services Agreement
-                                    </li>
-                                    <li>
-                                        SaaS Agreement
-                                    </li>
-                                    <li>
-                                        Master Services Agreement (MSA)
-                                    </li>
-                                    <li>
-                                        Statement of Work (SOW)
-                                    </li>
-                                </ul>
-		                    </div>
-		                    <div class="service-working-process">
-		                        <h3>How I work</h3>
-		                        <p>Consultation, research, drafting, review, and delivery—our meticulous process ensures legal excellence from start to finish, backed by client-centric consultation and rigorous quality assurance.</p>
-		                        <!--Single Service Working Start-->
-		                        <div class="single-service-working d-flex mb-20">
-		                            <div class="service-working-icon">
-		                                <img src="img/icon/icon6.png" alt="">
-		                            </div>
-		                            <div class="service-working-content mb-20">
-		                                <h5>Analyzing Case</h5>
-		                                <p>The case section for a law website presents legal precedents, client outcomes, and insightful analyses, offering transparency and expertise crucial for prospective clients' understanding and trust.  </p>
-		                            </div>
-		                        </div>
-		                        <!--Single Service Working End-->
-		                        <!--Single Service Working Start-->
-		                        <div class="single-service-working d-flex mb-20">
-		                            <div class="service-working-icon">
-		                                <img src="img/icon/icon7.png" alt="">
-		                            </div>
-		                            <div class="service-working-content">
-		                                <h5>Research & Investigation</h5>
-		                                <p>Thorough legal research and investigation to support informed decisions and strategies, ensuring comprehensive understanding and effective legal outcomes.</p>
-		                            </div>
-		                        </div>
-		                        <!--Single Service Working End-->
-		                        <!--Single Service Working Start-->
-		                        <div class="single-service-working d-flex mb-20">
-		                            <div class="service-working-icon">
-		                                <img src="img/icon/icon8.png" alt="">
-		                            </div>
-		                            <div class="service-working-content">
-		                                <h5>Court of Law  Success</h5>
-		                                <p>Explore our Court of Law Successes—victories in litigation, landmark rulings, and client testimonials. Experience our proven track record in legal excellence. </p>
-		                            </div>
-		                        </div>
-		                        <!--Single Service Working End-->
-		                    </div>
-		                </div>
-		                <div class="row">
-		                    <div class="col-12">
-		                        <div class="service-next-prev mb-50">
-		                            <ul>
-		                                <li><a href="#"><i class="icofont icofont-long-arrow-left"></i> Previous</a></li>
-		                                <li><a href="#"> Next <i class="icofont icofont-long-arrow-right"></i></a></li>
-		                            </ul>
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
-		            <div class="col-lg-4">
-                        <div class="service-sidebar-wrapper">
-		                
-		                    <div class="service-sidebar mb-50">
-		                    <h3>Download Brochure</h3>
-		                    <a class="download" href="#"><i class="icofont icofont-file-pdf"></i> Download PDF Brochure</a>
-		                    <a class="download" href="#"><i class="icofont icofont-file-document"></i> Download DOC Brochure</a>
-		                </div>
+        <header>
+            <div class="header-container">
+              <!--Header Top Area Start-->
+              <div class="header-top-area default-bg hide-on-mobile">
+                <div class="container">
+                  <div class="row row-75">
+                    <div class="header-top-wrap col-12">
+                      <div class="row">
+                        <!--Header Top Left Area Start-->
+                        <div class="col-md-4 col-xl-3">
+                          <div class="header-top-left">
+                            <p>CALL US : <a href="#"> +008 12548 658 658</a></p>
+                          </div>
                         </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<!-- Servcice Layout Area End-->
+                        <!--Header Top Left Area End-->
+                        <!--Header Top Middle Area Start-->
+                        <div class="col-md-4 col-xl-6">
+                          <div class="header-top-middle text-center">
+                            <ul class="social-link">
+                              <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!--Header Top Middle Area End-->
+                        <!--Header Top Right Area Start-->
+                        <div class="col-md-4 col-xl-3">
+                          <div class="header-top-right">
+                            <p>MAIL US :<a href="#">info@example.com</a></p>
+                          </div>
+                        </div>
+                        <!--Header Top Right Area End-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Header Top Area End-->
+              <!--Header Bottom Area Start-->
+              <div class="header-bottom-area header-sticky">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <!--Header Logo Start-->
+                    <div class="col-md-3">
+                      <div class="header-logo">
+                        <a href="index.html"
+                          ><img src="img/about/Legal-Pal-Logo.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <!--Header Logo End-->
+                    <!--Header Menu Start-->
+                    <div class="col-md-9">
+                      <div class="header-menu-area text-right">
+                        <nav>
+                          <ul class="main-menu">
+                            <li >
+                              <a href="index.html">HOME</a>
+                              <!--Dropdown Menu Start-->
+    
+                              <!--Dropdown Menu End-->
+                            </li>
+                            <li><a href="about.html">ABOUT US</a></li>
+                            <li class="active">
+                                <a href="service.html">OUR EXPERTISE</a>
+                              
+                              </li>
+                              <li><a href="case-Studies.html">CASE STUDIES</a>
+                                <!--Dropdown Menu Start-->
+                                <ul>
+                                  <li><a href="caseStudy1.html">Case Study 1</a></li>
+                                  <li><a href="caseStudy2.html">Case Study 2</a></li>
+                                </ul>
+                                <!--Dropdown Menu End--></li>
+                            <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                            <li><a href="blog.html">BLOG</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                    <!--Header Menu End-->
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <!--Mobile Menu Area Start-->
+                      <div class="mobile-menu d-lg-none d-xl-none"></div>
+                      <!--Mobile Menu Area End-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Header Bottom Area End-->
+            </div>
+          </header>
+		<!--Header Area End-->
+	
 		
-		
+    <div id="custom-content">
+      <div id="custom-sidebar">
+          <h3>Navigation</h3>
+          <a href="#introduction">Introduction</a>
+          <a href="#data-collection">Data Collection</a>
+          <a href="#data-use">Data Use</a>
+          <a href="#data-sharing">Data Sharing</a>
+          <a href="#data-security">Data Security</a>
+          <a href="#user-rights">User Rights</a>
+          <a href="#contact-us">Contact Us</a>
+      </div>
+      <div id="custom-main">
+          <section id="introduction">
+              <h2>Introduction</h2>
+              <p>We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and share information about you when you use our services.</p>
+          </section>
+          <section id="data-collection">
+              <h2>Data Collection</h2>
+              <p>We collect various types of information in connection with the services we provide, including:</p>
+              <ul>
+                  <li>Information you provide to us directly.</li>
+                  <li>Information we collect automatically.</li>
+                  <li>Information from third parties.</li>
+              </ul>
+          </section>
+          <section id="data-use">
+              <h2>Data Use</h2>
+              <p>We use the information we collect to:</p>
+              <ul>
+                  <li>Provide, maintain, and improve our services.</li>
+                  <li>Communicate with you.</li>
+                  <li>Monitor and analyze trends and usage.</li>
+                  <li>Personalize your experience.</li>
+              </ul>
+          </section>
+          <section id="data-sharing">
+              <h2>Data Sharing</h2>
+              <p>We may share your information with third parties in the following circumstances:</p>
+              <ul>
+                  <li>With your consent.</li>
+                  <li>For external processing.</li>
+                  <li>For legal reasons.</li>
+              </ul>
+          </section>
+          <section id="data-security">
+              <h2>Data Security</h2>
+              <p>We take reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet, or method of electronic storage, is 100% secure.</p>
+          </section>
+          <section id="user-rights">
+              <h2>User Rights</h2>
+              <p>You have the right to access, correct, or delete your personal data. You can also object to the processing of your data in certain circumstances.</p>
+          </section>
+          <section id="contact-us">
+              <h2>Contact Us</h2>
+              <p>If you have any questions or concerns about our privacy policy, please contact us at:</p>
+              <p>Email: support@example.com</p>
+              <p>Phone: (123) 456-7890</p>
+          </section>
+      </div>
+  </div>
 		<!--Footer Area Start-->
     <footer class="footer">
 			<div class="footer-section">
