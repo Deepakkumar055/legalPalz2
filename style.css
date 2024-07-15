@@ -2379,7 +2379,7 @@ body {
 	display: inline-block;
 }
 .sidebar-rc-post .rc-post-content {
-	margin-left: 140px;
+	
 	max-width: 200px;
 }
 .rc-post-content .widget-date {
@@ -2391,15 +2391,16 @@ body {
 .rc-post-content > h4 {
 	font-size: 15px;
 	font-weight: 700;
-	line-height: 26px;
+	line-height: 10px;
 	margin-bottom: 0;
 }
 .widget-categories > ul > li {
 	display: block;
 	list-style: none;
+	
 	font-size: 16px;
-	line-height: 30px;
-	margin-bottom: 20px;
+	
+	margin-bottom: 30px;
 	color: #303030;
 	font-weight: 400;
 }
