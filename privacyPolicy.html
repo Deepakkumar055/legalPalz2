@@ -102,152 +102,170 @@ p {
 }
 
 
-  /* footer */
-  
-  .footer {
-              background-color: #272727;
-              color: #fff;
-              padding: 20px;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              text-align: left;
-          }
-          .footer-section {
-              flex: 1 1 250px;
-              padding: 10px;
-              margin: 10px;
-              box-sizing: border-box;
-              text-align: center; /* Center align content */
-          }
-          .footer-section h3 {
-              margin-top: 0;
-              color: aliceblue;
-          }
-          .footer form {
-              display: flex;
-              flex-direction: column;
-          }
-          .footer form input[type="text"],
-          .footer form input[type="email"],
-          .footer form textarea,
-          .footer form button {
-              padding: 8px;
-              margin-bottom: 10px;
-              border: none;
-              border-radius: 4px;
-              width: 100%;
-              background-color: #333;
-              border: white;
-              box-sizing: border-box;
-              font-size: 14px;
-          }
-          .footer form textarea {
-              resize: vertical;
-              height: 60px;
-          }
-          .footer form button {
-              background-color: grey;
-              color: white;
-              cursor: pointer;
-              text-transform: uppercase;
-              font-size: 14px;
-          }
-          .footer form button:hover {
-              background-color: darkgray;
-          }
-          .footer ul {
-              list-style: none;
-              padding: 0;
-              text-align: center; /* Center align list items */
-          }
-          .footer ul li {
-              margin-bottom: 8px;
-          }
-          .footer a {
-              color: white;
-              text-decoration: none;
-          }
-          .footer a:hover {
-              text-decoration: underline;
-          }
-          .footer .social-lin {
-              display: flex;
-              justify-content: center;
-              padding: 0;
-              margin-top: 10px; /* Adjusted margin for better spacing */
-          }
-          .footer .social-lin li {
-              margin: 0 10px; /* Increased margin for better separation */
-          }
-          .footer .social-lin a {
-              color: #fff;
-              font-size: 18px;
-              display: inline-block;
-              width: 40px;
-              height: 40px;
-              line-height: 40px;
-              text-align: center;
-              border-radius: 50%;
-              background-color: #333;
-          }
-          .footer .social-lin a:hover {
-              color: #4CAF50;
-              background-color: #555;
-          }
-          .footer .social-lin a i {
-              vertical-align: middle;
-          }
-          .footer .copyright {
-              text-align: center;
-              margin-top: 20px;
-              width: 100%;
-              color: #aaa;
-          }
-          @media (max-width: 767px) {
-              .footer-section {
-                  flex: 1 1 100%; /* Take full width */
-                  width: 100%;
-                  margin: 0; /* Remove margin */
-                  padding: 10px 0; /* Add padding */
-                  text-align: center;
-              }
-              .footer .footer-section:nth-child(2),
-              .footer .footer-section:nth-child(3) {
-                  flex-basis: 100%; /* Ensure full width for stacked columns */
-                  max-width: 48%;
-                  margin: 0; /* Remove margin */
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-              }
-              .footer .footer-section:nth-child(2) ul,
-              .footer .footer-section:nth-child(3) ul {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  padding-left: 0;
-              }
-              .footer .footer-section:nth-child(3) ul {
-                
-                  justify-content: center; /* Ensure social links are in one line */
-              }
-              .footer .footer-section:nth-child(3) .social-lin li {
-                  margin: 0 8px; /* Adjusted margin for better spacing */
-              }
-              .footer .footer-section:nth-child(3) .social-lin a {
-              color: #fff;
-              font-size: 18px;
-              display: inline-block;
-              width: 30px;
-              height: 30px;
-              line-height: 30px;
-              text-align: center;
-              border-radius: 50%;
-              background-color: #333;
-          }
-          }
-          /* footer end */
+ 
+      /* footer */
+
+.footer {
+    background-color: #272727;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+.footer-section {
+    flex: 1 1 250px;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center; /* Center align content */
+}
+.footer-section h3 {
+    margin-top: 0;
+    color: aliceblue;
+}
+.footer form {
+    display: flex;
+    flex-direction: column;
+}
+.footer form input[type="text"],
+.footer form input[type="email"],
+.footer form textarea,
+.footer form button {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #333;
+    border: white;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.footer form textarea {
+    resize: vertical;
+    height: 60px;
+}
+.footer form button {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.footer form button:hover {
+    background-color: darkgray;
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center align list items */
+}
+.footer ul li {
+    margin-bottom: 8px;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-lin {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 10px; /* Adjusted margin for better spacing */
+}
+.footer .social-lin li {
+    margin: 0 10px; /* Increased margin for better separation */
+}
+.footer .social-lin a {
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #333;
+}
+.footer .social-lin a:hover {
+    color: #4CAF50;
+    background-color: #555;
+}
+.footer .social-lin a i {
+    vertical-align: middle;
+}
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    color: #aaa;
+}
+
+@media (max-width: 767px) {
+    .footer-section {
+        flex: 1 1 100%; /* Take full width */
+        width: 100%;
+        margin: 0; /* Remove margin */
+        padding: 10px 0; /* Add padding */
+        text-align: center;
+    }
+    .footer .footer-section:nth-child(2),
+    .footer .footer-section:nth-child(3) {
+        flex-basis: 100%; /* Ensure full width for stacked columns */
+        max-width: 48%;
+        margin: 0; /* Remove margin */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .footer-section:nth-child(2) ul,
+    .footer .footer-section:nth-child(3) ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .footer .footer-section:nth-child(3) ul {
+        justify-content: center; /* Ensure social links are in one line */
+    }
+    .footer .footer-section:nth-child(3) .social-lin li {
+        margin: 0 8px; /* Adjusted margin for better spacing */
+    }
+    .footer .footer-section:nth-child(3) .social-lin a {
+        color: #fff;
+        font-size: 18px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #333;
+    }
+    .footer .hide-on-laptop {
+        display: block;
+    }
+    .footer .hide-on-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer .social-section {
+        display: none;
+    }
+    .footer .social-lin.mt-30 {
+        margin-top: 30px; /* Add spacing between email and social links */
+    }
+}
+
+        
+        /* footer end */
       </style>
 </head>
 <body>
@@ -292,7 +310,7 @@ p {
                         <!--Header Top Right Area Start-->
                         <div class="col-md-4 col-xl-3">
                           <div class="header-top-right">
-                            <p>MAIL US :<a href="#">info@example.com</a></p>
+                            <p>Mail us : <a href="mailto:team@legalpalz.com">team@legalpalz.com</a></p>
                           </div>
                         </div>
                         <!--Header Top Right Area End-->
@@ -535,19 +553,19 @@ p {
               <input name="phone" placeholder="Phone" type="text" required />
               <input name="email" placeholder="Email" type="email" required />
               <textarea name="message" placeholder="Message" rows="2" required></textarea>
-              <button type="submit" class="btn">Send Now</button>
+              <button type="submit" class="btn">Send Now </button>
           </form>
       </div>
       <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="service.html">Our Expertise</a></li>
-            <li><a href="caseStudy1.html">Case Studies</a></li>
-            <li><a href="testimonials.html">Tesmonials</a></li>
-            <li><a href="blog.html">Blogs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Our Expertise</a></li>
+              <li><a href="caseStudy1.html">Case Studies</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
           </ul>
       </div>
       <div class="footer-section">
@@ -556,30 +574,34 @@ p {
               <li><a href="privacyPolicy.html">Privacy Policy</a></li>
               <li><a href="#">Terms of use</a></li>
               <li><a href="#">Disclaimer</a></li>
-              <div class="social-lin">
-                <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  
-              </div>
-              <div class="social-lin">
-                  
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  
-              </div>
+              <div class="footer-section social-section hide-on-laptop">
+                <div class="social-lin">
+                    <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                </div>
+            </div>
           </ul>
       </div>
+    
       <div class="footer-section hide-on-mobile">
           <h3>Contact Us</h3>
-          <p>Timing: 9:00 AM - 12:00 AM IST</p>
-          <a href="mailto:team@legalpalz.com">team@legalpalz.com</a>
-
+          <ul>
+              <li>Timing: 9:00 AM - 12:00 AM IST</li>
+              <li><a href="mailto:team@legalpalz.com">team@legalpalz.com</a></li>
+              <div class="social-lin  mt-30">
+                <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            </div>
+          </ul>
           
       </div>
       <div class="copyright">
-        <p>
-          <span>&copy;</span> Copyright, 2024 All right reserved by
-          <a href="#">LegalPalz</a>
-      </p>
+          <p>
+              <span>&copy;</span> Copyright, 2024 All rights reserved by
+              <a href="#">LegalPalz</a>
+          </p>
       </div>
   </footer>
 		<!--Footer Area End-->
