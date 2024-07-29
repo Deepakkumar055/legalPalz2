@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Civil Drafting || LegalPalz</title>
+	<title>Company Law || LegalPalz</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Place favicon.ico in the root directory -->
@@ -38,215 +38,12 @@
 	<!-- Modernizr Js -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
   <style>
-    /* Basic styles for the page */
-
-    .hero {
-     
-     
-      background-position: center;
-      color: #fff;
-      text-align: center;
-
-      position: relative;
-    }
-
-    .hero::before {
-     
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .hero-container {
-      position: relative;
-      z-index: 1;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .hero-text {
-      margin-bottom: 40px;
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-
-    .hero-subtitle {
-      font-size: 1.5em;
-      color: #ddd;
-    }
-
-    .columns {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .column {
-      width: 48%;
-      
-      /* Semi-transparent background */
-     
-      border-radius: 10px;
-    }
-
-    .vision,
-    .objective {
-      padding: 10px;
-    }
-
-    .column h2 {
-      font-size: 1.8em;
-      color: #333;
-    }
-
-    .column p {
-      text-align: justify;
-      margin-bottom: 10px;
-      line-height: 1.8;
-      color: #555;
-      font-size: 1.2em;
-      font-weight: 500;
-    }
-
-    .icon1,
-    .icon2 {
-      margin-right: 10px;
-      font-size: 1.2em;
-    }
-
-    .icon1 {
-      color: rgb(212, 212, 26);
-    }
-
-    .icon2 {
-      color: grey;
-    }
-    .mobile-only {
-          display: none;
-      }
-      .mobile-only1 {
-          display: none;
-      }
-
-      /* Show the section on mobile devices */
-      @media (max-width: 767px) {
-          .mobile-only {
-              display: block;
-              padding: 10px;
-              
-              border-radius: 10px;
-              overflow: hidden;
-          }
-      }
-
-      /* Styling for the cards */
-      .mobile-only .card {
-          background-color: white;
-          border: 1px solid #ddd;
-          padding: 15px;
-          margin: 10px 0;
-          height: auto;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          position: relative;
-          overflow: hidden;
-      }
-
-      .mobile-only .card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .mobile-only .card p {
-          margin: 0 0 10px;
-      }
-
-      .mobile-only .card a {
-          color: #333;
-          text-decoration: none;
-          font-weight: bold;
-          position: relative;
-          z-index: 1;
-      }
-
-      .mobile-only .card a:hover {
-          text-decoration: underline;
-      }
-
-      /* Adding background images */
-      .mobile-only .testimonial-card {
-          background-image: url('testimonial-bg.jpg');
-          background-size: cover;
-          background-position: center;
-      }
-
-      .mobile-only .case-study-card {
-          background-image: url('case-study-bg.jpg');
-          background-size: cover;
-          background-position: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-      }
-
-      /* Gradient overlay for text readability */
-      .mobile-only .card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-          z-index: 0;
-      }
-
-      .mobile-only .card * {
-          position: relative;
-          z-index: 1;
-      }
-
-      /* Adding some animation */
-      @keyframes bounceIn {
-          0% {
-              opacity: 0;
-              transform: scale(0.3) translateY(-1000px);
-          }
-          60% {
-              opacity: 1;
-              transform: scale(1.1) translateY(30px);
-          }
-          80% {
-              transform: scale(0.9) translateY(-10px);
-          }
-          100% {
-              transform: scale(1) translateY(0);
-          }
-      }
-
-      .mobile-only .card {
-          animation: bounceIn 1s ease-in-out;
-      }
-
-      
-    @media (max-width: 600px) {
-      .column {
-        width: 100%;
-      }
-    }
-
    
-      /* footer */
+   
+ /* General Styles */
 
+
+/* Footer Styles */
 .footer {
     background-color: #272727;
     color: #fff;
@@ -256,6 +53,7 @@
     justify-content: space-between;
     text-align: left;
 }
+
 .footer-section {
     flex: 1 1 250px;
     padding: 10px;
@@ -263,14 +61,17 @@
     box-sizing: border-box;
     text-align: center; /* Center align content */
 }
+
 .footer-section h3 {
     margin-top: 0;
     color: aliceblue;
 }
+
 .footer form {
     display: flex;
     flex-direction: column;
 }
+
 .footer form input[type="text"],
 .footer form input[type="email"],
 .footer form textarea,
@@ -281,14 +82,15 @@
     border-radius: 4px;
     width: 100%;
     background-color: #333;
-    border: white;
-    box-sizing: border-box;
+    color: white; /* Ensure text color is white */
     font-size: 14px;
 }
+
 .footer form textarea {
     resize: vertical;
     height: 60px;
 }
+
 .footer form button {
     background-color: grey;
     color: white;
@@ -296,33 +98,41 @@
     text-transform: uppercase;
     font-size: 14px;
 }
+
 .footer form button:hover {
     background-color: darkgray;
 }
+
 .footer ul {
     list-style: none;
     padding: 0;
     text-align: center; /* Center align list items */
 }
+
 .footer ul li {
     margin-bottom: 8px;
 }
+
 .footer a {
     color: white;
     text-decoration: none;
 }
+
 .footer a:hover {
     text-decoration: underline;
 }
+
 .footer .social-lin {
     display: flex;
     justify-content: center;
     padding: 0;
     margin-top: 10px; /* Adjusted margin for better spacing */
 }
+
 .footer .social-lin li {
     margin: 0 10px; /* Increased margin for better separation */
 }
+
 .footer .social-lin a {
     color: #fff;
     font-size: 18px;
@@ -334,13 +144,16 @@
     border-radius: 50%;
     background-color: #333;
 }
+
 .footer .social-lin a:hover {
     color: #4CAF50;
     background-color: #555;
 }
+
 .footer .social-lin a i {
     vertical-align: middle;
 }
+
 .footer .copyright {
     text-align: center;
     margin-top: 20px;
@@ -348,6 +161,7 @@
     color: #aaa;
 }
 
+/* Footer Responsive Styles */
 @media (max-width: 767px) {
     .footer-section {
         flex: 1 1 100%; /* Take full width */
@@ -406,78 +220,111 @@
     }
 }
 
-        
-        /* footer end */
-
-      .justify-content-between > .col {
-width: auto;
-flex: 0 0 auto;
-text-align: center;
+/* Compliance Tracker Styles */
+#complianceForm {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto; /* Center the form horizontally */
+    max-width: 1200px; /* Set a maximum width */
+    padding: 20px;
+   
+  
+  
+   
+}
+#complianceForm h1{
+ text-align: center;
+ margin-bottom: 20px;
 }
 
-.col.fun-factor-wrap > h2 {
-margin-bottom: 0;
+
+.question {
+    margin-bottom: 20px;
 }
 
-.fun-factor-wrap > h2 > span {
-font-size: 38px;
-font-weight: 700;
+.question label {
+    display: block;
+    margin-bottom: 10px;
 }
 
-.fun-factor-wrap > span {
-font-size: 18px;
-font-weight: 700;
-color: #303030;
-font-family: Droid Serif;
-text-transform: capitalize;
+.question .options {
+    display: flex;
+    justify-content: space-evenly; /* Space options evenly */
+    margin-bottom: 10px;
 }
 
-/* Media query for mobile view */
-@media (max-width: 767px) {
-.fun-factor-area .row {
-  display: flex;
-  flex-direction: column;
-}
-.fun-factor-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 20px; /* Adjust margin as needed */
-}
-.fun-factor-group .col {
-  width: 50%;
-  text-align: center;
-}
-.fun-factor-wrap {
-  box-sizing: border-box;
-  padding: 10px;
-}
+.question .options label {
+    display: flex;
+    align-items: center;
+ 
 }
 
-/* Media query for laptop view */
-@media (min-width: 768px) and (max-width: 1199px) {
-.fun-factor-area .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.fun-factor-group {
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 auto;
-  width: 100%;
-}
-.fun-factor-group .col {
-  width: auto;
-  flex: 1 1 auto;
-  max-width: none;
-}
-.fun-factor-wrap {
-  padding: 0 15px;
-}
+.question .options input[type="radio"] {
+    margin-right: 10px;
+    height: 15px;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0; /* Center the button and add top margin */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ 
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-content .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+}
+
+   
   </style>
    <style>
        
@@ -693,7 +540,7 @@ text-transform: capitalize;
                   <!--Header Top Right Area Start-->
                   <div class="col-md-4 col-xl-3">
                     <div class="header-top-right">
-                      <p>Mail us :<a href="mailto:team@legalpalz.com">team@legalpalz.com</a></p>
+                      <p>Mail us : <a href="mailto:team@legalpalz.com">team@legalpalz.com</a></p>
 
                     </div>
                   </div>
@@ -728,7 +575,7 @@ text-transform: capitalize;
 
                         <!--Dropdown Menu End-->
                       </li>
-                      <li class="active">
+                      <li >
                         <a href="about.html">ABOUT US</a>
                       </li>
                       <li>
@@ -767,108 +614,110 @@ text-transform: capitalize;
       </div>
     </header>
 		<!--Header Area End-->
-		<!-- Page Banner Area Start-->
-		<div class="page-banner-area bg-img-3 pt-95 pb-90">
-		    <div class="container">
-		        <div class="row">
-		            <div class="page-banner-content col-12 text-center">
-                        <h2>Civil Drafting</h2>
-                        <p>We specialize in creating effective and legally accurate civil legal documents to precisely
-                            represent your case.</p>
-		                <ul class="breadcrumb-pagination">
-		                    <li><a href="index.html">Home</a></li>
-		                    <li><a href="service.html">Our Expertise</a></li>
-		                    <li>Civil Drafting</li>
-		                </ul>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<!-- Page Banner Area End-->
-		<!-- Servcice Layout Area Start-->
-		<div class="service-layout-area pt-120 pb-60">
-		    <div class="container">
-		        <div class="row">
-		            <div class="col-lg-8">
-		                <div class="single-service-wrapper">
-		                    
-		                    <div class="single-service-content">
-		                        <h3>Civil Drafting</h3>
-		                        <p>We specialize in creating effective and legally accurate civil legal documents to precisely
-                                    represent your case.<br>
-                                    We specialize in Civil Drafting as it is one of the core expertise at Legal Palz. A good draft is
-                                    good only when an active researched is done on the subject matter and we are all about it. We
-                                    value the importance of clear, concise, and legally sound drafting in achieving your desired
-                                    outcome and we excel in it. Our experienced attorneys craft each document to your specific
-                                    case, ensuring it adheres to all procedural rules and accurately reflects your legal position.
-                                    Whether it's a persuasive complaint, a well-drafted contract, a well-researched legal brief or
-                                    Plaint, Written Statement, etc we take pride in our careful approach, safeguarding your
-                                    interests with every word.
-                                    </p>
-		                        <h4>About Company Law</h4>
-                                <p>We help our clients in the following areas:</p>
-                                <ul class="check-list ml-30">
-                                    <li>
-                                        Plaint
-                                    </li>
-                                    <li>
-                                        Written Statement
-                                    </li>
-                                    <li>
-                                        Interim Injunction
-
-                                    </li>
-                                    <li>
-                                        Interlocutory Application
-                                    </li>
-                                    <li>
-                                        Settlement deed
-
-                                    </li>
-                                    <li>
-                                        Release deed
-                                    </li>
-                                    <li>
-                                        Partnership deed
-                                    </li>
-                                    <li>
-                                        Deed Poll
-                                    </li>
-                                    <li>
-                                        Deed of Variation
-                                    </li>
-                                    <li>
-                                        Deed of Novation
-                                    </li>
-                                </ul>
-		                    </div>
-		                   
-		                </div>
-		                <div class="row">
-		                    <div class="col-12">
-		                        <div class="service-next-prev mb-50">
-		                            <ul>
-		                                <li><a href="#"><i class="icofont icofont-long-arrow-left"></i> Previous</a></li>
-		                                <li><a href="#"> Next <i class="icofont icofont-long-arrow-right"></i></a></li>
-		                            </ul>
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
-		            <div class="col-lg-4">
-                        <div class="service-sidebar-wrapper">
-		                    
-		                    <div class="service-sidebar text-center mb-50">
-                          <h3>Download Free E-book</h3>
-                          <a class="download" href="#"><i class="icofont icofont-file-pdf"></i> Coming soon</a>
-		                </div>
-                        </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<!-- Servcice Layout Area End-->
-		  
+    </div>
+		
+        <form id="complianceForm">
+            <h1 >Compliance Tracker</h1>
+        <div class="question">
+            <label>1. Have you ensured that your product/service does not infringe on existing patents, trademarks, or copyrights?</label>
+            <div class="options">
+                <label><input type="radio" name="question1" value="3"> Yes</label>
+                <label><input type="radio" name="question1" value="2"> Partially</label>
+                <label><input type="radio" name="question1" value="1"> No</label>
+                <label><input type="radio" name="question1" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>2. Do you have clear and comprehensive Terms of Service and a Privacy Policy on your website?</label>
+            <div class="options">
+                <label><input type="radio" name="question2" value="3"> Yes</label>
+                <label><input type="radio" name="question2" value="2"> Partially</label>
+                <label><input type="radio" name="question2" value="1"> No</label>
+                <label><input type="radio" name="question2" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>3. Are you obtaining explicit consent from users before collecting their personal data, in compliance with GDPR, CCPA, or other relevant data protection laws?</label>
+            <div class="options">
+                <label><input type="radio" name="question3" value="3"> Yes</label>
+                <label><input type="radio" name="question3" value="2"> Partially</label>
+                <label><input type="radio" name="question3" value="1"> No</label>
+                <label><input type="radio" name="question3" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>4. Have you implemented adequate security measures to protect user data from breaches or unauthorized access?</label>
+            <div class="options">
+                <label><input type="radio" name="question4" value="3"> Yes</label>
+                <label><input type="radio" name="question4" value="2"> Partially</label>
+                <label><input type="radio" name="question4" value="1"> No</label>
+                <label><input type="radio" name="question4" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>5. Are you ensuring that all content on your website (text, images, videos) is original or properly licensed?</label>
+            <div class="options">
+                <label><input type="radio" name="question5" value="3"> Yes</label>
+                <label><input type="radio" name="question5" value="2"> Partially</label>
+                <label><input type="radio" name="question5" value="1"> No</label>
+                <label><input type="radio" name="question5" value="0" class="dn"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>6. Have you conducted a trademark search to ensure that your startup's name and logo do not infringe on existing trademarks?</label>
+            <div class="options">
+                <label><input type="radio" name="question6" value="3"> Yes</label>
+                <label><input type="radio" name="question6" value="2"> Partially</label>
+                <label><input type="radio" name="question6" value="1"> No</label>
+                <label><input type="radio" name="question6" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>7. Have you chosen the appropriate legal structure for your startup (LLC, Corporation, Partnership, etc.) and completed all necessary filings?</label>
+            <div class="options">
+                <label><input type="radio" name="question7" value="3"> Yes</label>
+                <label><input type="radio" name="question7" value="2"> Partially</label>
+                <label><input type="radio" name="question7" value="1"> No</label>
+                <label><input type="radio" name="question7" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>8. Are you maintaining proper corporate governance practices, including holding regular board meetings and keeping minutes?</label>
+            <div class="options">
+                <label><input type="radio" name="question8" value="3"> Yes</label>
+                <label><input type="radio" name="question8" value="2"> Partially</label>
+                <label><input type="radio" name="question8" value="1"> No</label>
+                <label><input type="radio" name="question8" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>9. Are your marketing and sales practices compliant with antitrust laws, ensuring you are not engaging in anti-competitive behaviors such as price fixing or monopolistic practices?</label>
+            <div class="options">
+                <label><input type="radio" name="question9" value="3"> Yes</label>
+                <label><input type="radio" name="question9" value="2"> Partially</label>
+                <label><input type="radio" name="question9" value="1"> No</label>
+                <label><input type="radio" name="question9" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <div class="question">
+            <label>10. Have you assessed your market position to ensure that your business practices do not unintentionally create a monopoly or stifle competition?</label>
+            <div class="options">
+                <label><input type="radio" name="question10" value="3"> Yes</label>
+                <label><input type="radio" name="question10" value="2"> Partially</label>
+                <label><input type="radio" name="question10" value="1"> No</label>
+                <label><input class="dn"  type="radio" name="question10" value="0"> Don't Know</label>
+            </div>
+        </div>
+        <button class="view-all-btn" type="button" onclick="calculateScore()">Submit</button>
+    </form>
+    
+    <!-- The Modal -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="result"></p>
+        </div>
+        </div>
 		
 		<!--Footer Area Start-->
     <footer class="footer">
@@ -898,10 +747,11 @@ text-transform: capitalize;
       <div class="footer-section">
           <h3>Important Links</h3>
           <ul>
-            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-            <li><a href="termsOfUse.html">Terms of use</a></li>
-            <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="complianceTracker.html">Compliance Tracker</a></li>
+              <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+             
+              <li><a href="termsOfUse.html">Terms of use</a></li>
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="complianceTracker.html">Compliance Tracker</a></li>
               <div class="footer-section social-section hide-on-laptop">
                 <div class="social-lin">
                     <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
@@ -933,24 +783,20 @@ text-transform: capitalize;
       </div>
   </footer>
 		<!--Footer Area End-->
-
-
-    <button class="open-modal-btn" id="modalButton">
-      Check <br> Compliance
-  </button>
-
-  <!-- Modal Structure -->
-  <div id="complianceModal" class="modal">
-      <span class="modal-close-btn" onclick="closeModal()">&times;</span>
-      <div class="modal-content">
-          <h2>Compliance Check</h2>
-          <p>check whether your business is compliant or not.</p>
-          <button type="button" onclick="redirect()">Submit</button>
-      </div>
-  </div>
-
-	</div>
-
+	
+        <button class="open-modal-btn" id="modalButton">
+            Check <br> Compliance
+        </button>
+    
+        <!-- Modal Structure -->
+        <div id="complianceModal" class="modal">
+            <span class="modal-close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <h2>Compliance Check</h2>
+                <p>check whether your business is compliant or not.</p>
+                <button type="button" onclick="redirect()">Submit</button>
+            </div>
+        </div>
 
 
 
@@ -987,36 +833,63 @@ text-transform: capitalize;
 	<script src="js/plugins.js"></script>
 	<!--Main Js-->
 	<script src="js/main.js"></script>
-  <script>
-    // Function to show the button after a delay
-    setTimeout(() => {
-        document.getElementById('modalButton').classList.add('show');
-    }, 3000); // 5 seconds delay
+    <script>
+        function calculateScore() {
+            const form = document.getElementById('complianceForm');
+            const formData = new FormData(form);
+            let score = 0;
 
-    // Open the modal
-    function openModal() {
-        document.getElementById('complianceModal').classList.add('show');
-    }
+            for (let value of formData.values()) {
+                score += parseInt(value);
+            }
 
-    // Close the modal
-    function closeModal() {
-        document.getElementById('complianceModal').classList.remove('show');
-    }
+            let riskLevel;
+            if (score <= 10) {
+                riskLevel = 'High risk – Immediate consultation with a legal professional is highly recommended.';
+            } else if (score <= 20) {
+                riskLevel = 'Moderate risk – Review and improvement needed; consider consulting a legal professional soon.';
+            } else {
+                riskLevel = 'Low risk – Generally compliant but stay updated and periodically review compliance.';
+            }
 
-    // Redirect to another page
-    function redirect() {
-        window.location.href = 'compliancetracker.html'; // Replace with your target URL
-    }
-
-    // Close the modal when clicking outside of it
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('complianceModal')) {
-            closeModal();
+            document.getElementById('result').innerText = `Your score is: ${score}\nRisk level: ${riskLevel}`;
+            document.getElementById('resultModal').style.display = 'flex';
         }
-    };
 
-    // Open modal when clicking on the button
-    document.getElementById('modalButton').addEventListener('click', openModal);
-</script>
+        function closeModal() {
+            document.getElementById('resultModal').style.display = 'none';
+        }
+    </script>
+      <script>
+        // Function to show the button after a delay
+        setTimeout(() => {
+            document.getElementById('modalButton').classList.add('show');
+        }, 3000); // 5 seconds delay
+  
+        // Open the modal
+        function openModal() {
+            document.getElementById('complianceModal').classList.add('show');
+        }
+  
+        // Close the modal
+        function closeModal() {
+            document.getElementById('complianceModal').classList.remove('show');
+        }
+  
+        // Redirect to another page
+        function redirect() {
+            window.location.href = 'compliancetracker.html'; // Replace with your target URL
+        }
+  
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('complianceModal')) {
+                closeModal();
+            }
+        };
+  
+        // Open modal when clicking on the button
+        document.getElementById('modalButton').addEventListener('click', openModal);
+    </script>
 </body>
 </html>
