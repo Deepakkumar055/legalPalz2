@@ -480,7 +480,7 @@
   }
   
 	  </style>
-	       <style>
+	     <style>
 			/* Modal styles */
 			.modal {
 				display: none;
@@ -585,8 +585,9 @@
 			}
 	  
 			.compliance-logo img {
-				width: 100px;
-				height: auto;
+				width: 200px;
+				height:250px;
+				object-fit: cover;
 				margin-bottom: 10px;
 			}
 	  
@@ -594,6 +595,7 @@
 				font-size: 16px;
 				color: #555;
 				text-align: center;
+				display: none;
 			}
 	  
 			.modal-body-content {
@@ -752,7 +754,9 @@
 				}
 	  
 				.compliance-logo img {
-					width: 50px;
+					width: 100px;
+					height: 100px;
+					object-fit: cover;
 				}
 	  
 				.compliance-logo p {
@@ -1091,24 +1095,24 @@
 
 		<!-- Modal Structure -->
 		<div id="complianceModal" class="modal">
-		  <div class="modal-content">
-			  <span class="close" onclick="closeModal()">&times;</span>
-			  <div class="modal-body-content">
-				  <div class="compliance-logo">
-					  <img src="img/about/Legal-Pal-Logo.png" alt="Legal Palz Logo">
-					  <p>Ensure your startup's compliance with our easy-to-use tracker.</p>
-				  </div>
-				  <div class="modal-body">
-					  <div class="compliance-header">
-						  <h2>Want to check whether your business is legally compliant?</h2>
-					  </div>
-					  <div class="compliance-question">
-						  <button type="button" class="next-btn" onclick="navigateToPage()">Check Now</button>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-	  </div>
+			<div class="modal-content">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<div class="modal-body-content">
+					<div class="compliance-logo">
+						<img src="img/about/Legal-Pal-Logo.png" alt="Legal Palz Logo">
+						<p>Ensure your startup's compliance with our easy-to-use tracker.</p>
+					</div>
+					<div class="modal-body">
+						<div class="compliance-header">
+							<h2>Want to know whether your business is legally compliant?</h2>
+						</div>
+						<div class="compliance-question">
+							<button type="button" class="next-btn" onclick="navigateToPage()">Check Now For Free</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</div>
 
