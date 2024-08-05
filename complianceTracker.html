@@ -1,838 +1,808 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Compliance Tracker || LegalPalz</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Place favicon.ico in the root directory -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/about/Legal-Pal-Logo.png">
-    <!--All Css Here-->
-    
-	<!-- Droid Font CSS-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Compliance Tracker || LegalPalz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/about/Legal-Pal-Logo.png">
+    <!-- All CSS Here -->
     <link rel="stylesheet" href="css/droid.css">
-	<!-- Icofont CSS-->
     <link rel="stylesheet" href="css/icofont.css">
-    <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- Animate CSS-->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Owl Carousel CSS-->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<!-- Datepicker CSS-->
-	<link rel="stylesheet" href="css/jquery.datepicker.css">
-	<!-- Calendar CSS-->
-	<link rel="stylesheet" href="css/zabuto_calendar.css">
-	<!-- Meanmenu CSS-->
-	<link rel="stylesheet" href="css/meanmenu.min.css">
-	<!-- Venobox CSS-->
-	<link rel="stylesheet" href="css/venobox.css">
-	<!-- Bootstrap CSS-->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Style CSS -->
-	<link rel="stylesheet" href="style.css">
-	<!-- Responsive CSS -->
-	<link rel="stylesheet" href="css/responsive.css">
-	<!-- Modernizr Js -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/jquery.datepicker.css">
+    <link rel="stylesheet" href="css/zabuto_calendar.css">
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/venobox.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
-  <style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-/* Footer Styles */
-.footer {
-    background-color: #272727;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.footer-section {
-    flex: 1 1 250px;
-    padding: 10px;
-    margin: 10px;
-    box-sizing: border-box;
-    text-align: center; /* Center align content */
-}
-
-.footer-section h3 {
-    margin-top: 0;
-    color: aliceblue;
-}
-
-.footer form {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer form input[type="text"],
-.footer form input[type="email"],
-.footer form textarea,
-.footer form button {
-    padding: 8px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    background-color: #333;
-    color: white; /* Ensure text color is white */
-    font-size: 14px;
-}
-
-.footer form textarea {
-    resize: vertical;
-    height: 60px;
-}
-
-.footer form button {
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.footer form button:hover {
-    background-color: darkgray;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-    text-align: center; /* Center align list items */
-}
-
-.footer ul li {
-    margin-bottom: 8px;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer .social-lin {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-top: 10px; /* Adjusted margin for better spacing */
-}
-
-.footer .social-lin li {
-    margin: 0 10px; /* Increased margin for better separation */
-}
-
-.footer .social-lin a {
-    color: #fff;
-    font-size: 18px;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #333;
-}
-
-.footer .social-lin a:hover {
-    color: #4CAF50;
-    background-color: #555;
-}
-
-.footer .social-lin a i {
-    vertical-align: middle;
-}
-
-.footer .copyright {
-    text-align: center;
-    margin-top: 20px;
-    width: 100%;
-    color: #aaa;
-}
-
-/* Footer Responsive Styles */
-@media (max-width: 767px) {
-    .footer-section {
-        flex: 1 1 100%; /* Take full width */
-        width: 100%;
-     
-        padding: 10px 0; /* Add padding */
-        text-align: center;
-    }
-    .footer .footer-section:nth-child(2),
-    .footer .footer-section:nth-child(3) {
-        flex-basis: 100%; /* Ensure full width for stacked columns */
-        max-width: 48%;
-        margin: 0; /* Remove margin */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer .footer-section:nth-child(2) ul,
-    .footer .footer-section:nth-child(3) ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0;
-    }
-    .footer .footer-section:nth-child(3) ul {
-        justify-content: center; /* Ensure social links are in one line */
-    }
-    .footer .footer-section:nth-child(3) .social-lin li {
-        margin: 0 8px; /* Adjusted margin for better spacing */
-    }
-    .footer .footer-section:nth-child(3) .social-lin a {
-        color: #fff;
-        font-size: 18px;
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #333;
-    }
-    .footer .hide-on-laptop {
-        display: block;
-    }
-    .footer .hide-on-mobile {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .footer .social-section {
-        display: none;
-    }
-    .footer .social-lin.mt-30 {
-        margin-top: 30px; /* Add spacing between email and social links */
-    }
-}
-
-
-   
-  </style>
-   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-    .compliance-container {
-        font-family: 'Roboto', sans-serif;
-        background-color: #f0f0f0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       height: 90vh;
-        margin: 0;
-    }
-
-    .compliance-content {
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        max-width: 1000px;
-        width: 100%;
-        display: flex;
-        overflow: hidden;
-        padding: 0;
-    }
-
-    .compliance-left {
-        background:  #F5EEE3;
-
-        color: white;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 40%;
-    }
-
-    .compliance-left img {
-        width: 250px;
-        height: 200px;
-        object-fit: cover;
-        margin-bottom: 20px;
-    }
-
-    .compliance-left p {
-        color: #aaa;
-        text-align: center;
-        font-size: 1.1em;
-    }
-   
-
-    .compliance-right {
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 60%;
-        position: relative;
-    }
-
-    .compliance-right h1 {
-        margin-bottom: 20px;
-        font-size: 2em;
-        color: #343a40;
-    }
-
-    .compliance-question {
-        margin-bottom: 30px;
-    }
-
-    .compliance-question p {
-        font-size: 1.2em;
-        color: #343a40;
-    }
-
-    .compliance-form-check {
-        margin: 10px 0;
-    }
-
-    .compliance-btn-custom {
-        background-color:  #b99044;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border: 1px solid #b99044;;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 20px;
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 1em;
-    }
-
-    /* Removed hover effect */
-    .compliance-btn-custom:hover {
-        background-color:  #b99044; /* Keep the background color same */
-    }
-
-    .compliance-result {
-        display: none;
-        text-align: center;
-       
-   
-    }
-
-    .compliance-score {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #343a40;
-    }
-
-    .compliance-interpretation {
-        font-size: 1.2rem;
-        margin-top: 10px;
-        color: #343a40;
-    }
-
-    .compliance-chart {
-        margin-top: 20px;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .animate__animated {
-        animation-duration: 0.6s;
-    }
-    /* Mobile and Tablet Styles */
-
-@media (max-width: 991px) {
-    .compliance-content {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .compliance-left, .compliance-right {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .compliance-left {
-        background:  #F5EEE3; /* Adjust background color for better contrast */
-        text-align: center;
-    }
-
-    .compliance-left img {
-        width: 120px;
-    }
-
-    .compliance-right {
-        padding: 20px;
-    }
-
-    .compliance-question p {
-        font-size: 1em; /* Adjust font size for readability */
-    }
-
-    .compliance-form-check {
-        margin: 10px 0;
-    }
-
-    .compliance-btn-custom {
-        font-size: 0.9em; /* Slightly smaller button text for smaller screens */
-    }
-
-    .compliance-result {
-        padding: 20px;
-       
-    }
-
-    .compliance-chart {
-        max-width: 100%;
-    }
-}
-
-/* Additional adjustments for very small screens (e.g., portrait phones) */
-@media (max-width: 576px) {
-    .compliance-content {
-        padding: 10px;
-       
-       
-    }
-    .compliance-right h1 {
-        display: none;
-    }
-    .compliance-left {
-        padding: 15px;
-    }
-
-    .compliance-right {
-        padding: 15px;
-        height: 420px
-    }
-
-    .compliance-question p {
-        font-size: 0.9em; /* Further adjust font size */
-    }
-
-    .compliance-form-check {
-        margin: 8px 0;
-    }
-
-    .compliance-btn-custom {
-        font-size: 0.8em; /* Further adjust button text size */
-    }
-    .compliance-chart {
-       height: 200px;
-       width: 200px;
-    }
-}
-</style>
   
+    <style>
+
+        /* Footer Styles */
+        .footer {
+            background-color: #272727;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
+        }
+        
+        .footer-section {
+            flex: 1 1 250px;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center; /* Center align content */
+        }
+        
+        .footer-section h3 {
+            margin-top: 0;
+            color: aliceblue;
+        }
+        
+        .footer form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer form input[type="text"],
+        .footer form input[type="email"],
+        .footer form textarea,
+        .footer form button {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            background-color: #333;
+            color: white; /* Ensure text color is white */
+            font-size: 14px;
+        }
+        
+        .footer form textarea {
+            resize: vertical;
+            height: 60px;
+        }
+        
+        .footer form button {
+            background-color: grey;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        
+        .footer form button:hover {
+            background-color: darkgray;
+        }
+        
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* Center align list items */
+        }
+        
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer .social-lin {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-top: 10px; /* Adjusted margin for better spacing */
+        }
+        
+        .footer .social-lin li {
+            margin: 0 10px; /* Increased margin for better separation */
+        }
+        
+        .footer .social-lin a {
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        
+        .footer .social-lin a:hover {
+            color: #4CAF50;
+            background-color: #555;
+        }
+        
+        .footer .social-lin a i {
+            vertical-align: middle;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+            color: #aaa;
+        }
+        
+        /* Footer Responsive Styles */
+        @media (max-width: 767px) {
+            .footer-section {
+                flex: 1 1 100%; /* Take full width */
+                width: 100%;
+             
+                padding: 10px 0; /* Add padding */
+                text-align: center;
+            }
+            .footer .footer-section:nth-child(2),
+            .footer .footer-section:nth-child(3) {
+                flex-basis: 100%; /* Ensure full width for stacked columns */
+                max-width: 48%;
+                margin: 0; /* Remove margin */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer .footer-section:nth-child(2) ul,
+            .footer .footer-section:nth-child(3) ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+            }
+            .footer .footer-section:nth-child(3) ul {
+                justify-content: center; /* Ensure social links are in one line */
+            }
+            .footer .footer-section:nth-child(3) .social-lin li {
+                margin: 0 8px; /* Adjusted margin for better spacing */
+            }
+            .footer .footer-section:nth-child(3) .social-lin a {
+                color: #fff;
+                font-size: 18px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #333;
+            }
+            .footer .hide-on-laptop {
+                display: block;
+            }
+            .footer .hide-on-mobile {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .footer .social-section {
+                display: none;
+            }
+            .footer .social-lin.mt-30 {
+                margin-top: 30px; /* Add spacing between email and social links */
+            }
+        }
+        
+        
+           
+</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        .compliance-container {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 0;
+        }
+        .compliance-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            padding: 0;
+        }
+        .compliance-left {
+            background: #F5EEE3;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+        }
+        .compliance-left img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .compliance-left p {
+            color: #aaa;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .compliance-right {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+            position: relative;
+        }
+        .compliance-right h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #343a40;
+        }
+        .compliance-question {
+            margin-bottom: 30px;
+        }
+        .compliance-question p {
+            font-size: 1.2em;
+            color: #343a40;
+        }
+        .compliance-form-check {
+            margin: 10px 0;
+        }
+        .compliance-btn-custom {
+            background-color: #b99044;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border: 1px solid #b99044;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+        }
+        .compliance-btn-custom:hover {
+            background-color: #a87e2e;
+        }
+        .compliance-result {
+            display: none;
+            text-align: center;
+        }
+        .compliance-score {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .compliance-interpretation {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #343a40;
+        }
+        .compliance-chart {
+            margin-top: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .animate__animated {
+            animation-duration: 0.6s;
+        }
+        @media (max-width: 991px) {
+            .compliance-content {
+                flex-direction: column;
+                width: 100%;
+            }
+            .compliance-left, .compliance-right {
+                width: 100%;
+                padding: 20px;
+            }
+            .compliance-left {
+                background: #F5EEE3;
+                text-align: center;
+            }
+            .compliance-left img {
+                width: 120px;
+            }
+            .compliance-right {
+                padding: 20px;
+            }
+            .compliance-question p {
+                font-size: 1em;
+            }
+            .compliance-form-check {
+                margin: 10px 0;
+            }
+            .compliance-btn-custom {
+                font-size: 0.9em;
+            }
+            .compliance-result {
+                padding: 20px;
+            }
+            .compliance-chart {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 576px) {
+            .compliance-content {
+                padding: 10px;
+            }
+            .compliance-right h1 {
+                display: none;
+            }
+            .compliance-left {
+                padding: 15px;
+            }
+            .compliance-right {
+                padding: 15px;
+                height: 420px;
+            }
+            .compliance-question p {
+                font-size: 0.9em;
+            }
+            .compliance-form-check {
+                margin: 8px 0;
+            }
+            .compliance-btn-custom {
+                font-size: 0.8em;
+            }
+            .compliance-chart {
+                height: 200px;
+                width: 200px;
+            }
+        }
+
+        /* Modal Styling */
+        .modal-dialog {
+            display: flex;
+            align-items: center;
+            min-height: calc(100% - 1.75rem); /* Center vertically */
+            margin: 1.75rem auto; /* Center horizontally and add margin */
+        }
+        .modal-content {
+            border-radius: 10px;
+            background: #ffffff; /* White background for the modal */
+            border: 1px solid #e0e0e0; /* Light grey border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 20px;
+        }
+        .modal-header {
+            border-bottom: 1px solid #e0e0e0; /* Match border with modal content */
+        }
+        .modal-title {
+            color: #343a40; /* Dark color for title to match theme */
+        }
+        .modal-body {
+            color: #343a40; /* Dark color for text to match theme */
+        }
+        .modal-footer {
+            border-top: 1px solid #e0e0e0; /* Match border with modal content */
+        }
+        .btn-secondary {
+            background-color: #b99044; /* Match button color with theme */
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #a87e2e; /* Darken button color on hover */
+        }
+    </style>
 </head>
 <body>
-	<!--[if lt IE 8]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="wrapper">
 
-	<div class="wrapper">
-		<!--Header Area Start-->
-    <header>
-      <div class="header-container">
-        <!--Header Top Area Start-->
-        <div class="header-top-area default-bg hide-on-mobile">
-          <div class="container">
-            <div class="row row-75">
-              <div class="header-top-wrap col-12">
-                <div class="row">
-                  <!--Header Top Left Area Start-->
-                  <div class="col-md-4 col-xl-3">
-                    <div class="header-top-left">
-                      <ul class="social-link">
-                        <li>
-                          <a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--Header Top Left Area End-->
-                  <!--Header Top Middle Area Start-->
-                  <div class="col-md-4 col-xl-6">
-                    <div class="header-top-middle text-center">
-                     
-                    </div>
-                  </div>
-                  <!--Header Top Middle Area End-->
-                  <!--Header Top Right Area Start-->
-                  <div class="col-md-4 col-xl-3">
-                    <div class="header-top-right">
-                      <p>Mail us : <a href="mailto:team@legalpalz.com">team@legalpalz.com</a></p>
-
-                    </div>
-                  </div>
-                  <!--Header Top Right Area End-->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Header Top Area End-->
-        <!--Header Bottom Area Start-->
-        <div class="header-bottom-area header-sticky">
-          <div class="container">
-            <div class="row align-items-center">
-              <!--Header Logo Start-->
-              <div class="col-md-3">
-                <div class="header-logo">
-                  <a href="index.html"
-                    ><img src="img/about/Legal-Pal-Logo.png" alt=""
-                  /></a>
-                </div>
-              </div>
-              <!--Header Logo End-->
-              <!--Header Menu Start-->
-              <div class="col-md-9">
-                <div class="header-menu-area text-right">
-                  <nav>
-                    <ul class="main-menu">
-                      <li>
-                        <a href="index.html">HOME</a>
-                        <!--Dropdown Menu Start-->
-
-                        <!--Dropdown Menu End-->
-                      </li>
-                      <li >
-                        <a href="about.html">ABOUT US</a>
-                      </li>
-                      <li>
-                        <a href="service.html">OUR EXPERTISE</a>
-                      </li>
-                      <li>
-                        <a href="caseStudy1.html">CASE STUDIES</a>
-                        <!--Dropdown Menu Start-->
-                        <ul>
-                          <li><a href="caseStudy1.html">Case Study 1</a></li>
-                          <li><a href="caseStudy2.html">Case Study 2</a></li>
-                          <li><a href="caseStudy3.html">Case Study 3</a></li>
-                          <li><a href="caseStudy4.html">Case Study 4</a></li>
-                        </ul>
-                        <!--Dropdown Menu End-->
-                      </li>
-                      <li><a href="testimonials.html">TESTIMONIALS</a></li>
-                      <li><a href="blog.html">BLOG</a></li>
-                      <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <!--Header Menu End-->
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <!--Mobile Menu Area Start-->
-                <div class="mobile-menu d-lg-none d-xl-none"></div>
-                <!--Mobile Menu Area End-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Header Bottom Area End-->
-      </div>
-    </header>
-		<!--Header Area End-->
-    </div>
-		 <!-- Page Banner Area Start-->
-         <div class="page-banner-area bg-img-3 pt-95 pb-90">
+     <!--Header Area Start-->
+     <header>
+        <div class="header-container">
+          <!--Header Top Area Start-->
+          <div class="header-top-area default-bg hide-on-mobile">
             <div class="container">
-              <div class="row">
-                <div class="page-banner-content col-12 text-center">
-                  <h2>Compliance Tracker</h2>
-                  <p>
-                    check whether your business is compliant or not?
-                  </p>
-                  <ul class="breadcrumb-pagination">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Compliace Tracker  </li>
-                  </ul>
+              <div class="row row-75">
+                <div class="header-top-wrap col-12">
+                  <div class="row">
+                    <!--Header Top Left Area Start-->
+                    <div class="col-md-4 col-xl-3">
+                      <div class="header-top-left">
+                        <ul class="social-link">
+                          <li>
+                            <a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!--Header Top Left Area End-->
+                    <!--Header Top Middle Area Start-->
+                    <div class="col-md-4 col-xl-6">
+                      <div class="header-top-middle text-center">
+                       
+                      </div>
+                    </div>
+                    <!--Header Top Middle Area End-->
+                    <!--Header Top Right Area Start-->
+                    <div class="col-md-4 col-xl-3">
+                      <div class="header-top-right">
+                        <p>Mail us : <a href="mailto:team@legalpalz.com">team@legalpalz.com</a></p>
+  
+                      </div>
+                    </div>
+                    <!--Header Top Right Area End-->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Page Banner Area End-->
-    <div class="compliance-container">
-        <div class="compliance-content">
-            <div class="compliance-left">
-                <img src="img/about/Legal-Pal-Logo.png" alt="Compliance Tracker Logo">
-              
-            </div>
-            <div class="compliance-right">
-                <h1>Startup Compliance Tracker</h1>
-                <div id="question-container">
-                    <form id="compliance-form" >
-                        <!-- Questions will be injected here by JavaScript -->
-                    </form>
+          <!--Header Top Area End-->
+          <!--Header Bottom Area Start-->
+          <div class="header-bottom-area header-sticky">
+            <div class="container">
+              <div class="row align-items-center">
+                <!--Header Logo Start-->
+                <div class="col-md-3">
+                  <div class="header-logo">
+                    <a href="index.html"
+                      ><img src="img/about/Legal-Pal-Logo.png" alt=""
+                    /></a>
+                  </div>
                 </div>
-                <div id="result" class="compliance-result">
-                    <h2>Your Compliance Score: <span id="score" class="compliance-score"></span></h2>
-                    <canvas id="resultChart" class="compliance-chart"></canvas>
-                    <p id="interpretation" class="compliance-interpretation"></p>
+                <!--Header Logo End-->
+                <!--Header Menu Start-->
+                <div class="col-md-9">
+                  <div class="header-menu-area text-right">
+                    <nav>
+                      <ul class="main-menu">
+                        <li>
+                          <a href="index.html">HOME</a>
+                          <!--Dropdown Menu Start-->
+  
+                          <!--Dropdown Menu End-->
+                        </li>
+                        <li >
+                          <a href="about.html">ABOUT US</a>
+                        </li>
+                        <li>
+                          <a href="service.html">OUR EXPERTISE</a>
+                        </li>
+                        <li>
+                          <a href="caseStudy1.html">CASE STUDIES</a>
+                          <!--Dropdown Menu Start-->
+                          <ul>
+                            <li><a href="caseStudy1.html">Case Study 1</a></li>
+                            <li><a href="caseStudy2.html">Case Study 2</a></li>
+                            <li><a href="caseStudy3.html">Case Study 3</a></li>
+                            <li><a href="caseStudy4.html">Case Study 4</a></li>
+                          </ul>
+                          <!--Dropdown Menu End-->
+                        </li>
+                        <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!--Header Menu End-->
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <!--Mobile Menu Area Start-->
+                  <div class="mobile-menu d-lg-none d-xl-none"></div>
+                  <!--Mobile Menu Area End-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Header Bottom Area End-->
+        </div>
+      </header>
+          <!--Header Area End-->
+        <!-- Page Banner Area Start -->
+        <div class="page-banner-area bg-img-3 pt-95 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="page-banner-content col-12 text-center">
+                        <h2>Compliance Tracker</h2>
+                        <p>Want to know whether your business is legally compliant?</p>
+                        <ul class="breadcrumb-pagination">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Compliance Tracker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Banner Area End -->
+        <div class="compliance-container">
+            <div class="compliance-content">
+                <div class="compliance-left">
+                    <img src="img/about/Legal-Pal-Logo.png" alt="Compliance Tracker Logo">
+                </div>
+                <div class="compliance-right">
+                    <h1>Compliance Tracker</h1>
+                    <div id="question-container">
+                        <form id="compliance-form">
+                            <!-- Questions will be injected here by JavaScript -->
+                        </form>
+                    </div>
+                    <div id="result" class="compliance-result">
+                        <h2>Your Compliance Score: <span id="score" class="compliance-score"></span></h2>
+                        <canvas id="resultChart" class="compliance-chart"></canvas>
+                        <p id="interpretation" class="compliance-interpretation"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Footer Area Start-->
+<footer class="footer">
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <form action="mail.php" method="POST" class="footer-contact-form">
+            <input name="first-name" placeholder="First Name" type="text" required />
+            <input name="last-name" placeholder="Last Name" type="text" required />
+            <input name="phone" placeholder="Phone" type="text" required />
+            <input name="email" placeholder="Email" type="email" required />
+            <textarea name="message" placeholder="Message" rows="2" required></textarea>
+            <button type="submit" class="btn">Send Now </button>
+        </form>
+    </div>
+    <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Our Expertise</a></li>
+            <li><a href="caseStudy1.html">Case Studies</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Important Links</h3>
+        <ul>
+            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+           
+            <li><a href="termsOfUse.html">Terms of use</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="complianceTracker.html">Compliance Tracker</a></li>
+            <div class="footer-section social-section hide-on-laptop">
+              <div class="social-lin">
+                  <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              </div>
+          </div>
+        </ul>
+    </div>
+  
+    <div class="footer-section hide-on-mobile">
+        <h3>Contact Us</h3>
+        <ul>
+            <li>Timing: 9:00 AM - 12:00 AM IST</li>
+            <li><a href="mailto:team@legalpalz.com">team@legalpalz.com</a></li>
+            <div class="social-lin  mt-30">
+              <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          </div>
+        </ul>
+        
+    </div>
+    <div class="copyright">
+        <p>
+            <span>&copy;</span> Copyright, 2024 All rights reserved by
+            <a href="#">LegalPalz</a>
+        </p>
+    </div>
+</footer>
+      <!--Footer Area End-->
+
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="warningModalLabel">Incomplete Form!!</h3>
+                  
+                </div>
+                <div class="modal-body">
+                    <h4>
+                        Please answer the  question before proceeding.
+                    </h4>
+                  
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-		
-		<!--Footer Area Start-->
-    <footer class="footer">
-      <div class="footer-section">
-          <h3>Contact Us</h3>
-          <form action="mail.php" method="POST" class="footer-contact-form">
-              <input name="first-name" placeholder="First Name" type="text" required />
-              <input name="last-name" placeholder="Last Name" type="text" required />
-              <input name="phone" placeholder="Phone" type="text" required />
-              <input name="email" placeholder="Email" type="email" required />
-              <textarea name="message" placeholder="Message" rows="2" required></textarea>
-              <button type="submit" class="btn">Send Now </button>
-          </form>
-      </div>
-      <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="service.html">Our Expertise</a></li>
-              <li><a href="caseStudy1.html">Case Studies</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="blog.html">Blogs</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>Important Links</h3>
-          <ul>
-              <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-             
-              <li><a href="termsOfUse.html">Terms of use</a></li>
-              <li><a href="disclaimer.html">Disclaimer</a></li>
-              <li><a href="complianceTracker.html">Compliance Tracker</a></li>
-              <div class="footer-section social-section hide-on-laptop">
-                <div class="social-lin">
-                    <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                </div>
-            </div>
-          </ul>
-      </div>
-    
-      <div class="footer-section hide-on-mobile">
-          <h3>Contact Us</h3>
-          <ul>
-              <li>Timing: 9:00 AM - 12:00 AM IST</li>
-              <li><a href="mailto:team@legalpalz.com">team@legalpalz.com</a></li>
-              <div class="social-lin  mt-30">
-                <li><a href="https://www.linkedin.com/company/legal-palz/"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            </div>
-          </ul>
-          
-      </div>
-      <div class="copyright">
-          <p>
-              <span>&copy;</span> Copyright, 2024 All rights reserved by
-              <a href="#">LegalPalz</a>
-          </p>
-      </div>
-  </footer>
-		<!--Footer Area End-->
-	
-       
-        </div>
-
-
-
-
-    <!--All Js Here-->
-    
-	<!--Jquery 1.12.4-->
-	<script src="js/vendor/jquery-1.12.4.min.js"></script>
-	<!--Waypoints-->
-	<script src="js/waypoints.min.js"></script>
-	<!--Counterup-->
-	<script src="js/jquery.counterup.min.js"></script>
-	<!--Carousel-->
-	<script src="js/owl.carousel.min.js"></script>
-	<!--Meanmenu-->
-	<script src="js/jquery.meanmenu.min.js"></script>
-	<!--Instafeed-->
-	<script src="js/instafeed.min.js"></script>
-	<!--Datepicker-->
-	<script src="js/jquery.datepicker.min.js"></script>
-	<!--Calendar-->
-	<script src="js/zabuto-calendar.min.js"></script>
-	<!--ScrollUp-->
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<!--Wow-->
-	<script src="js/wow.min.js"></script>
-	<!--Venobox-->
-	<script src="js/venobox.min.js"></script>
-	<!--Popper-->
-	<script src="js/popper.min.js"></script>
-	<!--Bootstrap-->
-	<script src="js/bootstrap.min.js"></script>
-	<!--Plugins-->
-	<script src="js/plugins.js"></script>
-	<!--Main Js-->
-	<script src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- All JS Here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+    <script src="js/jquery.filterizr.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
     <script>
+      
         const questions = [
-            "Question 1. Have you ensured that your product/service does not infringe on existing patents, trademarks, or copyrights?",
-            "Question 2. Do you have clear and comprehensive Terms of Service and a Privacy Policy on your website?",
-            "Question 3. Are you obtaining explicit consent from users before collecting their personal data, in compliance with GDPR, CCPA, or other relevant data protection laws?",
-            "Question 4. Have you implemented adequate security measures to protect user data from breaches or unauthorized access?",
-            "Question 5. Are you ensuring that all content on your website (text, images, videos) is original or properly licensed?",
-            "Question 6. Have you conducted a trademark search to ensure that your startup's name and logo do not infringe on existing trademarks?",
-            "Question 7. Have you chosen the appropriate legal structure for your startup (LLC, Corporation, Partnership, etc.) and completed all necessary filings?",
-            "Question 8. Are you maintaining proper corporate governance practices, including holding regular board meetings and keeping minutes?",
-            "Question 9. Are your marketing and sales practices compliant with antitrust laws, ensuring you are not engaging in anti-competitive behaviors such as price fixing or monopolistic practices?",
-            "Question 10. Have you assessed your market position to ensure that your business practices do not unintentionally create a monopoly or stifle competition?"
+          "1. Have you ensured that your product/service does not infringe on existing patents, trademarks, or copyrights?",
+          "2. Do you have clear and comprehensive Terms of Service and a Privacy Policy on your website?",
+          "3. Are you obtaining explicit consent from users before collecting their personal data, in compliance with GDPR, CCPA, or other relevant data protection laws?",
+          "4. Have you implemented adequate security measures to protect user data from breaches or unauthorized access?",
+          "5. Are you ensuring that all content on your website (text, images, videos) is original or properly licensed?",
+          "6. Have you conducted a trademark search to ensure that your startup's name and logo do not infringe on existing trademarks?",
+          "7. Have you chosen the appropriate legal structure for your startup (LLC, Corporation, Partnership, etc.) and completed all necessary filings?",
+          "8. Are you maintaining proper corporate governance practices (e.g., regular board meetings, minutes, and resolutions)?",
+          "9. Are you in compliance with employment laws, including employee classification, wage and hour laws, and anti-discrimination laws?",
+          "10. Are you aware of and complying with any industry-specific regulations that apply to your startup?"
         ];
-
+      
         let currentQuestionIndex = 0;
-        let score = 0;
-        let answers = Array(questions.length).fill(null);
-
-        const form = document.getElementById('compliance-form');
-        const resultDiv = document.getElementById('result');
-        const questionContainer = document.getElementById('question-container');
-        const scoreSpan = document.getElementById('score');
-        const interpretationP = document.getElementById('interpretation');
-
-        function showQuestion() {
-            form.innerHTML = `
+        const answers = Array(questions.length).fill(null);
+      
+        function showQuestion(index) {
+            const questionContainer = document.getElementById('question-container');
+            questionContainer.innerHTML = `
                 <div class="compliance-question animate__animated animate__fadeIn">
-                    <p>${questions[currentQuestionIndex]}</p>
-                    <div class="compliance-form-check mx-4">
-                        <input class="form-check-input" type="radio" name="q${currentQuestionIndex}" id="q${currentQuestionIndex}yes" value="3" required>
-                        <label class="form-check-label" for="q${currentQuestionIndex}yes">Yes</label>
+                    <p>${questions[index]}</p>
+                    <div class="compliance-form-check">
+                        <input type="radio" name="answer" value="yes" id="answerYes">
+                        <label for="answerYes">Yes </label>
                     </div>
-                    <div class="compliance-form-check  mx-4">
-                        <input class="form-check-input" type="radio" name="q${currentQuestionIndex}" id="q${currentQuestionIndex}partially" value="2">
-                        <label class="form-check-label" for="q${currentQuestionIndex}partially">Partially </label>
-                    </div> 
-                    <div class="compliance-form-check  mx-4">
-                        <input class="form-check-input" type="radio" name="q${currentQuestionIndex}" id="q${currentQuestionIndex}no" value="1">
-                        <label class="form-check-label" for="q${currentQuestionIndex}no">No</label>
+                    <div class="compliance-form-check">
+                        <input type="radio" name="answer" value="partial" id="answerPartial">
+                        <label for="answerPartial">Partially </label>
                     </div>
-                    <div class="compliance-form-check  mx-4">
-                        <input class="form-check-input" type="radio" name="q${currentQuestionIndex}" id="q${currentQuestionIndex}dontknow" value="0">
-                        <label class="form-check-label " for="q${currentQuestionIndex}dontknow">Don't Know </label>
+                    <div class="compliance-form-check">
+                        <input type="radio" name="answer" value="no" id="answerNo">
+                        <label for="answerNo">No </label>
                     </div>
+                    <div class="compliance-form-check">
+                        <input type="radio" name="answer" value="dont-know" id="answerDontKnow">
+                        <label for="answerDontKnow">Don't Know </label>
+                    </div>
+                    <button type="button" class="compliance-btn-custom" onclick="nextQuestion()">Next</button>
                 </div>
-                <button type="button" class="btn compliance-btn-custom" onclick="nextQuestion()">Next</button>
             `;
-
-            // Use Animate.css for fade-in animation
-            $('.compliance-question').addClass('animate__fadeIn');
         }
-
+      
         function nextQuestion() {
-            const radios = form[`q${currentQuestionIndex}`];
-            let answer = null;
-            for (const radio of radios) {
-                if (radio.checked) {
-                    answer = parseInt(radio.value);
-                    break;
-                }
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (!selectedAnswer) {
+                const warningModal = new bootstrap.Modal(document.getElementById('warningModal'));
+                warningModal.show();
+                return;
             }
-          
-            answers[currentQuestionIndex] = answer;
-
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
-                showQuestionWithAnimation();
+            answers[currentQuestionIndex] = selectedAnswer.value;
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                showQuestion(currentQuestionIndex);
             } else {
-                displayResult();
+                calculateScore();
+                document.getElementById('question-container').style.display = 'none'; // Hide the question container
+                document.getElementById('result').style.display = 'block'; // Show the result container
             }
         }
-
-        function showQuestionWithAnimation() {
-            $('.compliance-question').addClass('animate__animated animate__fadeOut');
-            setTimeout(() => {
-                showQuestion();
-                $('.compliance-question').removeClass('animate__fadeOut').addClass('animate__fadeIn');
-            }, 600); // Duration of fade out animation
+      
+        function calculateScore() {
+            const scores = {
+                yes: 3,
+                partial: 2,
+                no: 1,
+                'dont-know': 0
+            };
+      
+            const totalScore = answers.reduce((sum, answer) => sum + (scores[answer] || 0), 0);
+            const interpretation = getInterpretation(totalScore);
+      
+            document.getElementById('score').textContent = `${totalScore} / ${questions.length * 3}`;
+            document.getElementById('interpretation').textContent = interpretation;
+            showResult(totalScore);
         }
-
-        function displayResult() {
-            score = answers.reduce((acc, cur) => acc + cur, 0);
-            questionContainer.style.display = 'none';
-            resultDiv.style.display = 'block';
-
-            scoreSpan.textContent = score;
-
-            let interpretation;
-            let color;
+      
+        function getInterpretation(score) {
             if (score <= 10) {
-                interpretation = 'High risk – Immediate consultation with a legal professional is highly recommended.';
-                color = '#e74c3c'; // Red
+                return 'High risk – Immediate consultation with a legal professional is highly recommended.';
             } else if (score <= 20) {
-                interpretation = 'Moderate risk – Review and improvement needed; consider consulting a legal professional soon.';
-                color = '#f1c40f'; // Yellow
+                return 'Moderate risk – Review and improvement needed; consider consulting a legal professional soon.';
             } else {
-                interpretation = 'Low risk – Generally compliant but stay updated and periodically review compliance.';
-                color = '#2ecc71'; // Green
+                return 'Low risk – Generally compliant but stay updated and periodically review compliance.';
             }
-            interpretationP.textContent = interpretation;
-
+        }
+      
+        function showResult(score) {
+            const result = document.getElementById('result');
+            result.style.display = 'block';
+      
+            const percentage = (score / (questions.length * 3)) * 100;
             const ctx = document.getElementById('resultChart').getContext('2d');
+            const riskColor = getRiskColor(score);
+      
             new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
-                    labels: ['Score', 'Remaining'],
+                    labels: ['Compliance', 'Non-Compliance'],
                     datasets: [{
-                        label: 'Compliance Score',
-                        data: [score, 30 - score],
-                        backgroundColor: [color, '#e0e0e0'],
-                        borderColor: [color, '#e0e0e0'],
-                        borderWidth: 1
+                        data: [percentage, 100 - percentage],
+                        backgroundColor: [riskColor, '#e6e6e6'],
                     }]
                 },
                 options: {
                     responsive: true,
                     plugins: {
                         legend: {
-                            display: true,
-                            position: 'top'
+                            position: 'top',
                         },
                         tooltip: {
                             enabled: false // Disable tooltips
-                        },
-                        title: {
-                            display: true,
-                            text: 'Compliance Score',
-                            font: {
-                                size: 18
-                            }
                         }
                     }
                 }
             });
         }
-
-        showQuestion();
-    </script>
-    
+      
+        function getRiskColor(score) {
+            if (score <= 10) {
+                return '#ff0000'; // Red for high risk
+            } else if (score <= 20) {
+                return '#f1c40f'; // Yellow for moderate risk
+            } else {
+                return '#2ecc71'; // Green for low risk
+            }
+        }
+      
+        document.addEventListener('DOMContentLoaded', () => {
+            showQuestion(currentQuestionIndex);
+        });
+      </script>
 </body>
 </html>
