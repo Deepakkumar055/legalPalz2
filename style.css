@@ -89,8 +89,8 @@ a:hover {
     text-decoration: none;
 }
 a,
-button,
-input {
+button
+ {
     outline: medium none;
     color: #434343;
 }

@@ -1,4 +1,9 @@
 <?php
+// Enable error reporting for debugging (disable in production)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Only process POST requests.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form fields and remove whitespace.
@@ -9,11 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = trim($_POST["phone"]);
-    $subject = trim($_POST["subject"]);
+    $subject = isset($_POST["subject"]) ? trim($_POST["subject"]) : '';
     $message = trim($_POST["message"]);
 
     // Check that data was sent to the mailer.
-    if (empty($first_name) OR empty($last_name) OR empty($phone) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (empty($first_name) || empty($last_name) || empty($phone) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Set a 400 (bad request) response code and exit.
         http_response_code(400);
         echo "Please complete the form and try again.";
@@ -23,22 +28,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Set the recipient email address.
     $recipient = "team@legalpalz.com";
 
-    
     // Set the email subject.
-    $subject = "New contact from $name";
+    $email_subject = empty($subject) ? "New contact from $name" : $subject;
 
     // Build the email content.
     $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Phone: $phone\n\n";
-    $email_content .= "Subject: $subject\n\n";
+    $email_content .= "Email: $email\n";
+    $email_content .= "Phone: $phone\n";
     $email_content .= "Message:\n$message\n";
 
     // Build the email headers.
     $email_headers = "From: $name <$email>";
 
     // Send the email.
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
+    if (mail($recipient, $email_subject, $email_content, $email_headers)) {
         // Set a 200 (okay) response code.
         http_response_code(200);
         echo "Thank You! Your message has been sent.";
